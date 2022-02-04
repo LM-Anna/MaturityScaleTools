@@ -1,0 +1,638 @@
+---
+title: ''
+author: ''
+date: ''
+output:
+  word_document:
+    number_sections: no
+    reference_docx: ../output/Template_matu.docx
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#Ce script est la version fiche maturité exemple pour 1 espèce.
+
+#Il contient les codes pour fournir une fiche d'identification de toutes les phases de maturité d'une espèce pour les femelles et pour les mâles.
+
+#La fiche est divisé en 2 feuilles recto-verso : l'une correspondant aux femelles et l'autre correspondant aux mâles.
+
+#Vous retrouverez des indications annotées pour comprendre et savoir quelles informations remplir à chaque étape.
+
+#Ce script est applicable à toutes les espèces dont les photos sont présentes dans le jeu de données.
+
+
+#Le "nom scientifique" des Gadidées est "Gadidae sp."
+#Le "nom scientifique" des Poissons plats est "Flat fish sp."
+
+
+
+#Au niveau du choix des photos, voici les correspondances des codes d'identification : 
+# EXT = gonades à l'extérieur de la cavité interne du poisson
+# EXT OUV = gonades ouverte à l'extérieur de la cavité interne du poisson 
+# INT = gonades à l'intérieur de la cavité interne du poisson SANS les organes autour
+# INT ORG = gonades à l'intérieur de la cavité interne du poisson AVEC les organes autour
+
+```
+
+```{r library, echo=FALSE}
+
+#Librairie utilisées
+library(readxl)
+library(dplyr, warn.conflicts = FALSE)
+library(knitr)
+library(pander)
+library(kableExtra, warn.conflicts = FALSE)
+
+#Import des jeux de données
+Dataphoto <- read_excel("../data/photo_mat.xlsx",sheet=1)
+#Dataphoto = jeu de données avec les photos
+
+Datascale <- read_excel("../data/matu_scale.xlsx",sheet=1)
+#Datascale = jeu de données avec les phases de maturité
+
+Datataille <- read_excel("../data/matu_scale.xlsx",sheet=4)
+#Datataille = jeu de données avec les tailles de 1ère maturité
+
+
+```
+
+
+# MATURITE
+## Noter ici nom commun de l'espèce
+## *Noter ici nom scientifique* (Noter ici code ID tutti)
+
+
+```{r pressure, echo=FALSE,fig.align='right'}
+
+#La première fiche correspond aux femelles
+
+#Affichage du symbole du sexe
+knitr::include_graphics('../data/Female sign.png')
+
+```
+
+```{r PHOTOINDIV, echo=FALSE,fig.align='right', out.width = '150px'}
+
+
+#Objet PHOTO avec la photo du poisson
+PHOTO<-Datataille %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Sexe=="F")
+PHOTO <- PHOTO$Photo
+
+knitr::include_graphics(PHOTO,)
+
+```
+
+
+```{r Ftaille, echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+TAILLE<-Datataille %>% filter(Species=="Flat fish sp.",Sexe=="F")
+TAILLE <- TAILLE$Fishbase
+
+#Création d'un tableau affichant la taille de 1ère maturité
+tabT <- data.frame(x=TAILLE )
+colnames(tabT) <- c("Taille de 1ère maturité")
+knitr::kable(tabT, align='c', position='c', format='simple')%>%kable_styling("striped")%>%column_spec(1,width="3cm")#Amélioration du tableau
+
+
+```
+
+### A - IMMATURE
+
+```{r FphaseA text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce premier chunk est destiné à la phase A
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="A - IMMATURE",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="A - IMMATURE", Sexe=="F")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+
+```
+
+### B - EN DEVELOPPEMENT
+
+```{r FphaseB text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase B
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="B - EN DEVELOPPEMENT",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="B - EN DEVELOPPEMENT", Sexe=="F")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+
+```
+
+### C - EN PONTE
+
+```{r FphaseC text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase C
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="C - EN PONTE",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="C - EN PONTE", Sexe=="F")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+
+```
+
+###### Références/Photos  
+ICES (**WKASMSF** 2018 & **WKMATCH** 2012)  
+IFREMER (CGFS, EVHOE, IBTS)  
+
+
+
+\newpage
+
+### D - REGRETION/REGENERATION
+
+```{r FphaseD text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase D
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="D - REGRETION/REGENERATION",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="D - REGRETION/REGENERATION", Sexe=="F")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+```
+
+### E - OMISSION DE PONTE
+
+```{r FphaseE text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase E
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="E - OMISSION DE PONTE",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="E - OMISSION DE PONTE", Sexe=="F")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+```
+
+### F - ANORMAL
+
+```{r FphaseF text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase F
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="F - ANORMAL",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="F - ANORMAL", Sexe=="F")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+```
+
+
+###### Références/Photos  
+ICES (**WKASMSF** 2018 & **WKMATCH** 2012)  
+IFREMER (CGFS, EVHOE, IBTS)  
+
+
+\newpage
+
+## Noter ici nom commun de l'espèce
+## *Noter ici nom scientifique* (Noter ici code ID tutti)
+
+```{r male, echo=FALSE,fig.align='right'}
+
+#La deuxième fiche correspond aux mâles
+
+#Affichage du symbole du sexe
+knitr::include_graphics('../data/Male sign.png')
+
+```
+
+
+```{r mPHOTOINDIV, echo=FALSE,fig.align='right', out.width = '150px'}
+
+
+#Objet PHOTO avec la photo du poisson
+PHOTO<-Datataille %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Sexe=="M")
+PHOTO <- PHOTO$Photo
+
+knitr::include_graphics(PHOTO,)
+
+```
+
+
+```{r Mtaille, echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+TAILLE<-Datataille %>% filter(Species=="Flat fish sp.",Sexe=="M")
+TAILLE <- TAILLE$Fishbase
+
+#Création d'un tableau affichant la taille de 1ère maturité
+tabT <- data.frame(x=TAILLE )
+colnames(tabT) <- c("Taille de 1ère maturité")
+knitr::kable(tabT, align='c', position='c', format='simple')%>%kable_styling("striped")%>%column_spec(1,width="3cm")#Amélioration du tableau
+
+
+```
+
+### A - IMMATURE
+
+```{r MphaseA text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce premier chunk est destiné à la phase A
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="A - IMMATURE",Sexe=="M")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="A - IMMATURE", Sexe=="M")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+
+```
+
+### B - EN DEVELOPPEMENT
+
+```{r MphaseB text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase B
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="B - DEVELOPING",Sexe=="M")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter le ici nom scientifique de l'espèce",Phase=="B - DEVELOPING", Sexe=="M")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+
+```
+
+### C - EN PONTE
+
+```{r MphaseC text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase C
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="C - SPAWNING",Sexe=="M")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="C - SPAWNING", Sexe=="M")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+
+```
+
+###### Références/Photos  
+ICES (**WKASMSF** 2018 & **WKMATCH** 2012)  
+IFREMER (CGFS, EVHOE, IBTS)  
+
+
+\newpage
+
+### D - REGRETION/REGENERATION
+
+```{r MphaseD text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase D
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="D - REGRETION/REGENERATION",Sexe=="M")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="D - REGRETION/REGENERATION", Sexe=="M")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+```
+
+### E - PONTE OMISE
+
+```{r MphaseE text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase E
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="E - OMITTED SPAWNING",Sexe=="M")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="E - OMITTED SPAWNING", Sexe=="M")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+```
+
+### F - ANORMAL
+
+```{r MphaseF text,echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#Ce chunk est destiné à la phase F
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="F - ABNORMAL",Sexe=="M")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab)#Amélioration du tableau (facultatif)
+
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Noter ici le nom scientifique de l'espèce",Phase=="F - ABNORMAL", Sexe=="M")
+
+#Extraction des photos correspondant aux types de photos choisies
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+knitr::include_graphics(ASBType$`Link`,)
+
+```
+
+
+###### Références/Photos  
+ICES (**WKASMSF** 2018 & **WKMATCH** 2012)  
+IFREMER (CGFS, EVHOE, IBTS)  
+
+
+
+
+
+
+
+
+
+

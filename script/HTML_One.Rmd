@@ -1,0 +1,344 @@
+---
+title: ' '
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<html>
+<head>
+    <style>
+  body {
+        height: 842px;
+        width: 595px;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        font-family: sans-serif;
+    }
+    </style>
+  
+
+<title>Page Title</title>
+
+</head>
+
+
+<body>
+
+
+   
+
+<h1 style="color:white;font-size:25px;background-color:#4775D1;font-weight:700;">MATURITE</h1>
+<h2 style="font-size:25px;background-color:#E6E6FF;"><bold>Noter ici nom commun de l'espèce<br><i>Noter ici nom scientifique de l'espèce</i> (Noter ici code ID Tutti)</bold></h2>
+
+
+```{r test, echo=F, resultas='asis', warning=F, message=F}
+
+library(dplyr, warn.conflicts = FALSE)
+library(readxl, warn.conflicts = FALSE)
+library(knitr, warn.conflicts = FALSE)
+library(pander, warn.conflicts = FALSE)
+library(kableExtra, warn.conflicts = FALSE)
+library(magick, warn.conflicts = FALSE)
+library(jpeg, warn.conflicts = FALSE)
+library(png, warn.conflicts = FALSE)
+library(imager, warn.conflicts = FALSE)
+library(cowplot)
+library(ggplot2)
+
+#Import des jeux de données
+Dataphoto <- read_excel("../data/photo_mat.xlsx",sheet=2)
+#Dataphoto = jeu de données avec les photos
+
+Datascale <- read_excel("../data/matu_scale.xlsx",sheet=2)
+#Datascale = jeu de données avec les phases de maturité
+
+Datataille <- read_excel("../data/matu_scale.xlsx",sheet=4)
+#Datataille = jeu de données avec les tailles de 1ère maturité
+
+```
+
+
+
+```{r tabTaille, echo=F, resultas='asis', warning=F, message=F}
+
+#Création d'un tableau avec la photo du poisson, son sexe et sa taille de 1ère maturité
+
+#Objet TAILLE avec la taille de 1ère maturité
+TAILLE<-Datataille %>% filter(Species=="Flat fish sp.",Sexe=="F")
+TAILLE <- TAILLE$Fishbase
+
+#Objet PHOTO avec la photo du poisson
+PHOTO<-Datataille %>% filter(Species=="Flat fish sp.",Sexe=="F")
+PHOTO <- PHOTO$Photo
+
+#Création du tableau
+tbl_img <-data.frame(Espèce = "", Sexe = "", name = TAILLE)
+colnames(tbl_img)<-c("Photo","Sexe","Taille de 1ère maturité")
+
+kbl(tbl_img, booktabs =T,align="c", valign = "c")%>%column_spec(2,image ="../data/Fsign.png")%>% kable_styling(full_width = F, position = "left")%>%column_spec(3,bold=T)%>%column_spec(1,image =PHOTO, width="3cm")
+```
+
+
+
+<hr style="color:#4775D1;height:5px;background-color:#4775D1;"></hr>
+
+<h3 style="color:red;font-size:20px;font-weight:1000;">A - IMMATURE</h3>
+
+
+```{r tabTailleA, echo=F, resultas='asis', warning=F, message=F,fig.align='center',fig.show = "hold",fig.width=6,fig.height=2}
+
+#Affichage des phases de maturité : VERSION 1
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Flat fish sp.",Phase=="A - IMMATURE",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab, format = 'html',align = 'c', position='center', longtable=T)%>% kable_styling(position="center")
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Flat fish sp.",Phase=="A - IMMATURE", Sexe=="F")
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+p1 <- ggdraw() + draw_image(ASBType[1], scale = 0.9)
+p2 <- ggdraw() + draw_image(ASBType[2], scale = 0.9)
+plot_grid(p1, p2)
+
+
+
+#Autres possibilitées d'afficher les photos que je garde de côté pour l'instant
+
+#knitr::kable( tab1,valign = 't', format= 'html') %>% kable_styling(position="left",latex_options =c( "hold_position","scale_down", full_width = F)) %>% column_spec(2,image = c(ASBType)) %>% column_spec(1, width="8cm") %>% column_spec(2, width="3cm")
+
+#knitr::include_graphics(ASBType)
+
+```
+
+
+<hr style="color:#4775D1;height:5px;background-color:#4775D1;"></hr>
+
+<h3 style="color:red;font-size:20px;font-weight:1000;"><bold>B - DEVELOPPING</bold></h3>
+
+
+```{r tabTailleB, echo=F, resultas='asis', warning=F, message=F}
+
+#Affichage des phases de maturité : VERSION 2 (plus compliqué que la version 1 car il ne faut plus que 2 lignes de commentaires, pas plus et pas moins)
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Flat fish sp.",Phase=="B - DEVELOPING",Sexe=="F")
+textASB <- textASB$Text
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Flat fish sp.",Phase=="B - DEVELOPING", Sexe=="F")
+ASBType<-ASB %>% filter(Fiches == "oui")
+ASBType<-ASBType$Link
+
+
+#Création d'un tableau regroupant les commentaires et les photos
+tab1 <- data.frame(x = textASB,pho ="")
+colnames(tab1) <- c(" "," ")
+
+knitr::kable( tab1,valign = 't', format= 'html') %>% kable_styling(position="left",latex_options =c( "hold_position","scale_down", full_width = F)) %>% column_spec(2,image = c(ASBType)) %>% column_spec(1, width="8cm") %>% column_spec(2, width="3cm")
+
+
+```
+
+
+<hr style="color:#4775D1;height:5px;background-color:#4775D1;"></hr>
+
+<h3 style="color:red;font-size:20px;font-weight:1000;"><bold>C - SPAWNING</bold></h3>
+
+```{r tabTailleC, echo=F, resultas='asis', warning=F, message=F ,fig.align='center',fig.show = "hold",fig.width=6,fig.height=2}
+
+#Affichage des phases de maturité : VERSION 1
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Flat fish sp.",Phase=="C - SPAWNING",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab, format = 'html',align = 'c', position='center', longtable=T)%>% kable_styling(position="center")
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Flat fish sp.",Phase=="C - SPAWNING", Sexe=="F")
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+p1 <- ggdraw() + draw_image(ASBType[1], scale = 0.9)
+p2 <- ggdraw() + draw_image(ASBType[2], scale = 0.9)
+plot_grid(p1, p2)
+
+```
+
+
+
+
+<h4 style="font-size:15px;color:#4775D1;">Références/Photos</h4>
+<hr style="color:#4775D1;border-bottom: 1px dashed #4775D1;"></hr>
+<p>ICES (<bold>WKASMSF</bold>2018 & <bold>WKMATCH</bold> 2012)<br> IFREMER (CGFS, EVHOE, IBTS) </br></p>
+
+
+
+
+<hr style="color:#4775D1;height:5px;background-color:#4775D1;"></hr>
+
+<h3 style="color:red;font-size:20px;font-weight:1000;"><bold>D - REGRETION/REGENERATION</bold></h3>
+
+```{r tabTailleD, echo=F, resultas='asis', warning=F, message=F,fig.align='center',fig.show = "hold",fig.width=6,fig.height=2}
+#Affichage des phases de maturité : VERSION 1
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Flat fish sp.",Phase=="D - REGRETION/REGENERATION",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab, format = 'html',align = 'c', position='center', longtable=T)%>% kable_styling(position="center")
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Flat fish sp.",Phase=="D - REGRETION/REGENERATION", Sexe=="F")
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+p1 <- ggdraw() + draw_image(ASBType[1], scale = 0.9)
+p2 <- ggdraw() + draw_image(ASBType[2], scale = 0.9)
+plot_grid(p1, p2)
+
+```
+
+
+<hr style="color:#4775D1;height:5px;background-color:#4775D1;"></hr>
+
+<h3 style="color:red;font-size:20px;font-weight:1000;"><bold>E - OMITTED SPAWNING</bold></h3>
+
+```{r tabTailleE, echo=F, resultas='asis', warning=F, message=F ,fig.align='center',fig.show = "hold",fig.width=6,fig.height=2}
+#Affichage des phases de maturité : VERSION 1
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Flat fish sp.",Phase=="E - OMITTED SPAWNING",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab, format = 'html',align = 'c', position='center', longtable=T)%>% kable_styling(position="center")
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Flat fish sp.",Phase=="E - OMITTED SPAWNING", Sexe=="F")
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+p1 <- ggdraw() + draw_image(ASBType[1], scale = 0.9)
+#p2 <- ggdraw() + draw_image(ASBType[2], scale = 0.9)
+plot_grid(p1)
+
+```
+
+
+
+<hr style="color:#4775D1;height:5px;background-color:#4775D1;"></hr>
+
+<h3 style="color:red;font-size:20px;font-weight:1000;"><bold>F - ABNORMAL</bold></h3>
+
+```{r tabTailleF, echo=F, resultas='asis', warning=F, message=F,fig.align='center',fig.show = "hold",fig.width=6,fig.height=2}
+#Affichage des phases de maturité : VERSION 1
+
+#Extraction des commentaires liées a la phase
+textASB<-Datascale %>% filter(Species=="Flat fish sp.",Phase=="F - ABNORMAL",Sexe=="F")
+textASB <- textASB$Text
+
+#Création d'un tableau regroupant les commentaires
+tab <- data.frame(x = textASB)
+colnames(tab) <- c(" ")
+kable(tab, format = 'html',align = 'c', position='center', longtable=T)%>% kable_styling(position="center")
+
+
+#Partie de sélection des photos
+
+#Extraction des photos correspondant a la phase
+ASB<-Dataphoto %>% filter(Species=="Flat fish sp.",Phase=="F - ABNORMAL", Sexe=="F")
+ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+
+#Insertion des photos
+p1 <- ggdraw() + draw_image(ASBType[1], scale = 0.9)
+p2 <- ggdraw() + draw_image(ASBType[2], scale = 0.9)
+plot_grid(p1, p2)
+
+```
+
+
+
+<h4 style="font-size:15px;color:#4775D1;">Références/Photos</h4>
+<hr style="color:#4775D1;border-bottom: 1px dashed #4775D1;"></hr>
+<p>ICES (<bold>WKASMSF</bold>2018 & <bold>WKMATCH</bold> 2012)<br> IFREMER (CGFS, EVHOE, IBTS) </br></p>
+
+
+
+
+</body>
+</html> 

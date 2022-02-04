@@ -1,0 +1,150 @@
+---
+title: ''
+author: ''
+date: ''
+output:
+  word_document:
+    number_sections: no
+    reference_docx: ../output/Template_matu.docx
+    df_print: paged
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+  
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr, warn.conflicts = FALSE)
+library(readxl, warn.conflicts = FALSE)
+library(knitr, warn.conflicts = FALSE)
+library(magick, warn.conflicts = FALSE)
+library(jpeg, warn.conflicts = FALSE)
+library(png, warn.conflicts = FALSE)
+library(imager, warn.conflicts = FALSE)
+
+Dataphoto <- read_excel("../data/photo_mat.xlsx",sheet=1)
+Datascale <- read_excel("../data/matu_scale.xlsx",sheet=1)
+Logo <- read_excel("../data/matu_scale.xlsx",sheet=3)
+Datataille <- read_excel("../data/matu_scale.xlsx",sheet=4)
+
+
+```
+
+
+```{r longueur, echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+#PH <- c("A - IMMATURE", "B - EN DEVELOPPEMENT", "C - EN PONTE", "D - REGRETION/REGENERATION", "E -  OMISSION DE PONTE", "F - ANORMAL")
+PH <- c("A - IMMATURE", "B - EN DEVELOPPEMENT")
+
+ species2 = c("Dicentrachus labrax","Engraulis encrasilocus","Mullus surmuletus", "Solea solea", "Sprattus sprattus", "Sardina pilchardus", "Gadidae sp.", "Flat fish sp.", "Chelidonichthys cuculus", "Lophius sp.", "Scomber scombrus","Trachurus trachurus","Zeus faber","Clupea clupea","Merluccius merluccius")
+  name2 = c("Sea bass","Anchovy","Red mullet", "Sole", "Sprat", "Sardine", "Gadidae", "Flat fish", "Red gurnard", "Monkfish", "Mackerel","Scad","Peter's fish","Harrengus","Hake")
+ code2 = c("Dicentrachus labrax (DICE LAB)","Engraulis encrasilocus (ENGR ENCR)","Mullus surmuletus (MUL SUR)", "Solea solea (SOL SOL)", "Sprattus sprattus (SPR SPR)", "Sardina pilchardus (SARD PIL)", "Gadidae sp. (GAD)", "Flat fish sp. (FLAT)", "Chelidonichthys cuculus (ASPI CUC)", "Lophius sp. (LOPH)", "Scomber scombrus (SCOM SCO)","Trachurus trachurus (TRAC TRU)","Zeus faber (ZEUS FAB)","Clupea clupea (CLUP CLU)","Merluccius merluccius (MERL MCC)")
+
+
+
+```
+
+
+
+
+```{r tableau, echo= FALSE, out.width = '250px', results='asis', warning=FALSE}
+
+df <- data.frame(
+  species = c("Dicentrarchus labrax"),
+  name = c("Sea bass"),
+ code = c("Dicentrachus labrax (DICE LAB)")
+)
+df
+
+```
+
+
+
+
+```{r boucle, echo=FALSE, results="asis", out.width='250px'}
+
+
+
+for(j in 1:nrow(df)){
+ pander::pandoc.header("MATURITE",level=1)
+  pander::pandoc.header(df$name[j],level=2)
+ pander::pandoc.header(df$code[j],level=2)
+ grid::grid.newpage()
+ grid::grid.raster(readPNG('../data/Flogo.png'),x = 0.5, y = 0.5, just = "center")
+ cat(' \n')
+ PHOTO<-Datataille %>% filter(Species==df$species[j],Sexe=="F")
+PHOTO <- PHOTO$Photo
+grid::grid.raster(readJPEG(PHOTO))
+ cat(' \n')
+ Ftaille <- Datataille %>% filter(Species==df$species[j],Sexe=="F")
+ pander::pandoc.header(Ftaille$Title[j],level=4)
+ pander::pandoc.header(Ftaille$Fishbase[j],level=5)
+ cat(' \n')  
+  for(b in 1:length(PH)){
+  pander::pandoc.header(PH[b],level=3)
+  textASB<-Datascale %>% filter(Species==df$species[j],Phase==PH[b],Sexe=="F")
+  textASB <- textASB$Text
+  tab <- data.frame(x = textASB)
+  colnames(tab) <- c(" ")
+  kable(tab)
+  print(kable(tab))
+  ASB<-Dataphoto %>% filter(Species==df$species[j],Phase==PH[b], Sexe=="F")
+  ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+  for(i in 1:length(ASB)){
+  grid::grid.newpage()
+  grid::grid.raster(readJPEG(ASB[i]))
+  cat(' \n')  
+  } 
+  }
+  cat("\n\n\\newpage\n")
+  cat(' \n')
+  pander::pandoc.header("MATURITE",level=1)
+  pander::pandoc.header(df$name[j],level=2)
+ pander::pandoc.header(df$code[j],level=2)
+ grid::grid.newpage()
+ grid::grid.raster(readPNG('../data/Mlogo.png'),x = 0.5, y = 0.5, just = "center")
+ cat(' \n')
+ PHOTO<-Datataille %>% filter(Species==df$species[j],Sexe=="M")
+PHOTO <- PHOTO$Photo
+grid::grid.raster(readJPEG(PHOTO))
+ cat(' \n')
+ Mtaille <- Datataille %>% filter(Species==df$species[j],Sexe=="M")
+ pander::pandoc.header(Mtaille$Title[j],level=4)
+ pander::pandoc.header(Mtaille$Fishbase[j],level=5)
+ cat(' \n')  
+  for(b in 1:length(PH)){
+  pander::pandoc.header(PH[b],level=3)
+  textASB<-Datascale %>% filter(Species==df$species[j],Phase==PH[b],Sexe=="M")
+  textASB <- textASB$Text
+  tab <- data.frame(x = textASB)
+  colnames(tab) <- c(" ")
+  kable(tab)
+  print(kable(tab))
+   ASB<-Dataphoto %>% filter(Species==df$species[j],Phase==PH[b], Sexe=="M")
+  ASBType <- filter(ASB,Fiches=='oui'| Fiches=='na')
+permutation <- order(ASBType$Fiches, decreasing = TRUE)
+ASBType <- head(ASBType[permutation,])
+if(ASBType$Fiches=='oui') {
+ ASBType <- filter(ASBType, Fiches != "na") 
+}
+ASBType<-ASBType$Link
+  for(i in 1:length(ASB)){
+  grid::grid.newpage()
+  grid::grid.raster(readJPEG(ASB[i]),interpolate=FALSE)
+  cat(' \n')  
+  } 
+  }
+cat("\n\n\\newpage\n")
+}
+
+```
+
