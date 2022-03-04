@@ -1,0 +1,320 @@
+---
+title: ' '
+geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
+number_sections : no
+pagestyle: "empty"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+#knit option
+knitr::opts_chunk$set(echo = TRUE,fig.pos = 'h',dpi=32)
+#packages
+library(dplyr, warn.conflicts = FALSE)  # because tidyverse
+library(readxl, warn.conflicts = FALSE) # to read excel file
+library(knitr, warn.conflicts = FALSE)  # to elaborate html/pdf
+library(flextable)
+library(magick, warn.conflicts = FALSE)
+library(tidyr)
+library(gridExtra)
+#library(pander, warn.conflicts = FALSE)
+#library(kableExtra, warn.conflicts = FALSE)
+#library(jpeg, warn.conflicts = FALSE)
+#library(png, warn.conflicts = FALSE)
+#library(imager, warn.conflicts = FALSE)
+#library(cowplot)
+#library(ggplot2)
+#a short function to get image ratio
+fratimg<-function(pathimg){
+	imgdim<-image_info(image_read(pathimg))
+	imgratio<- imgdim$height/imgdim$width
+	return(imgratio)
+}
+
+```
+
+
+```{r localparam, include=FALSE}
+#local parameters
+#define variables (spp)
+#onespp<-"Engraulis encrasicolus"
+spplat<-"Flat fish sp."
+sppfr<-"Poissons plats"
+sppeng<-"Flat fish"
+sex<-"M" #or "M"
+#define local path
+path2localfile<-"../data/"
+#define image database path (aka the Photo_MATURITE directory)
+#here Laurent computer
+path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
+#example for Anna computer
+#path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
+#"/home/moi2/ifremer/data/Photo_MATURITE"
+#define path to NA photo
+imgNA<-paste0(path2localfile,'NA.jpg')
+#NA photo dim and ratio
+imgNAratio<- fratimg(imgNA)
+
+#define local images
+#spp
+imgspp<-paste0(path2localfile,"Image poisson/",sppfr,".jpg")
+#spp img ratio
+imgsppratio<- fratimg(imgspp)
+#sex symbol
+if(sex=="F"){
+	imgsex<-paste0(path2localfile,"Female sign.png")
+}
+if(sex=="M"){
+	imgsex<-paste0(path2localfile,"Male sign.png")
+}
+#sex img ratio
+imgsexratio<- fratimg(imgsex)
+
+```
+
+```{r testpara, echo=F, resultas='asis', warning=F, message=F,eval=T}
+
+library(officer)
+big_border = fp_border(color="#4775D1", width = 8)
+small_border = fp_border(color="gray", width = 1)
+border1 = fp_border(color="black", width = 2)
+
+```
+
+
+```{r referencetable, include=FALSE}
+#load reference data
+Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=2)
+Datascale <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=1)
+Datataille <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=3)
+#build link for maturity phase photo data using the imgpath
+#hack to keep NA info
+l1<-sapply(strsplit(Dataphoto$Link,split="Photo_MATURITE\\\\"),"[[",1)
+l1NA<-which(grepl("NA.JPG",l1))
+l1noNA<-which(!grepl("NA.JPG",l1))
+l2<-sapply(strsplit(Dataphoto$Link[l1noNA],split="Photo_MATURITE"),"[[",2)
+if(.Platform$OS.type=="unix"){
+	#pipo<-paste0(path2imgdb, gsub("\\\\","/",l2[272]) )
+	#plot(image_read(l1[392]))
+	l1[l1noNA]<-paste0(path2imgdb, gsub("\\\\","/",l2) )
+	l1[l1NA]<-paste0(path2localfile,"NA.jpg")
+	Dataphoto$Link<-l1
+}else{
+	#to be setup for other computers (Anna first)
+	#pipo<-paste0(path2imgdb, l2[272] )
+}
+```
+
+
+```{r testtable , echo=F, warning=F, message=F,fig.height=0.7,fig.width=14,out.width='560px'}
+
+titre1 <- "MATURITÉ ÉCHELLE VISUELLE"
+
+TITRE1<- data.frame(titre=titre1)
+
+TT1<-TITRE1%>%flextable()%>%
+		delete_part(part="header")%>%
+		#set_table_properties(layout="autofit",width=1)%>%
+    fontsize(size = 20, part = "body")%>%
+	  align( align = "center", part = "all")%>%
+	  color(color="white",part="body")%>%
+	  #bold(part="body")%>%
+	  valign(valign = "center", part="body")%>%
+    width(j="titre",width=40)%>%
+    border_remove()%>%
+    bg(i = 1, bg = "#4775D1", part = "body")
+
+plot(TT1)
+
+```
+
+```{r testtable2 , echo=F, warning=F, message=F,fig.height=0.8,fig.width=14,out.width='560px'}
+
+mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / ")) %>% 
+  separate(`Espèce`, c("french_name", "latin_name"), sep = "\\ / ") %>% 
+  mutate(latin_name = paste0(" / ", latin_name) )
+
+TT2 <- flextable(mydata, col_keys = "dummy") %>%
+  compose(j = "dummy", value =as_paragraph(french_name, as_i(latin_name)))%>%
+  delete_part(part="header")%>%
+	set_table_properties(layout="autofit",width=1)%>%
+  fontsize(size = 25, part = "body")%>%
+	align( align = "left", part = "all")%>%
+	color(color="black",part="body")%>%
+	bold(part="body")%>%
+	valign(valign = "center", part="body")%>%
+  border_remove()%>%
+  bg(i = 1, bg = "#E6E6FF", part = "body")
+
+plot(TT2,dpi=32)
+
+
+```
+
+
+
+
+```{r test4 , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='475px'}
+
+TAILLE<-Datataille %>% filter(Species==spplat,Sexe==sex)
+TAILLE <- TAILLE %>%select(1,4)
+TAILLE <- TAILLE %>% drop_na("Fishbase")
+
+tbl_img<-data.frame(Species2=rep(imgspp,length(TAILLE$SubSpecies)),Sex=rep(imgsex,length(TAILLE$SubSpecies)),Species=TAILLE$SubSpecies,FMS=TAILLE$Fishbase)
+
+tbl_img1<-tbl_img%>%flextable()%>%
+  merge_v(j=~Species2+Sex)%>%
+	colformat_image(j="Species2",width=1,height=1*imgsppratio)%>%
+	colformat_image(j="Sex",width=0.2,height=0.2*imgsexratio)%>%
+	align(j=c("Species","Sex","FMS","Species2"), align = "center", part = "all")%>%
+  bold(part = "header")%>%
+  fontsize(size = 8, part = "all")%>%
+  width(j = "Species", width = 1.5)%>%
+  width(j = "FMS", width = 1.3)%>%
+  border_remove()%>%
+  hline_top(part="header", border = border1 )%>%
+  hline_bottom(part="header", border = border1 )%>%
+  set_header_labels(Species2="Photo",FMS="Taille de 1ère maturité",Sex="Sexe",Species="Espèces")
+
+plot(tbl_img1)
+
+
+```
+
+
+
+```{r aphase, echo=F, resultas='asis', warning=F, message=F,eval=T, dpi=32}
+# Generic check for a phase
+#test flextable for maturity phase
+#phase<-"A - IMMATURE"
+#phase<-"B - DEVELOPING"
+#parameters: 
+#text maturity
+
+fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
+	  textASB<-Datascale %>% 
+		filter(Species==spplat,Phase==phase,Sexe==sex)%>%
+		pull(Text)
+	#picture maturity
+	ASB<-Dataphoto %>% 
+		filter(Species==spplat,Sexe==sex,Phase==phase)%>%
+		filter(Fiches=='oui'| Fiches=='na')
+	#if oui then keep only "oui" Fiches and remove NA
+	if(any(ASB$Fiches%in%"oui")){
+		ASB<-ASB%>% filter(Fiches!="na")
+	}
+	#links to the two pictures
+	imgmat1<-ASB$Link[1]
+	imgmat2<-ASB$Link[2]
+	#if no image -> NA img
+	if(nchar(imgmat1)==0|is.na(imgmat1)){imgmat1<-imgNA}
+	if(nchar(imgmat2)==0|is.na(imgmat2)){imgmat2<-imgNA}
+	#get ratio imgdim and ratio img
+	imgmat1ratio<- fratimg(imgmat1)
+	imgmat2ratio<- fratimg(imgmat2)
+	#mat tab
+	tbl_img<-data.frame(Description=textASB,
+			    Img1=rep(imgmat1,length(textASB)),
+			    Img2=rep(imgmat2,length(textASB)))
+	tbl_img<-tbl_img%>%flextable()%>%
+		merge_v(j=~Img1+Img2)%>%
+		colformat_image(j="Img1",width=3.5,height=3.5*imgmat1ratio)%>%
+		colformat_image(j="Img2",width=3.5,height=3.5*imgmat2ratio)%>%
+		delete_part(part="header")%>%
+		add_header_row(value=phase,colwidths=3)%>%
+		set_table_properties(layout="autofit",width=1)%>%
+    fontsize(size = 15, part = "body")%>%
+	  align(j = c("Img1","Img2"), align = "center", part = "all")%>%
+    fontsize(size = 28, part = "header")%>%
+	  color(color="red",part="header")%>%
+	  bold(part="header")%>%
+	  border_remove()%>%
+	  hline_top(border = big_border, part = "header")%>%
+	  valign(j="Description",valign = "center", part="body")
+	return(tbl_img)
+}
+
+#tbl_img<-fctphase(Datascale,Dataphoto,spplat,phase="B - DEVELOPING",sex,imgNA)
+#plot(tbl_img)
+```
+
+```{r phaseA, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="A - IMMATURE",sex,imgNA)
+plot(tbl_img)
+```
+
+```{r phaseB, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="B - EN DÉVELOPPEMENT",sex,imgNA)
+plot(tbl_img)
+```
+
+```{r phaseC, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="C - EN PONTE",sex,imgNA)
+plot(tbl_img)
+```
+
+**Références/Photos** : CIEM (WKASMSF 2018 & WKMATCH 2012), IFREMER
+
+
+\newpage
+
+```{r testtable3 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='400px'}
+
+titre3 <- " "
+
+TITRE3<- data.frame(titre=titre3)
+
+TT3<-TITRE3%>%flextable()%>%
+		delete_part(part="header")%>%
+		set_table_properties(layout="autofit",width=1)%>%
+    fontsize(size = 30, part = "body")%>%
+	  align( align = "left", part = "all")%>%
+	  color(color="white",part="body")%>%
+	  bold(part="body")%>%
+	  valign(valign = "center", part="body")%>%
+    border_remove()%>%
+    bg(i = 1, bg = "white", part = "body")
+
+plot(TT3)
+
+
+```
+
+
+```{r phaseD, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="D - RÉGRESSION/RÉGÉNÉRATION",sex,imgNA)
+plot(tbl_img)
+```
+
+```{r testtable4 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='200px'}
+
+plot(TT3)
+
+```
+
+
+```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="E - OMISSION DE PONTE",sex,imgNA)
+plot(tbl_img)
+```
+
+```{r testtable5 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='200px'}
+
+plot(TT3)
+
+```
+
+
+```{r phaseF, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="F - ANORMAL",sex,imgNA)
+plot(tbl_img)
+```
+
+\vspace*{\fill}
+
+**Références/Photos** : CIEM (WKASMSF 2018 & WKMATCH 2012), IFREMER 
+
+
