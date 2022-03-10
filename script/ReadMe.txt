@@ -1,9 +1,9 @@
 Description des scripts :
 
-All_Fiches : fiches en boucles avec toutes les espèces
-ENG_All_Fiches : Idem en anglais
+ScaleENG : automatic scale script in English
 
-One_Fiches : fiches pour 1 espèces en sortie .doc
-ENG_One_Fiches : Idem en anglais
+ScaleFR : automatic scale script in French
 
-MaturityFR/MaturityENG : Fiches complètes en sortie html.
+LoopENG : script that reads ScaleENG for every species
+
+LoppFR : script that reads ScaleFR for every species

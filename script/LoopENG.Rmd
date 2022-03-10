@@ -1,0 +1,33 @@
+---
+title: "Loop"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r para, warning=FALSE, echo=FALSE, message=FALSE, autodep=TRUE}
+
+library(readxl)
+library(tidyverse)
+library(rmarkdown)
+
+path2localfile<-"../data/"
+species = read_excel(paste0(path2localfile,"dataLOOP.xlsx"))
+
+     
+     for (i in 1:nrow(species)) {
+  render("ScaleENG.rmd", 
+         params=list(spplat=species$spplat[i], sppeng=species$sppeng[i], sex=species$sex[i], sppfr=species$sppfr[i]),
+         output_file=paste0("Scale_", species$spplat[i],"_", species$sex[i], ".html"))
+}
+     
+     
+```
+
+
+

@@ -59,7 +59,7 @@ path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURIT
 #path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
 #"/home/moi2/ifremer/data/Photo_MATURITE"
 #define path to NA photo
-imgNA<-paste0(path2localfile,'NA.jpg')
+imgNA<-paste0(path2localfile,'NAEng.jpg')
 #NA photo dim and ratio
 imgNAratio<- fratimg(imgNA)
 
@@ -85,27 +85,26 @@ imgsexratio<- fratimg(imgsex)
 library(officer)
 big_border = fp_border(color="#4775D1", width = 8)
 small_border = fp_border(color="gray", width = 1)
-border1 = fp_border(color="black", width = 2)
 
 ```
 
 
 ```{r referencetable, include=FALSE}
 #load reference data
-Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=2)
-Datascale <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=1)
+Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=3)
+Datascale <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=2)
 Datataille <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=3)
 #build link for maturity phase photo data using the imgpath
 #hack to keep NA info
 l1<-sapply(strsplit(Dataphoto$Link,split="Photo_MATURITE\\\\"),"[[",1)
-l1NA<-which(grepl("NA.JPG",l1))
-l1noNA<-which(!grepl("NA.JPG",l1))
+l1NA<-which(grepl("NAEng.JPG",l1))
+l1noNA<-which(!grepl("NAEng.JPG",l1))
 l2<-sapply(strsplit(Dataphoto$Link[l1noNA],split="Photo_MATURITE"),"[[",2)
 if(.Platform$OS.type=="unix"){
 	#pipo<-paste0(path2imgdb, gsub("\\\\","/",l2[272]) )
 	#plot(image_read(l1[392]))
 	l1[l1noNA]<-paste0(path2imgdb, gsub("\\\\","/",l2) )
-	l1[l1NA]<-paste0(path2localfile,"NA.jpg")
+	l1[l1NA]<-paste0(path2localfile,"NAEng.jpg")
 	Dataphoto$Link<-l1
 }else{
 	#to be setup for other computers (Anna first)
@@ -116,7 +115,7 @@ if(.Platform$OS.type=="unix"){
 
 ```{r testtable , echo=F, warning=F, message=F,fig.height=0.7,fig.width=14,out.width='560px'}
 
-titre1 <- "MATURITÉ ÉCHELLE VISUELLE"
+titre1 <- "VISUAL MATURITY SCALE"
 
 TITRE1<- data.frame(titre=titre1)
 
@@ -138,7 +137,7 @@ plot(TT1)
 
 ```{r testtable2 , echo=F, warning=F, message=F,fig.height=0.8,fig.width=14,out.width='560px'}
 
-mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / ")) %>% 
+mydata <- data.frame(Espèce =  paste(sppeng,spplat,sep=" / ")) %>% 
   separate(`Espèce`, c("french_name", "latin_name"), sep = "\\ / ") %>% 
   mutate(latin_name = paste0(" / ", latin_name) )
 
@@ -178,11 +177,8 @@ tbl_img1<-tbl_img%>%flextable()%>%
   bold(part = "header")%>%
   fontsize(size = 8, part = "all")%>%
   width(j = "Species", width = 1.5)%>%
-  width(j = "FMS", width = 1.3)%>%
-  border_remove()%>%
-  hline_top(part="header", border = border1 )%>%
-  hline_bottom(part="header", border = border1 )%>%
-  set_header_labels(Species2="Photo",FMS="Taille de 1ère maturité",Sex="Sexe",Species="Espèces")
+  width(j = "FMS", width = 1.2)%>%
+  set_header_labels(Species2="Picture",FMS="First maturity size")
 
 plot(tbl_img1)
 
@@ -252,16 +248,16 @@ plot(tbl_img)
 ```
 
 ```{r phaseB, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
-tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="B - EN DÉVELOPPEMENT",sex,imgNA)
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="B - DEVELOPING",sex,imgNA)
 plot(tbl_img)
 ```
 
 ```{r phaseC, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
-tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="C - EN PONTE",sex,imgNA)
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="C - SPAWNING",sex,imgNA)
 plot(tbl_img)
 ```
 
-**Références/Photos** : CIEM (WKASMSF 2018 & WKMATCH 2012), IFREMER
+**Références/Photos** : ICES (WKASMSF 2018 & WKMATCH 2012), IFREMER
 
 
 \newpage
@@ -290,7 +286,7 @@ plot(TT3)
 
 
 ```{r phaseD, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
-tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="D - RÉGRESSION/RÉGÉNÉRATION",sex,imgNA)
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="D - REGRESSION/REGENERATION",sex,imgNA)
 plot(tbl_img)
 ```
 
@@ -302,7 +298,7 @@ plot(TT3)
 
 
 ```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
-tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="E - OMISSION DE PONTE",sex,imgNA)
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="E - OMITTED SPAWNING",sex,imgNA)
 plot(tbl_img)
 ```
 
@@ -314,12 +310,13 @@ plot(TT3)
 
 
 ```{r phaseF, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
-tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="F - ANORMAL",sex,imgNA)
+tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="F - ABNORMAL",sex,imgNA)
 plot(tbl_img)
 ```
 
 \vspace*{\fill}
 
-**Références/Photos** : CIEM (WKASMSF 2018 & WKMATCH 2012), IFREMER 
+**Références/Photos** : ICES (WKASMSF 2018 & WKMATCH 2012), IFREMER 
+
 
 

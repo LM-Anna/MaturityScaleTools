@@ -7,6 +7,11 @@ output:
   html_document: default
   word_document: default
   pdf_document: default
+params:
+  spplat : "Flat fish sp."
+  sppeng : "Flat fish"
+  sppfr : "Poissons plats"
+  sex : "F"
 ---
 
 ```{r setup, include=FALSE}
@@ -41,10 +46,10 @@ fratimg<-function(pathimg){
 #local parameters
 #define variables (spp)
 #onespp<-"Engraulis encrasicolus"
-spplat<-"Flat fish sp."
-sppfr<-"Poissons plats"
-sppeng<-"Flat fish"
-sex<-"M" #or "M"
+spplat<-params$spplat
+sppfr<-params$sppfr
+sppeng<-params$sppeng
+sex<-params$sex #or "M"
 #define local path
 path2localfile<-"../data/"
 #define image database path (aka the Photo_MATURITE directory)
