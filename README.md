@@ -19,6 +19,6 @@ You can also find all of the HTML scales for every species in output.
 
 Mullus surmuletus : 
 
-[Female](.\gh-pages\Scale_Mullus surmuletus_F.html)
+[Female](.\output\Scale_Mullus surmuletus_F.html)
 
-[Male](.\gh-pages\Scale_Mullus surmuletus_M.html)
+[Male](.\output\Scale_Mullus surmuletus_M.html)
