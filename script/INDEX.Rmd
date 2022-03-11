@@ -4,11 +4,11 @@ output: html_document
 ---
 
 
-
+https://github.com/LM-Anna/MaturityScaleTools/tree/main/gh-pages/Scale_Chelidonichthys cuculus_F.html
 
 *Chelidonichthys cuculus*
 
-[Female](https://github.com/LM-Anna/MaturityScaleTools/tree/main/gh-pages/Scale_Chelidonichthys cuculus_F.html) / [Male](.\output\Scale_Chelidonichthys cuculus_M.html)
+[Female](.\HTML\Scale_Chelidonichthys cuculus_F.html) / [Male](.\output\Scale_Chelidonichthys cuculus_M.html)
 
 *Clupea clupea*
 
