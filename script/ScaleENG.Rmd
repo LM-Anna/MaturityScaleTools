@@ -4,9 +4,9 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 params:
   spplat : "Flat fish sp."
   sppeng : "Flat fish"
@@ -57,7 +57,9 @@ path2localfile<-"../data/"
 path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
 #example for Anna computer
 #path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
-#"/home/moi2/ifremer/data/Photo_MATURITE"
+if(.Platform$OS.type=="unix"){
+path2imgdb<-"/home/moi2/ifremer/data/Photo_MATURITE"
+}
 #define path to NA photo
 imgNA<-paste0(path2localfile,'NAEng.jpg')
 #NA photo dim and ratio
@@ -261,7 +263,6 @@ tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="C - SPAWNING",sex,imgNA)
 plot(tbl_img)
 ```
 
-**Références/Photos** : ICES (WKASMSF 2018 & WKMATCH 2012), IFREMER
 
 
 \newpage
@@ -320,7 +321,9 @@ plot(tbl_img)
 
 \vspace*{\fill}
 
-**Références/Photos** : ICES (WKASMSF 2018 & WKMATCH 2012), IFREMER 
+**Références/Photos** :   
+ICES (WKASMSF 2018 & WKMATCH 2012),   
+IFREMER 
 
 
 

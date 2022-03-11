@@ -261,7 +261,6 @@ tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="C - EN PONTE",sex,imgNA)
 plot(tbl_img)
 ```
 
-**Références/Photos** : CIEM (WKASMSF 2018 & WKMATCH 2012), IFREMER
 
 
 \newpage
@@ -320,6 +319,8 @@ plot(tbl_img)
 
 \vspace*{\fill}
 
-**Références/Photos** : CIEM (WKASMSF 2018 & WKMATCH 2012), IFREMER 
+**Références/Photos** :   
+CIEM (WKASMSF 2018 & WKMATCH 2012),   
+IFREMER 
 
 
