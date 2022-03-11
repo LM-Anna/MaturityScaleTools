@@ -8,7 +8,7 @@ https://github.com/LM-Anna/MaturityScaleTools/tree/main/gh-pages/Scale_Chelidoni
 
 *Chelidonichthys cuculus*
 
-[Female](.\HTML\Scale_Chelidonichthys cuculus_F.html) / [Male](.\output\Scale_Chelidonichthys cuculus_M.html)
+[Female](Scale_Chelidonichthys cuculus_F.html) / [Male](.\output\Scale_Chelidonichthys cuculus_M.html)
 
 *Clupea clupea*
 
