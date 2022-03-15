@@ -82,5 +82,17 @@ output: html_document
 :::
 ::::::::::::::
 
+\
+
+\
+
+\
+
+\
+
+<center>
+![](../data/Image.png){width=600px}
+</center>
+
 </body>
 </html>
