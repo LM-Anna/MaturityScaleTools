@@ -67,7 +67,7 @@ output: html_document
 <center>
 <h2>*Chelidonichthys cuculus* / Grondin rouge</h2>
 
-![](../data/Image poisson/Grondin rouge.jpg){width=200px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Chelidonichthys cuculus_F.html) / [Male](Echelle_Chelidonichthys cuculus_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Grondin rouge.jpg){width=200px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Chelidonichthys cuculus_F.pdf) / [Male](Echelle_Chelidonichthys cuculus_M.html) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
