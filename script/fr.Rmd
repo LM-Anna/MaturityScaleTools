@@ -121,9 +121,9 @@ border1 = fp_border(color="black", width = 2)
 <div style="text-align: justify"> 
   Cet outil est un **guide d'identification des phases de maturité des poissons d'intérêts commerciaux**. Il a été mis en place dans le cadre du projet d'harmonisation des méthodes de collecte de données de maturité.
 
-  Il est présenté sous forme de fiches d'identifications pour les mâles et femelles de chaque espèces de poissons et apporte des commentaires et des photos simples afin de faciliter l'identification des phases de maturité.
+  Il est présenté sous forme de fiches d'identification pour les mâles et femelles de chaque espèce de poissons et apporte des commentaires et des photos simples afin de faciliter l'identification des phases de maturité.
 
-  L'identification des phases de maturité présenté dans ces fiches est basée uniquement sur des critères visuels décris par l'**échelle du CIEM de 2012/2018 "WKMATCH"**. Cette échelle se veut universelle et utilisable quelle que soit l'espèce de poisson ou le sexe de l'individu. Elle s'inscrit dans le respect de la biologie des espèces de poisson. 
+  L'identification des phases de maturité présentées dans ces fiches est basée uniquement sur des critères visuels décris par l'**échelle du CIEM de 2012/2018 "WKMATCH"**. Cette échelle se veut universelle et utilisable quelle que soit l'espèce de poisson ou le sexe de l'individu. Elle s'inscrit dans le respect de la biologie des espèces de poisson. 
   
   Elle est divisée en 6 phases de maturité qui correspondent aux périodes spécifiques de développement des gonades au sein du cycle reproducteur : 
 </div>
@@ -172,7 +172,7 @@ plot(tbl_img)
 
 <div style="text-align: justify">
 
-  Les photos présentent sur les fiches ont été prises à partir du protocole établit au cours du projet d'harmonisation des méthodes de collectes des données de maturité.
+  Les photos présentes sur les fiches ont été prises à partir du protocole établi au cours du projet d'harmonisation des méthodes de collecte des données de maturité.
 
 <center>
 

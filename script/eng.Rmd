@@ -123,7 +123,7 @@ border1 = fp_border(color="black", width = 2)
 
   It is composed of identification sheets for males and females of each species of fish and it provides simple comments and photos to ease the maturity phases identification.
 
-  The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2012/2018 "WKMATCH" scale**. This scale was therefore created in an ideal of a universal scale, regardless of the species or the sex of the individual. It also fall within the respect of the species biology.
+  The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2012/2018 "WKMATCH" scale**. This scale was therefore created in an ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
   
   It is divided into 6 maturity phases which correspond to the specific development periods of gonads during the reproductive cycle : 
  
@@ -173,7 +173,7 @@ plot(tbl_img)
 
 <div style="text-align: justify">
 
-  Photos presented on the sheets have been taken based on the protocol established during the maturity data collection methods harmonization .
+  The photos presented on the sheets have been taken based on the protocol established during the maturity data collection methods harmonization .
 
 <center>
 
