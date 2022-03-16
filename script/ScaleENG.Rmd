@@ -321,7 +321,7 @@ plot(tbl_img)
 
 \vspace*{\fill}
 
-**Références/Photos** :   
+**References/Photos** :   
 ICES (WKASMSF 2018 & WKMATCH 2012),   
 IFREMER 
 

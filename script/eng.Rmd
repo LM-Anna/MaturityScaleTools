@@ -2,6 +2,20 @@
 title: " "
 output: html_document
 ---
+```{r, include=FALSE}
+library(dplyr, warn.conflicts = FALSE)  # because tidyverse
+library(readxl, warn.conflicts = FALSE) # to read excel file
+library(knitr, warn.conflicts = FALSE)  # to elaborate html/pdf
+library(flextable)
+library(magick, warn.conflicts = FALSE)
+library(tidyr)
+library(gridExtra)
+
+library(officer)
+big_border = fp_border(color="#4775D1", width = 8)
+small_border = fp_border(color="gray", width = 1)
+border1 = fp_border(color="black", width = 2)
+```
 
 
 <html>
@@ -27,9 +41,9 @@ output: html_document
     font-weight:600;
     }
     h3{
-    color:red;
-    font-size:20px;
-    font-weight:1000;
+    color:black;
+    font-size:14px;
+    font-weight:900;
     font-weight: bold;
     }
     hr{
@@ -56,6 +70,14 @@ output: html_document
 
 <h1>MATURITY SCALE TOOLS</h1>
 
+
+\
+
+<center>
+
+**Choice of the output format : **
+
+</center>
 
 \
 
@@ -87,6 +109,81 @@ output: html_document
 \
 
 \
+
+
+
+<div style="text-align: justify"> 
+  This tool is a **guide for identifying maturity phases of fish with commercial interest**. It was set up as part of the project to harmonize maturity data collection methods.
+
+  It is composed of identification sheets for the males and females of each species of fish and it provides simple comments and photos to ease the maturity phases identification.
+
+  The maturity phases identification presented in this tools is exclusively based on visual criterias described by the **ICES 2012/2018 "WKMATCH" scale**. This scale was therefore created in an ideal of universal scale, regardless of the species or the sex of the individual. It also fall within the respect of the species biology.
+  
+  It is divided into 6 maturity phases which correspond to the specific development period of gonads during the reproductive cycle : 
+ 
+</div>
+
+\
+
+<center>
+
+<h3>ICES maturity scale « WKMATCH 2012 and 2018 »</h3>
+
+</center>
+
+```{r, echo=F, warning=F, message=F,fig.height=2,fig.width=7,out.width='800px', fig.align='center'}
+
+
+statut<- c("Sexually immature","Sexually mature","Sexually mature","Sexually mature","Sexually mature","Sexually mature")
+
+Code<-c("A","B","C","D","E","F")
+
+phase<- c("IMMATURE","DEVELOPING","SPAWNING","REGRESSION/REGENERATION","OMITTED SPAWNING","ABNORMAL")
+
+
+	tbl_img<-data.frame(Status=statut,
+			    Code=Code,
+			    Phase=phase)
+	tbl_img<-tbl_img%>%flextable()%>%
+		merge_v(j=~Status)%>%
+		set_table_properties(layout="autofit",width=1)%>%
+    fontsize(size = 15, part = "body")%>%
+    fontsize(size = 28, part = "header")%>%
+	  color(color="red",part="header")%>%
+	  bold(part="header")%>%
+	  align(j=c("Status","Code","Phase"), align = "center", part = "all")%>%
+	  border_remove()%>%
+    hline(part="all", border = border1 )%>%
+    vline(part="all", border = border1 )%>%
+	  hline_top(part="all", border = border1 )%>%
+	  vline_left(part="all", border = border1 )%>%
+    set_header_labels(Phase="Maturity phases")
+	
+plot(tbl_img)
+
+```
+
+\
+
+<div style="text-align: justify">
+
+  Photos presented on the sheets have been taken basec on the protocol established during the maturity data collection methods harmonization .
+
+<center>
+
+[FISH GONADS PHOTOGRAPHY PROTOCOL]()
+
+</center>
+
+
+\
+
+
+Anna LE MELEDER  
+IFREMER / RBE-HMMN-LRHPB
+
+
+</div>
 
 
 

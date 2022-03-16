@@ -2,6 +2,20 @@
 title: " "
 output: html_document
 ---
+```{r, include=FALSE}
+library(dplyr, warn.conflicts = FALSE)  # because tidyverse
+library(readxl, warn.conflicts = FALSE) # to read excel file
+library(knitr, warn.conflicts = FALSE)  # to elaborate html/pdf
+library(flextable)
+library(magick, warn.conflicts = FALSE)
+library(tidyr)
+library(gridExtra)
+
+library(officer)
+big_border = fp_border(color="#4775D1", width = 8)
+small_border = fp_border(color="gray", width = 1)
+border1 = fp_border(color="black", width = 2)
+```
 
 
 <html>
@@ -27,9 +41,9 @@ output: html_document
     font-weight:600;
     }
     h3{
-    color:red;
-    font-size:20px;
-    font-weight:1000;
+    color:black;
+    font-size:14px;
+    font-weight:900;
     font-weight: bold;
     }
     hr{
@@ -45,6 +59,10 @@ output: html_document
     font-size:
     17px;
     }
+    caption{
+    font-weight:1000;
+    line-height: 26pt;
+    }
     </style>
 
 <title>Page Title</title>
@@ -56,6 +74,13 @@ output: html_document
 
 <h1>FICHES MATURITÉ VISUELLE</h1>
 
+\
+
+<center>
+
+**Choix du format de sortie des fiches : **
+
+</center>
 
 \
 
@@ -82,5 +107,104 @@ output: html_document
 :::
 ::::::::::::::
 
+\
+
+\
+
+
+<div style="text-align: justify"> 
+  Cet outil est un **guide d'identification des phases de maturité des poissons d'intérêts commerciaux**. Il a été mis en place dans le cadre du projet d'harmonisation des méthodes de collecte de données de maturité.
+
+  Il est présenté sous forme de fiches d'identifications pour les mâles et femelles de chaque espèces de poissons et apporte des commentaires et des photos simples afin de faciliter l'identification des phases de maturité.
+
+  L'identification des phases de maturité présenté dans ces fiches est basée uniquement sur des critères visuels décris par l'**échelle du CIEM de 2012/2018 "WKMATCH"**. Cette échelle se veut universelle et utilisable quelle que soit l'espèce de poisson ou le sexe de l'individu. Elle s'inscrit dans le respect de la biologie des espèces de poisson. 
+  
+  Elle est divisée en 6 phases de maturité qui correspondent aux périodes spécifiques de développement des gonades au sein du cycle reproducteur : 
+</div>
+
+\
+
+<center>
+
+<h3>Echelle de maturité du CIEM « WKMATCH 2012 et 2018 »</h3>
+
+</center>
+
+```{r, echo=F, warning=F, message=F,fig.height=2,fig.width=7,out.width='800px', fig.align='center'}
+
+
+statut<- c("Sexuellement immature","Sexuellement mature","Sexuellement mature","Sexuellement mature","Sexuellement mature","Sexuellement mature")
+
+Code<-c("A","B","C","D","E","F")
+
+phase<- c("IMMATURE","EN DÉVELOPPEMENT","EN PONTE","RÉGRESSION/RÉGÉNÉRATION","OMISSION DE PONTE","ANORMAL")
+
+
+	tbl_img<-data.frame(Statut=statut,
+			    Code=Code,
+			    Phase=phase)
+	tbl_img<-tbl_img%>%flextable()%>%
+		merge_v(j=~Statut)%>%
+		set_table_properties(layout="autofit",width=1)%>%
+    fontsize(size = 15, part = "body")%>%
+    fontsize(size = 28, part = "header")%>%
+	  color(color="red",part="header")%>%
+	  bold(part="header")%>%
+	  align(j=c("Statut","Code","Phase"), align = "center", part = "all")%>%
+	  border_remove()%>%
+    hline(part="all", border = border1 )%>%
+    vline(part="all", border = border1 )%>%
+	  hline_top(part="all", border = border1 )%>%
+	  vline_left(part="all", border = border1 )%>%
+    set_header_labels(Phase="Phase de maturité")
+	
+plot(tbl_img)
+
+```
+
+\
+
+<div style="text-align: justify">
+
+  Les photos présentent sur les fiches ont été prises à partir du protocole établit au cours du projet d'harmonisation des méthodes de collectes des données de maturité.
+
+<center>
+
+[PROTOCOLE PRISE DE PHOTO DES GONADES DE POISSONS]()
+
+</center>
+
+
+\
+
+
+Anna LE MELEDER  
+IFREMER / RBE-HMMN-LRHPB
+
+
+</div>
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
