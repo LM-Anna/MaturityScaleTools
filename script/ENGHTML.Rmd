@@ -38,8 +38,8 @@ output: html_document
     background-color:#4775D1;
     }
     h4{
-    font-size:10px;
-    color:#4775D1;
+    font-size:14px;
+    color:black;
     }
     p{
     font-size:
@@ -55,6 +55,12 @@ output: html_document
 <body>
 
 <h1>MATURITY SCALE INDEX</h1>
+
+<center>
+
+<h4>*Last update : 16/03/2022*</h4>
+
+</center>
 
 :::::::::::::: {.columns}
 ::: {.column width="10%"}
@@ -164,7 +170,12 @@ output: html_document
 :::
 ::::::::::::::
 
+\
 
+\
+
+Anna LE MELEDER  
+IFREMER / RBE-HMMN-LRHPB
 
 
 </body>

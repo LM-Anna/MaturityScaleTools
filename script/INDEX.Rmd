@@ -38,12 +38,12 @@ output: html_document
     background-color:#4775D1;
     }
     h4{
-    font-size:10px;
-    color:#4775D1;
+    font-size:14px;
+    color:black;
     }
     p{
     font-size:
-    17px;
+    14px;
     }
     </style>
 
@@ -55,6 +55,12 @@ output: html_document
 <body>
 
 <h1>MATURITY SCALE TOOLS</h1>
+
+<center>
+
+<h4>*Last update : 16/03/2022*</h4>
+
+</center>
 
 
 \
@@ -88,11 +94,29 @@ output: html_document
 
 \
 
-\
 
 <center>
-![](../data/Image.png){width=600px}
+![](../data/Image.png){width=800px}
 </center>
+
+\
+
+
+
+\
+
+\
+
+\
+
+\
+
+\
+
+Anna LE MELEDER  
+IFREMER / RBE-HMMN-LRHPB
+
+
 
 </body>
 </html>
