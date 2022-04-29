@@ -71,6 +71,14 @@ output: html_document
 ::: {.column width="80%"}
 
 <center>
+<h2>*Argyrosomus regius* / Maigre</h2>
+
+
+![](../data/Image poisson/Maigre.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Argyrosomus regius_F.pdf) / [Male](Echelle_Argyrosomus regius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
 <h2>*Chelidonichthys cuculus* / Grondin rouge</h2>
 
 ![](../data/Image poisson/Grondin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Chelidonichthys cuculus_F.pdf) / [Male](Echelle_Chelidonichthys cuculus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
