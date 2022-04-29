@@ -4,9 +4,9 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 params:
   spplat : "Flat fish sp."
   sppeng : "Flat fish"
@@ -300,8 +300,30 @@ plot(TT3)
 ```
 
 
-```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
-tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="E - OMISSION DE PONTE",sex,imgNA)
+```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=1.5,fig.width=7.5,out.width='600px'}
+
+fctphasetest<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
+	  textASB<-Datascale %>% 
+		filter(Species==spplat,Phase==phase,Sexe==sex)%>%
+		pull(Text)
+	tbl_img<-data.frame(Description=textASB)
+	tbl_img<-tbl_img%>%flextable()%>%
+		delete_part(part="header")%>%
+		add_header_row(value=phase,colwidths=1)%>%
+	  padding(padding=35, part="body")%>%
+		set_table_properties(layout="autofit",width=1)%>%
+    fontsize(size = 25, part = "body")%>%
+	  align(j = "Description", align = "center", part = "body")%>%
+    fontsize(size = 28, part = "header")%>%
+	  color(color="red",part="header")%>%
+	  bold(part="header")%>%
+	  border_remove()%>%
+	  hline_top(border = big_border, part = "header")
+
+	return(tbl_img)
+}
+
+tbl_img<-fctphasetest(Datascale,Dataphoto,spplat,phase="E - OMISSION DE PONTE",sex,imgNA)
 plot(tbl_img)
 ```
 
