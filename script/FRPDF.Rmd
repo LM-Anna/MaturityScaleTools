@@ -71,100 +71,242 @@ output: html_document
 ::: {.column width="80%"}
 
 <center>
-<h2>*Argyrosomus regius* / Maigre</h2>
+<h2>*Acanthostracion polygonius* / Honeycomb cowfish</h2>
 
+![](../data/Image poisson/Coffre nid d'abeille.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Acanthostracion polygonius_F.pdf) / [Male](Echelle_Acanthostracion polygonius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Acanthurus bahianus* / Barber surgeonfish</h2>
+
+![](../data/Image poisson/Chirurgien océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Acanthurus bahianus_F.pdf) / [Male](Echelle_Acanthurus bahianus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Aluterus scriptus* / Scribbled leatherjacket filefish</h2>
+
+![](../data/Image poisson/Bourse écriture.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Aluterus scriptus_F.pdf) / [Male](Echelle_Aluterus scriptus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Argyrosomus regius* / Meagre</h2>
 
 ![](../data/Image poisson/Maigre.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Argyrosomus regius_F.pdf) / [Male](Echelle_Argyrosomus regius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Chelidonichthys cuculus* / Grondin rouge</h2>
+<h2>*Balistes vetula* / Queen triggerfish</h2>
 
-![](../data/Image poisson/Grondin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Chelidonichthys cuculus_F.pdf) / [Male](Echelle_Chelidonichthys cuculus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
-
-\
-
-<h2>*Clupea clupea* / Hareng</h2>
-
-![](../data/Image poisson/Hareng.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Clupea clupea_F.pdf) / [Male](Echelle_Clupea clupea_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Baliste royal.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Balistes vetula_F.pdf) / [Male](Echelle_Balistes vetula_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Engraulis encrasicolus* / Anchois</h2>
+<h2>*Calamus bajonado* / Jolthead porgy</h2>
 
-![](../data/Image poisson/Anchois.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Engraulis encrasicolus_F.pdf) / [Male](Echelle_Engraulis encrasicolus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Daubenet trembleur.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Calamus bajonado_F.pdf) / [Male](Echelle_Calamus bajonado_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Dicentrarchus labrax* / Bar</h2>
 
-![](../data/Image poisson/Bar.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Dicentrarchus labrax_F.pdf) / [Male](Echelle_Dicentrarchus labrax_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+<h2>*Cantherhines macrocerus* / American whitespotted filefish</h2>
+
+![](../data/Image poisson/Bourse cabri.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Cantherhines macrocerus_F.pdf) / [Male](Echelle_Cantherhines macrocerus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Canthidermis sufflamen* / Ocean triggerfish</h2>
+
+![](../data/Image poisson/Baliste océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Canthidermis sufflamen_F.pdf) / [Male](Echelle_Canthidermis sufflamen_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Caranx sp.* / Jack</h2>
+
+![](../data/Image poisson/Carangues.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Caranx sp._F.pdf) / [Male](Echelle_Caranx sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Chelidonichthys cuculus* / Red gurnard</h2>
+
+![](../data/Image poisson/Grondin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Chelidonichthys cuculus_F.pdf) / [Male](Echelle_Chelidonichthys cuculus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+<h2>*Clupea clupea* / Herring</h2>
+
+![](../data/Image poisson/Hareng.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Clupea clupea_F.pdf) / [Male](Echelle_Clupea clupea_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+<h2>*Engraulis encrasicolus* / Anchovy</h2>
+
+![](../data/Image poisson/Anchois.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Engraulis encrasicolus_F.pdf) / [Male](Echelle_Engraulis encrasicolus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Epinephelinae sp.* / Grouper</h2>
+
+![](../data/Image poisson/Mérous.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Epinephelinae sp._F.pdf) / [Male](Echelle_Epinephelinae sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Etelis oculatus* / Queen snapper</h2>
+
+![](../data/Image poisson/Vivaneau royale.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Etelis oculatus_F.pdf) / [Male](Echelle_Etelis oculatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Dicentrarchus labrax* / Sea bass</h2>
+
+![](../data/Image poisson/Bar.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Dicentrarchus labrax_F.pdf) / [Male](Echelle_Dicentrarchus labrax_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+<h2>*Flat fish sp.* / Flat fish</h2>
+
+![](../data/Image poisson/Poissons plats.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Flat fish sp._F.pdf) / [Male](Echelle_Flat fish sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
 
 \
 
 <h2>*Gadidae sp.* / Gadidae</h2>
 
-![](../data/Image poisson/Gadidae.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Gadidae sp._F.pdf) / [Male](Echelle_Gadidae sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Gadidae.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Gadidae sp._F.pdf) / [Male](Echelle_Gadidae sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
 
 \
 
-<h2>*Flat fish sp.* / Poissons plats</h2>
 
-![](../data/Image poisson/Poissons plats.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Flat fish sp._F.pdf) / [Male](Echelle_Flat fish sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+<h2>*Haemulon sp.* / Grunt</h2>
 
-\
+![](../data/Image poisson/Gorettes.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Haemulon sp._F.pdf) / [Male](Echelle_Haemulon sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
-<h2>*Merluccius merluccius* / Merlu</h2>
-
-![](../data/Image poisson/Merlu.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Merluccius merluccius_F.pdf) / [Male](Echelle_Merluccius merluccius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Mullus surmuletus* / Rouget barbet de roche</h2>
 
-![](../data/Image poisson/Rouget barbet de roche.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Mullus surmuletus_F.pdf) / [Male](Echelle_Mullus surmuletus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+<h2>*Lutjanus sp.* / Snapper</h2>
 
-\
+![](../data/Image poisson/Vivaneaux.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Lutjanus sp._F.pdf) / [Male](Echelle_Lutjanus sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
-<h2>*Lophius sp.* / Baudroie</h2>
-
-![](../data/Image poisson/Baudroie.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Lophius sp._F.pdf) / [Male](Echelle_Lophius sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Pagellus bogaraveo* / Dorade rose</h2>
 
-![](../data/Image poisson/Dorade rose.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Pagellus bogaraveo_F.pdf) / [Male](Echelle_Pagellus bogaraveo_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+<h2>*Merluccius merluccius* / Hake</h2>
+
+![](../data/Image poisson/Merlu.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Merluccius merluccius_F.pdf) / [Male](Echelle_Merluccius merluccius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Mulloidichthys martinicus* / Yellow goatfish</h2>
+
+![](../data/Image poisson/Barbarin blanc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Mulloidichthys martinicus_F.pdf) / [Male](Echelle_Mulloidichthys martinicus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
+<h2>*Mullus surmuletus* / Red mullet</h2>
+
+![](../data/Image poisson/Rouget barbet de roche.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Mullus surmuletus_F.pdf) / [Male](Echelle_Mullus surmuletus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+<h2>*Lophius sp.* / Anglefish</h2>
+
+![](../data/Image poisson/Baudroie.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Lophius sp._F.pdf) / [Male](Echelle_Lophius sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Ocyurus chrysurus* / Yellowtail snapper</h2>
+
+![](../data/Image poisson/Sarde queue jaune.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Ocyurus chrysurus_F.pdf) / [Male](Echelle_Ocyurus chrysurus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+<h2>*Pagellus bogaraveo* / Sea bream</h2>
+
+![](../data/Image poisson/Dorade rose.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pagellus bogaraveo_F.pdf) / [Male](Echelle_Pagellus bogaraveo_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Priacanthus arenatus* / Atlantic bigeye</h2>
+
+![](../data/Image poisson/Soleil franc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Priacanthus arenatus_F.pdf) / [Male](Echelle_Priacanthus arenatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
+<h2>*Pseudupeneus maculatus* / Spotted goatfish</h2>
+
+![](../data/Image poisson/Barbarin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pseudupeneus maculatus_F.pdf) / [Male](Echelle_Pseudupeneus maculatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
+<h2>*Pterois volitans* / Red lionfish</h2>
+
+![](../data/Image poisson/Rascasse volante.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pterois volitans._F.pdf) / [Male](Echelle_Pterois volitans_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
 
 \
 
 <h2>*Sardina pilchardus* / Sardine</h2>
 
-![](../data/Image poisson/Sardine.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Sardina pilchardus_F.pdf) / [Male](Echelle_Sardina pilchardus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Sardine.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Sardina pilchardus_F.pdf) / [Male](Echelle_Sardina pilchardus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Scomber scombrus* / Maquereau</h2>
+<h2>*Scomber scombrus* / Mackerel</h2>
 
-![](../data/Image poisson/Maquereau.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Scomber scombrus_F.pdf) / [Male](Echelle_Scomber scombrus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Maquereau.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Scomber scombrus_F.pdf) / [Male](Echelle_Scomber scombrus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Scophthalmus sp.* / Barbue & Turbot</h2>
+<h2>*Scophthalmus sp.* / Brill & Turbot</h2>
 
-![](../data/Image poisson/Barbue & Turbot.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Scophthalmus sp._F.pdf) / [Male](Echelle_Scophthalmus sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Barbue & Turbot.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Scophthalmus sp._F.pdf) / [Male](Echelle_Scophthalmus sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 <h2>*Solea solea* / Sole</h2>
 
-![](../data/Image poisson/Sole.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Solea solea_F.pdf) / [Male](Echelle_Solea solea_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Sole.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Solea solea_F.pdf) / [Male](Echelle_Solea solea_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Sparisoma sp.* / Parrotfish</h2>
+
+![](../data/Image poisson/Perroquet.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Sparisoma sp._F.pdf) / [Male](Echelle_Sparisoma sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
 
 \
 
 <h2>*Sprattus sprattus* / Sprat</h2>
 
-![](../data/Image poisson/Sprat.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Femelle](Echelle_Sprattus sprattus_F.pdf) / [Male](Echelle_Sprattus sprattus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Sprat.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Sprattus sprattus_F.pdf) / [Male](Echelle_Sprattus sprattus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+attus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+ttus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 
 </center>
@@ -187,4 +329,4 @@ IFREMER / RBE-HMMN-LRHPB
 
 
 </body>
-</html>
+</pdf>

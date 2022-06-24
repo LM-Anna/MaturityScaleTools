@@ -76,7 +76,7 @@ border1 = fp_border(color="black", width = 2)
 
 <center>
 
-<h4>*Dernière mise à jour : 29/04/2022*</h4>
+<h4>*Dernière mise à jour : 24/06/2022*</h4>
 
 </center>
 

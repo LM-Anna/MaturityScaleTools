@@ -73,11 +73,66 @@ output:
 ::: {.column width="80%"}
 
 <center>
+<h2>*Acanthostracion polygonius* / Honeycomb cowfish</h2>
+
+![](../data/Image poisson/Coffre nid d'abeille.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Acanthostracion polygonius_F.pdf) / [Male](Scale_Acanthostracion polygonius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Acanthurus bahianus* / Barber surgeonfish</h2>
+
+![](../data/Image poisson/Chirurgien océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Acanthurus bahianus_F.pdf) / [Male](Scale_Acanthurus bahianus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Aluterus scriptus* / Scribbled leatherjacket filefish</h2>
+
+![](../data/Image poisson/Bourse écriture.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Aluterus scriptus_F.pdf) / [Male](Scale_Aluterus scriptus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
 <h2>*Argyrosomus regius* / Meagre</h2>
 
 ![](../data/Image poisson/Maigre.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Argyrosomus regius_F.pdf) / [Male](Scale_Argyrosomus regius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
+
+<h2>*Balistes vetula* / Queen triggerfish</h2>
+
+![](../data/Image poisson/Baliste royal.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Balistes vetula_F.pdf) / [Male](Scale_Balistes vetula_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+<h2>*Calamus bajonado* / Jolthead porgy</h2>
+
+![](../data/Image poisson/Daubenet trembleur.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Calamus bajonado_F.pdf) / [Male](Scale_Calamus bajonado_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Cantherhines macrocerus* / American whitespotted filefish</h2>
+
+![](../data/Image poisson/Bourse cabri.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Cantherhines macrocerus_F.pdf) / [Male](Scale_Cantherhines macrocerus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Canthidermis sufflamen* / Ocean triggerfish</h2>
+
+![](../data/Image poisson/Baliste océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Canthidermis sufflamen_F.pdf) / [Male](Scale_Canthidermis sufflamen_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Caranx sp.* / Jack</h2>
+
+![](../data/Image poisson/Carangues.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Caranx sp._F.pdf) / [Male](Scale_Caranx sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
 
 <h2>*Chelidonichthys cuculus* / Red gurnard</h2>
 
@@ -97,15 +152,24 @@ output:
 
 \
 
-<h2>*Dicentrarchus labrax* / Sea bass</h2>
 
-![](../data/Image poisson/Bar.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Dicentrarchus labrax_F.pdf) / [Male](Scale_Dicentrarchus labrax_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+<h2>*Epinephelinae sp.* / Grouper</h2>
+
+![](../data/Image poisson/Mérous.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Epinephelinae sp._F.pdf) / [Male](Scale_Epinephelinae sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
-<h2>*Gadidae sp.* / Gadidae</h2>
 
-![](../data/Image poisson/Gadidae.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Gadidae sp._F.pdf) / [Male](Scale_Gadidae sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+<h2>*Etelis oculatus* / Queen snapper</h2>
+
+![](../data/Image poisson/Vivaneau royale.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Etelis oculatus_F.pdf) / [Male](Scale_Etelis oculatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Dicentrarchus labrax* / Sea bass</h2>
+
+![](../data/Image poisson/Bar.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Dicentrarchus labrax_F.pdf) / [Male](Scale_Dicentrarchus labrax_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
@@ -113,13 +177,49 @@ output:
 
 ![](../data/Image poisson/Poissons plats.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Flat fish sp._F.pdf) / [Male](Scale_Flat fish sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
+
+
 \
+
+<h2>*Gadidae sp.* / Gadidae</h2>
+
+![](../data/Image poisson/Gadidae.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Gadidae sp._F.pdf) / [Male](Scale_Gadidae sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
+<h2>*Haemulon sp.* / Grunt</h2>
+
+![](../data/Image poisson/Gorettes.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Haemulon sp._F.pdf) / [Male](Scale_Haemulon sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
+<h2>*Lutjanus sp.* / Snapper</h2>
+
+![](../data/Image poisson/Vivaneaux.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Lutjanus sp._F.pdf) / [Male](Scale_Lutjanus sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
 
 <h2>*Merluccius merluccius* / Hake</h2>
 
 ![](../data/Image poisson/Merlu.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Merluccius merluccius_F.pdf) / [Male](Scale_Merluccius merluccius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
 
 \
+
+
+<h2>*Mulloidichthys martinicus* / Yellow goatfish</h2>
+
+![](../data/Image poisson/Barbarin blanc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Mulloidichthys martinicus_F.pdf) / [Male](Scale_Mulloidichthys martinicus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
 
 <h2>*Mullus surmuletus* / Red mullet</h2>
 
@@ -133,9 +233,41 @@ output:
 
 \
 
+
+<h2>*Ocyurus chrysurus* / Yellowtail snapper</h2>
+
+![](../data/Image poisson/Sarde queue jaune.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Ocyurus chrysurus_F.pdf) / [Male](Scale_Ocyurus chrysurus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
 <h2>*Pagellus bogaraveo* / Sea bream</h2>
 
 ![](../data/Image poisson/Dorade rose.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Pagellus bogaraveo_F.pdf) / [Male](Scale_Pagellus bogaraveo_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Priacanthus arenatus* / Atlantic bigeye</h2>
+
+![](../data/Image poisson/Soleil franc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Priacanthus arenatus_F.pdf) / [Male](Scale_Priacanthus arenatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
+<h2>*Pseudupeneus maculatus* / Spotted goatfish</h2>
+
+![](../data/Image poisson/Barbarin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Pseudupeneus maculatus_F.pdf) / [Male](Scale_Pseudupeneus maculatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+
+\
+
+
+<h2>*Pterois volitans* / Red lionfish</h2>
+
+![](../data/Image poisson/Rascasse volante.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Pterois volitans._F.pdf) / [Male](Scale_Pterois volitans_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
 
 \
 
@@ -160,6 +292,14 @@ output:
 <h2>*Solea solea* / Sole</h2>
 
 ![](../data/Image poisson/Sole.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Solea solea_F.pdf) / [Male](Scale_Solea solea_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
+\
+
+
+<h2>*Sparisoma sp.* / Parrotfish</h2>
+
+![](../data/Image poisson/Perroquet.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Sparisoma sp._F.pdf) / [Male](Scale_Sparisoma sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+
 
 \
 
@@ -188,4 +328,4 @@ IFREMER / RBE-HMMN-LRHPB
 
 
 </body>
-</html>
+</pdf>
