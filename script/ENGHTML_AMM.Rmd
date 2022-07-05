@@ -74,7 +74,7 @@ output: html_document
 
 <h2>*Argyrosomus regius* / Meagre</h2>
 
-![](../data/Image poisson/Maigre.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Argyrosomus regius_F.html) / [Male](Scale_Argyrosomus regius_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Maigre.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Argyrosomus regius_F.html){target="_blank"} / [Male](Scale_Argyrosomus regius_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
@@ -82,19 +82,19 @@ output: html_document
 
 <h2>*Chelidonichthys cuculus* / Red gurnard</h2>
 
-![](../data/Image poisson/Grondin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Chelidonichthys cuculus_F.html) / [Male](Scale_Chelidonichthys cuculus_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Grondin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Chelidonichthys cuculus_F.html){target="_blank"} / [Male](Scale_Chelidonichthys cuculus_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 <h2>*Clupea clupea* / Herring</h2>
 
-![](../data/Image poisson/Hareng.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Clupea clupea_F.html) / [Male](Scale_Clupea clupea_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Hareng.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Clupea clupea_F.html){target="_blank"} / [Male](Scale_Clupea clupea_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 <h2>*Engraulis encrasicolus* / Anchovy</h2>
 
-![](../data/Image poisson/Anchois.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Engraulis encrasicolus_F.html) / [Male](Scale_Engraulis encrasicolus_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Anchois.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Engraulis encrasicolus_F.html){target="_blank"} / [Male](Scale_Engraulis encrasicolus_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
@@ -102,13 +102,13 @@ output: html_document
 
 <h2>*Dicentrarchus labrax* / Sea bass</h2>
 
-![](../data/Image poisson/Bar.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Dicentrarchus labrax_F.html) / [Male](Scale_Dicentrarchus labrax_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Bar.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Dicentrarchus labrax_F.html){target="_blank"} / [Male](Scale_Dicentrarchus labrax_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 <h2>*Flat fish sp.* / Flat fish</h2>
 
-![](../data/Image poisson/Poissons plats.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Flat fish sp._F.html) / [Male](Scale_Flat fish sp._M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Poissons plats.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Flat fish sp._F.html){target="_blank"} / [Male](Scale_Flat fish sp._M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 
@@ -116,7 +116,7 @@ output: html_document
 
 <h2>*Gadidae sp.* / Gadidae</h2>
 
-![](../data/Image poisson/Gadidae.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Gadidae sp._F.html) / [Male](Scale_Gadidae sp._M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Gadidae.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Gadidae sp._F.html){target="_blank"} / [Male](Scale_Gadidae sp._M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
@@ -125,27 +125,27 @@ output: html_document
 
 <h2>*Merluccius merluccius* / Hake</h2>
 
-![](../data/Image poisson/Merlu.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Merluccius merluccius_F.html) / [Male](Scale_Merluccius merluccius_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Merlu.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Merluccius merluccius_F.html){target="_blank"} / [Male](Scale_Merluccius merluccius_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Mullus surmuletus* / Red mullet</h2>
 
-![](../data/Image poisson/Rouget barbet de roche.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Mullus surmuletus_F.html) / [Male](Scale_Mullus surmuletus_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Rouget barbet de roche.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Mullus surmuletus_F.html){target="_blank"} / [Male](Scale_Mullus surmuletus_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 <h2>*Lophius sp.* / Anglefish</h2>
 
-![](../data/Image poisson/Baudroie.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Lophius sp._F.html) / [Male](Scale_Lophius sp._M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Baudroie.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Lophius sp._F.html){target="_blank"} / [Male](Scale_Lophius sp._M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Pagellus bogaraveo* / Sea bream</h2>
 
-![](../data/Image poisson/Dorade rose.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Pagellus bogaraveo_F.html) / [Male](Scale_Pagellus bogaraveo_M.html) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Dorade rose.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Pagellus bogaraveo_F.html){target="_blank"} / [Male](Scale_Pagellus bogaraveo_M.html){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
