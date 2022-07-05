@@ -59,6 +59,10 @@ border1 = fp_border(color="black", width = 2)
     font-size:
     17px;
     }
+    caption{
+    font-weight:1000;
+    line-height: 26pt;
+    }
     </style>
 
 <title>Page Title</title>
@@ -68,20 +72,19 @@ border1 = fp_border(color="black", width = 2)
 
 <body>
 
-<h1>MATURITY SCALE TOOLS</h1>
+<h1>FICHES MATURITÉ VISUELLE</h1>
 
 <center>
 
-<h4>*Last update : 05/07/2022*</h4>
+<h4>*Dernière mise à jour : 05/07/2022*</h4>
 
 </center>
-
 
 \
 
 <center>
 
-**Geographic area : **
+**Choix du format de sortie des fiches : **
 
 </center>
 
@@ -92,7 +95,7 @@ border1 = fp_border(color="black", width = 2)
 ::: {.column width="40%"}
 
 <center>
-[North Atlantic / Channel Sea / North Sea](engAMM.html)
+[PDF](FRPDF_MG.html)
 </center>
 
 :::
@@ -104,7 +107,7 @@ border1 = fp_border(color="black", width = 2)
 ::: {.column width="40%"}
 
 <center>
-[Martinique / Guadeloupe](engMG.html)
+[HTML](FRHTML_MG.html)
 </center>
 
 :::
@@ -114,56 +117,52 @@ border1 = fp_border(color="black", width = 2)
 
 \
 
-\
-
-
 
 <div style="text-align: justify"> 
-  This tool is a **guide for identifying maturity phases of fish with commercial interest**. It was set up as part of the project to harmonize maturity data collection methods.
+  Cet outil est un **guide d'identification des phases de maturité des poissons d'intérêts commerciaux**. Il a été mis en place dans le cadre du projet d'harmonisation des méthodes de collecte de données de maturité.
 
-  It is composed of identification sheets for males and females of each species of fish and it provides simple comments and photos to ease the maturity phases identification.
+  Il est présenté sous forme de fiches d'identification pour les mâles et femelles de chaque espèce de poissons et apporte des commentaires et des photos simples afin de faciliter l'identification des phases de maturité.
 
-  The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2012/2018 "WKMATCH" scale**. This scale was therefore created in an ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
+  L'identification des phases de maturité présentées dans ces fiches est basée uniquement sur des critères visuels décris par l'**échelle du CIEM de 2012/2018 "WKMATCH"**. Cette échelle se veut universelle et utilisable quelle que soit l'espèce de poisson ou le sexe de l'individu. Elle s'inscrit dans le respect de la biologie des espèces de poisson. 
   
-  It is divided into 6 maturity phases which correspond to the specific development periods of gonads during the reproductive cycle : 
- 
+  Elle est divisée en 6 phases de maturité qui correspondent aux périodes spécifiques de développement des gonades au sein du cycle reproducteur : 
 </div>
 
 \
 
 <center>
 
-<h3>ICES maturity scale « WKMATCH 2012 and 2018 »</h3>
+<h3>Echelle de maturité du CIEM « WKMATCH 2012 et 2018 »</h3>
 
 </center>
 
 ```{r, echo=F, warning=F, message=F,fig.height=2,fig.width=7,out.width='800px', fig.align='center'}
 
 
-statut<- c("Sexually immature","Sexually mature","Sexually mature","Sexually mature","Sexually mature","Sexually mature")
+statut<- c("Sexuellement immature","Sexuellement mature","Sexuellement mature","Sexuellement mature","Sexuellement mature","Sexuellement mature")
 
 Code<-c("A","B","C","D","E","F")
 
-phase<- c("IMMATURE","DEVELOPING","SPAWNING","REGRESSION/REGENERATION","OMITTED SPAWNING","ABNORMAL")
+phase<- c("IMMATURE","EN DÉVELOPPEMENT","EN PONTE","RÉGRESSION/RÉGÉNÉRATION","OMISSION DE PONTE","ANORMAL")
 
 
-	tbl_img<-data.frame(Status=statut,
+	tbl_img<-data.frame(Statut=statut,
 			    Code=Code,
 			    Phase=phase)
 	tbl_img<-tbl_img%>%flextable()%>%
-		merge_v(j=~Status)%>%
+		merge_v(j=~Statut)%>%
 		set_table_properties(layout="autofit",width=1)%>%
     fontsize(size = 15, part = "body")%>%
     fontsize(size = 28, part = "header")%>%
 	  color(color="red",part="header")%>%
 	  bold(part="header")%>%
-	  align(j=c("Status","Code","Phase"), align = "center", part = "all")%>%
+	  align(j=c("Statut","Code","Phase"), align = "center", part = "all")%>%
 	  border_remove()%>%
     hline(part="all", border = border1 )%>%
     vline(part="all", border = border1 )%>%
 	  hline_top(part="all", border = border1 )%>%
 	  vline_left(part="all", border = border1 )%>%
-    set_header_labels(Phase="Maturity phases")
+    set_header_labels(Phase="Phase de maturité")
 	
 plot(tbl_img)
 
@@ -173,11 +172,11 @@ plot(tbl_img)
 
 <div style="text-align: justify">
 
-  The photos presented on the sheets have been taken based on the protocol established during the maturity data collection methods harmonization .
+  Les photos présentes sur les fiches ont été prises à partir du protocole établi au cours du projet d'harmonisation des méthodes de collecte des données de maturité.
 
 <center>
 
-[FISH GONADS PHOTOGRAPHY PROTOCOL](ENG_P.pdf)
+[PROTOCOLE PRISE DE PHOTO DES GONADES DE POISSONS](FR_P.pdf)
 
 </center>
 
@@ -192,7 +191,6 @@ IFREMER / RBE-HMMN-LRHPB
 
 
 </div>
-
 
 
 </body>

@@ -81,7 +81,7 @@ border1 = fp_border(color="black", width = 2)
 
 <center>
 
-**Geographic area : **
+**Choice of the output format : **
 
 </center>
 
@@ -92,7 +92,7 @@ border1 = fp_border(color="black", width = 2)
 ::: {.column width="40%"}
 
 <center>
-[North Atlantic / Channel Sea / North Sea](engAMM.html)
+[PDF](ENGPDF_AMM.html)
 </center>
 
 :::
@@ -104,7 +104,7 @@ border1 = fp_border(color="black", width = 2)
 ::: {.column width="40%"}
 
 <center>
-[Martinique / Guadeloupe](engMG.html)
+[HTML](ENGHTML_AMM.html)
 </center>
 
 :::
