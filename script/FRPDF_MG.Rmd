@@ -73,68 +73,68 @@ output: html_document
 <center>
 <h2>*Acanthostracion polygonius* / Coffre nid d'abeille</h2>
 
-![](../data/Image poisson/Coffre nid d'abeille.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Acanthostracion polygonius_F.pdf) / [Male](Echelle_Acanthostracion polygonius_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Coffre nid d'abeille.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Acanthostracion polygonius_F.pdf){target="_blank"} / [Male](Echelle_Acanthostracion polygonius_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Acanthurus bahianus* / Chirurgien océanique</h2>
 
-![](../data/Image poisson/Chirurgien océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Acanthurus bahianus_F.pdf) / [Male](Echelle_Acanthurus bahianus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Chirurgien océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Acanthurus bahianus_F.pdf){target="_blank"} / [Male](Echelle_Acanthurus bahianus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Aluterus scriptus* / Bourse écriture</h2>
 
-![](../data/Image poisson/Bourse écriture.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Aluterus scriptus_F.pdf) / [Male](Echelle_Aluterus scriptus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Bourse écriture.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Aluterus scriptus_F.pdf){target="_blank"} / [Male](Echelle_Aluterus scriptus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 <h2>*Balistes vetula* / Baliste royal</h2>
 
-![](../data/Image poisson/Baliste royal.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Balistes vetula_F.pdf) / [Male](Echelle_Balistes vetula_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Baliste royal.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Balistes vetula_F.pdf){target="_blank"} / [Male](Echelle_Balistes vetula_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 <h2>*Calamus bajonado* / Daubenet trembleur</h2>
 
-![](../data/Image poisson/Daubenet trembleur.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Calamus bajonado_F.pdf) / [Male](Echelle_Calamus bajonado_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Daubenet trembleur.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Calamus bajonado_F.pdf){target="_blank"} / [Male](Echelle_Calamus bajonado_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Cantherhines macrocerus* / Bourse cabri</h2>
 
-![](../data/Image poisson/Bourse cabri.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Cantherhines macrocerus_F.pdf) / [Male](Echelle_Cantherhines macrocerus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Bourse cabri.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Cantherhines macrocerus_F.pdf){target="_blank"} / [Male](Echelle_Cantherhines macrocerus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Canthidermis sufflamen* / Baliste océanique</h2>
 
-![](../data/Image poisson/Baliste océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Canthidermis sufflamen_F.pdf) / [Male](Echelle_Canthidermis sufflamen_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Baliste océanique.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Canthidermis sufflamen_F.pdf){target="_blank"} / [Male](Echelle_Canthidermis sufflamen_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Caranx sp.* / Carangues</h2>
 
-![](../data/Image poisson/Carangues.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Caranx sp._F.pdf) / [Male](Echelle_Caranx sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Carangues.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Caranx sp._F.pdf){target="_blank"} / [Male](Echelle_Caranx sp._M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Epinephelinae sp.* / Mérous</h2>
 
-![](../data/Image poisson/Mérous.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Epinephelinae sp._F.pdf) / [Male](Echelle_Epinephelinae sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Mérous.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Epinephelinae sp._F.pdf){target="_blank"} / [Male](Echelle_Epinephelinae sp._M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Etelis oculatus* / Vivaneau royale</h2>
 
-![](../data/Image poisson/Vivaneau royale.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Etelis oculatus_F.pdf) / [Male](Echelle_Etelis oculatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Vivaneau royale.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Etelis oculatus_F.pdf){target="_blank"} / [Male](Echelle_Etelis oculatus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
@@ -142,7 +142,7 @@ output: html_document
 
 <h2>*Haemulon sp.* / Gorettes</h2>
 
-![](../data/Image poisson/Gorettes.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Haemulon sp._F.pdf) / [Male](Echelle_Haemulon sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Gorettes.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Haemulon sp._F.pdf){target="_blank"} / [Male](Echelle_Haemulon sp._M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
@@ -150,7 +150,7 @@ output: html_document
 
 <h2>*Lutjanus sp.* / Vivaneaux</h2>
 
-![](../data/Image poisson/Vivaneaux.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Lutjanus sp._F.pdf) / [Male](Echelle_Lutjanus sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Vivaneaux.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Lutjanus sp._F.pdf){target="_blank"} / [Male](Echelle_Lutjanus sp._M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
@@ -158,7 +158,7 @@ output: html_document
 
 <h2>*Mulloidichthys martinicus* / Barbarin blanc</h2>
 
-![](../data/Image poisson/Barbarin blanc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Mulloidichthys martinicus_F.pdf) / [Male](Echelle_Mulloidichthys martinicus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Barbarin blanc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Mulloidichthys martinicus_F.pdf){target="_blank"} / [Male](Echelle_Mulloidichthys martinicus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
@@ -166,21 +166,21 @@ output: html_document
 
 <h2>*Ocyurus chrysurus* / Sarde queue jaune</h2>
 
-![](../data/Image poisson/Sarde queue jaune.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Ocyurus chrysurus_F.pdf) / [Male](Echelle_Ocyurus chrysurus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Sarde queue jaune.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Ocyurus chrysurus_F.pdf){target="_blank"} / [Male](Echelle_Ocyurus chrysurus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
 
 <h2>*Pagellus bogaraveo* / Dorade rose</h2>
 
-![](../data/Image poisson/Dorade rose.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pagellus bogaraveo_F.pdf) / [Male](Echelle_Pagellus bogaraveo_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Dorade rose.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pagellus bogaraveo_F.pdf){target="_blank"} / [Male](Echelle_Pagellus bogaraveo_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 \
 
 
 <h2>*Priacanthus arenatus* / Soleil franc</h2>
 
-![](../data/Image poisson/Soleil franc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Priacanthus arenatus_F.pdf) / [Male](Echelle_Priacanthus arenatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Soleil franc.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Priacanthus arenatus_F.pdf){target="_blank"} / [Male](Echelle_Priacanthus arenatus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
@@ -188,7 +188,7 @@ output: html_document
 
 <h2>*Pseudupeneus maculatus* / Barbarin rouge</h2>
 
-![](../data/Image poisson/Barbarin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pseudupeneus maculatus_F.pdf) / [Male](Echelle_Pseudupeneus maculatus_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Barbarin rouge.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pseudupeneus maculatus_F.pdf){target="_blank"} / [Male](Echelle_Pseudupeneus maculatus_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
@@ -196,7 +196,7 @@ output: html_document
 
 <h2>*Pterois volitans* / Rascasse volante</h2>
 
-![](../data/Image poisson/Rascasse volante.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pterois volitans._F.pdf) / [Male](Echelle_Pterois volitans_M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Rascasse volante.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Pterois volitans._F.pdf){target="_blank"} / [Male](Echelle_Pterois volitans_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
@@ -205,7 +205,7 @@ output: html_document
 
 <h2>*Sparisoma sp.* / Perroquet</h2>
 
-![](../data/Image poisson/Perroquet.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Sparisoma sp._F.pdf) / [Male](Echelle_Sparisoma sp._M.pdf) ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Perroquet.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Echelle_Sparisoma sp._F.pdf){target="_blank"} / [Male](Echelle_Sparisoma sp._M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 </center>
 
@@ -216,6 +216,14 @@ output: html_document
 
 :::
 ::::::::::::::
+
+
+\
+
+
+<center>
+![](../data/GoBack.png){height=26px width=20px} <a href="#" onclick="history.go(-1)" style="color:black;font-size:20px;">Retour</a>
+</center>
 
 
 \
