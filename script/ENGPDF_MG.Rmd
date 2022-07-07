@@ -193,7 +193,7 @@ output: html_document
 
 <h2>*Pterois volitans* / Red lionfish</h2>
 
-![](../data/Image poisson/Rascasse volante.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Pterois volitans._F.pdf){target="_blank"} / [Male](Scale_Pterois volitans_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
+![](../data/Image poisson/Rascasse volante.jpg){width=250px} ![](../data/Female sign.png){height=26px width=20px} [Female](Scale_Pterois volitans_F.pdf){target="_blank"} / [Male](Scale_Pterois volitans_M.pdf){target="_blank"} ![](../data/Male sign.png){height=26px width=20px}
 
 
 \
