@@ -177,7 +177,7 @@ plot(tbl_img)
 
 <center>
 
-[FISH GONADS' PHOTOGRAPHY PROTOCOL](ENG_P.pdf)
+[FISH GONADS' PHOTOGRAPHY PROTOCOL](ENG_P.pdf){target="_blank"}
 
 </center>
 

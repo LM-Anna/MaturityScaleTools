@@ -176,7 +176,7 @@ plot(tbl_img)
 
 <center>
 
-[PROTOCOLE PRISE DE PHOTO DES GONADES DE POISSONS](FR_P.pdf)
+[PROTOCOLE PRISE DE PHOTO DES GONADES DE POISSONS](FR_P.pdf){target="_blank"}
 
 </center>
 
