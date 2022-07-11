@@ -19,7 +19,7 @@ You can also find all of the HTML scales for every species in output.
 03/16/2022 UPDATE : 
 You can find the pages with all the html and pdf visual scale.
 
-05/07/2022 UPDATE /
+05/07/2022 UPDATE :
 Added species from the Antilles.
 
 ---
