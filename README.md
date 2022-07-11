@@ -1,13 +1,11 @@
 # MaturityScaleTools
-Maturity scale tools to identify visual maturity phases
+  This tool is a **guide for identifying maturity phases of fish of commercial interest**. It was set up as part of the project to harmonize maturity data collection methods.
 
-This is where you can find tools to help identify maturity phases with visual criterias for fishes with commercial interest in Europe.
+  It is composed of identification sheets for males and females of each species of fish and provides simple comments and photos to ease the identification of maturity phases.
 
-This tool is a **guide for identifying maturity phases of fish with commercial interest**. It was set up as part of the project to harmonize maturity data collection methods.
-
-  It is composed of identification sheets for males and females of each species of fish and it provides simple comments and photos to ease the maturity phases identification.
-
-  The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2012/2018 "WKMATCH" scale**. This scale was therefore created in an ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
+  The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2012/2018 "WKMATCH" scale**. This scale was created in the ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
+  
+  This scale is divided into 6 maturity phases, corresponding to specific development periods of the gonads during the reproductive cycle : 
 
 
 03/04/2022 UPDATE :
@@ -20,5 +18,8 @@ You can also find all of the HTML scales for every species in output.
 
 03/16/2022 UPDATE : 
 You can find the pages with all the html and pdf visual scale.
+
+05/07/2022 UPDATE /
+Added species from the Antilles.
 
 ---
