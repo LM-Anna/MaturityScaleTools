@@ -8,9 +8,9 @@ output:
   word_document: default
   html_document: default
 params:
-  spplat : "Flat fish sp."
-  sppeng : "Flat fish"
-  sppfr : "Poissons plats"
+  spplat : "Acanthostracion polygonius"
+  sppeng : "Honeycomb cowfish"
+  sppfr : "Coffre nid d'abeille"
   sex : "F"
 ---
 
@@ -67,7 +67,7 @@ imgNAratio<- fratimg(imgNA)
 
 #define local images
 #spp
-imgspp<-paste0(path2localfile,"Image poisson/",sppfr,".jpg")
+imgspp<-paste0(path2localfile,"Image poisson/",sppfr,".png")
 #spp img ratio
 imgsppratio<- fratimg(imgspp)
 #sex symbol

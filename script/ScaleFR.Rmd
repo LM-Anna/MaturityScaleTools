@@ -4,9 +4,9 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 params:
   spplat : "Flat fish sp."
   sppeng : "Flat fish"
@@ -65,7 +65,7 @@ imgNAratio<- fratimg(imgNA)
 
 #define local images
 #spp
-imgspp<-paste0(path2localfile,"Image poisson/",sppfr,".jpg")
+imgspp<-paste0(path2localfile,"Image poisson/",sppfr,".png")
 #spp img ratio
 imgsppratio<- fratimg(imgspp)
 #sex symbol
