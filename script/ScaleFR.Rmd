@@ -114,81 +114,34 @@ if(.Platform$OS.type=="unix"){
 ```
 
 
-```{r testtable , echo=F, warning=F, message=F,fig.height=0.7,fig.width=14,out.width='560px'}
+```{r allfish , echo=F, warning=F, message=F,fig.height=1.3,fig.width=8.4,out.width='560px'}
 
-titre1 <- "MATURITÉ ÉCHELLE VISUELLE"
+#☺titre1 <- "MATURITÉ ÉCHELLE VISUELLE"
 
-TITRE1<- data.frame(titre=titre1)
-
-TT1<-TITRE1%>%flextable()%>%
-		delete_part(part="header")%>%
-		#set_table_properties(layout="autofit",width=1)%>%
-    fontsize(size = 20, part = "body")%>%
-	  align( align = "center", part = "all")%>%
-	  color(color="white",part="body")%>%
-	  #bold(part="body")%>%
-	  valign(valign = "center", part="body")%>%
-    width(j="titre",width=40)%>%
-    border_remove()%>%
-    bg(i = 1, bg = "#4775D1", part = "body")
-
-plot(TT1)
-
-```
-
-```{r testtable2 , echo=F, warning=F, message=F,fig.height=0.8,fig.width=14,out.width='560px'}
-
-mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / ")) %>% 
+mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / "),Fish=rep(imgspp,length(1)),Sex=rep(imgsex,length(1))) %>% 
   separate(`Espèce`, c("french_name", "latin_name"), sep = "\\ / ") %>% 
   mutate(latin_name = paste0(" / ", latin_name) )
 
-TT2 <- flextable(mydata, col_keys = "dummy") %>%
+TT2 <- flextable(mydata, col_keys = c("dummy","Fish","Sex")) %>%
   compose(j = "dummy", value =as_paragraph(french_name, as_i(latin_name)))%>%
-  delete_part(part="header")%>%
+  colformat_image(j="Sex",width=0.7,height=0.7*imgsexratio)%>%
+  colformat_image(j="Fish",width=1.9,height=1.9*imgsppratio)%>%
+  set_header_labels(dummy="MATURITE ECHELLE VISUELLE",Sex="",Fish="")%>%
 	set_table_properties(layout="autofit",width=1)%>%
   fontsize(size = 25, part = "body")%>%
+  fontsize(size = 15, part = "header")%>%
 	align( align = "left", part = "all")%>%
 	color(color="black",part="body")%>%
-	bold(part="body")%>%
+	bold(part="all")%>%
 	valign(valign = "center", part="body")%>%
   border_remove()%>%
-  bg(i = 1, bg = "#E6E6FF", part = "body")
+  bg(i = 1, bg = "#E6E6FF", part = "body")%>%
+  bg(i = 1, bg = "#4775D1", part = "header")
 
 plot(TT2,dpi=32)
 
 
 ```
-
-
-
-
-```{r test4 , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='475px'}
-
-TAILLE<-Datataille %>% filter(Species==spplat,Sexe==sex)
-TAILLE <- TAILLE %>%select(1,4)
-TAILLE <- TAILLE %>% drop_na("Fishbase")
-
-tbl_img<-data.frame(Species2=rep(imgspp,length(TAILLE$SubSpecies)),Sex=rep(imgsex,length(TAILLE$SubSpecies)),Species=TAILLE$SubSpecies,FMS=TAILLE$Fishbase)
-
-tbl_img1<-tbl_img%>%flextable()%>%
-  merge_v(j=~Species2+Sex)%>%
-	colformat_image(j="Species2",width=1,height=1*imgsppratio)%>%
-	colformat_image(j="Sex",width=0.2,height=0.2*imgsexratio)%>%
-	align(j=c("Species","Sex","FMS","Species2"), align = "center", part = "all")%>%
-  bold(part = "header")%>%
-  fontsize(size = 8, part = "all")%>%
-  width(j = "Species", width = 1.5)%>%
-  width(j = "FMS", width = 1.3)%>%
-  border_remove()%>%
-  hline_top(part="header", border = border1 )%>%
-  hline_bottom(part="header", border = border1 )%>%
-  set_header_labels(Species2="Photo",FMS="Taille de 1ère maturité",Sex="Sexe",Species="Espèces")
-
-plot(tbl_img1)
-
-
-```
-
 
 
 ```{r aphase, echo=F, resultas='asis', warning=F, message=F,eval=T, dpi=32}
@@ -231,9 +184,9 @@ fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 		delete_part(part="header")%>%
 		add_header_row(value=phase,colwidths=3)%>%
 		set_table_properties(layout="autofit",width=1)%>%
-    fontsize(size = 15, part = "body")%>%
+    fontsize(size = 18, part = "body")%>%
 	  align(j = c("Img1","Img2"), align = "center", part = "all")%>%
-    fontsize(size = 28, part = "header")%>%
+    fontsize(size = 25, part = "header")%>%
 	  color(color="red",part="header")%>%
 	  bold(part="header")%>%
 	  border_remove()%>%
@@ -246,61 +199,60 @@ fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 #plot(tbl_img)
 ```
 
-```{r phaseA, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+```{r phaseA, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px'}
 tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="A - IMMATURE",sex,imgNA)
 plot(tbl_img)
 ```
 
-```{r phaseB, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+```{r phaseB, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px'}
 tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="B - EN DÉVELOPPEMENT",sex,imgNA)
 plot(tbl_img)
 ```
 
-```{r phaseC, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+```{r phaseC, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px'}
 tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="C - EN PONTE",sex,imgNA)
 plot(tbl_img)
 ```
 
-
-
-\newpage
-
-```{r testtable3 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='400px'}
-
-titre3 <- " "
-
-TITRE3<- data.frame(titre=titre3)
-
-TT3<-TITRE3%>%flextable()%>%
-		delete_part(part="header")%>%
-		set_table_properties(layout="autofit",width=1)%>%
-    fontsize(size = 30, part = "body")%>%
-	  align( align = "left", part = "all")%>%
-	  color(color="white",part="body")%>%
-	  bold(part="body")%>%
-	  valign(valign = "center", part="body")%>%
-    border_remove()%>%
-    bg(i = 1, bg = "white", part = "body")
-
-plot(TT3)
-
-
-```
-
-
-```{r phaseD, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+```{r phaseD, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px'}
 tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="D - RÉGRESSION/RÉGÉNÉRATION",sex,imgNA)
 plot(tbl_img)
 ```
 
-```{r testtable4 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='200px'}
+\newpage
 
-plot(TT3)
+```{r allfish2 , echo=F, warning=F, message=F,fig.height=1.3,fig.width=8.4,out.width='560px'}
+
+#☺titre1 <- "MATURITÉ ÉCHELLE VISUELLE"
+
+mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / "),Fish=rep(imgspp,length(1)),Sex=rep(imgsex,length(1))) %>% 
+  separate(`Espèce`, c("french_name", "latin_name"), sep = "\\ / ") %>% 
+  mutate(latin_name = paste0(" / ", latin_name) )
+
+TT2 <- flextable(mydata, col_keys = c("dummy","Fish","Sex")) %>%
+  compose(j = "dummy", value =as_paragraph(french_name, as_i(latin_name)))%>%
+  colformat_image(j="Sex",width=0.7,height=0.7*imgsexratio)%>%
+  colformat_image(j="Fish",width=1.9,height=1.9*imgsppratio)%>%
+  set_header_labels(dummy="MATURITE ECHELLE VISUELLE",Sex="",Fish="")%>%
+	set_table_properties(layout="autofit",width=1)%>%
+  fontsize(size = 25, part = "body")%>%
+  fontsize(size = 15, part = "header")%>%
+	align( align = "left", part = "all")%>%
+	color(color="black",part="body")%>%
+	bold(part="all")%>%
+	valign(valign = "center", part="body")%>%
+  border_remove()%>%
+  bg(i = 1, bg = "#E6E6FF", part = "body")%>%
+  bg(i = 1, bg = "#4775D1", part = "header")
+
+plot(TT2,dpi=32)
+
 
 ```
 
 
-```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=1.5,fig.width=7.5,out.width='600px'}
+
+```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=1.5,fig.width=7.5,out.width='400px', fig.align='center'}
 
 fctphasetest<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	  textASB<-Datascale %>% 
@@ -327,22 +279,76 @@ tbl_img<-fctphasetest(Datascale,Dataphoto,spplat,phase="E - OMISSION DE PONTE",s
 plot(tbl_img)
 ```
 
-```{r testtable5 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='200px'}
 
-plot(TT3)
-
-```
-
-
-```{r phaseF, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.5,fig.width=7.5,out.width='600px'}
+```{r phaseF, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px',fig.align='center'}
 tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="F - ANORMAL",sex,imgNA)
 plot(tbl_img)
 ```
+
+
+```{r testtable3 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='400px'}
+
+titre3 <- " "
+
+TITRE3<- data.frame(titre=titre3)
+
+TT3<-TITRE3%>%flextable()%>%
+		delete_part(part="header")%>%
+		set_table_properties(layout="autofit",width=1)%>%
+    fontsize(size = 20, part = "body")%>%
+	  align( align = "left", part = "all")%>%
+	  color(color="white",part="body")%>%
+	  bold(part="body")%>%
+	  valign(valign = "center", part="body")%>%
+    border_remove()%>%
+    bg(i = 1, bg = "white", part = "body")
+
+plot(TT3)
+
+
+```
+
+----
+
+```{r testtable7 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='200px'}
+
+plot(TT3)
+
+
+```
+
+
+```{r test4 , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='550px',fig.align='center'}
+
+TAILLE<-Datataille %>% filter(Species==spplat,Sexe==sex)
+TAILLE <- TAILLE %>%select(1,4)
+TAILLE <- TAILLE %>% drop_na("Fishbase")
+
+tbl_img<-data.frame(Species2=rep(imgspp,length(TAILLE$SubSpecies)),Sex=rep(imgsex,length(TAILLE$SubSpecies)),Species=TAILLE$SubSpecies,FMS=TAILLE$Fishbase)
+
+tbl_img1<-tbl_img%>%flextable()%>%
+  merge_v(j=~Species2+Sex)%>%
+	colformat_image(j="Species2",width=1,height=1*imgsppratio)%>%
+	colformat_image(j="Sex",width=0.2,height=0.2*imgsexratio)%>%
+	align(j=c("Species","Sex","FMS","Species2"), align = "center", part = "all")%>%
+  bold(part = "header")%>%
+  fontsize(size = 8, part = "all")%>%
+  width(j = "Species", width = 1.5)%>%
+  width(j = "FMS", width = 1.3)%>%
+  border_remove()%>%
+  hline_top(part="header", border = border1 )%>%
+  hline_bottom(part="header", border = border1 )%>%
+  set_header_labels(Species2="Photo",FMS="Taille de 1ère maturité",Sex="Sexe",Species="Espèces")
+
+plot(tbl_img1)
+
+
+```
+
 
 \vspace*{\fill}
 
 **Références/Photos** :   
 CIEM (WKASMSF 2018 & WKMATCH 2012),   
 IFREMER 
-
 
