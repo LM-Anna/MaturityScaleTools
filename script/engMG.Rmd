@@ -179,6 +179,18 @@ plot(tbl_img)
 
 [FISH GONADS' PHOTOGRAPHY PROTOCOL](ENG_P.pdf){target="_blank"}
 
+\
+
+  In order to complete the tool, here is the list of photos to take by species, sex and maturity phases :
+  
+  <center>
+[PDF](PhotototakeGM.pdf){target="_blank"}
+/
+[HTML](PhotototakeGM.html){target="_blank"}
+</center>
+
+
+
 </center>
 
 \

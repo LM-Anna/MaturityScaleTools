@@ -178,6 +178,29 @@ plot(tbl_img)
 
 [PROTOCOLE PRISE DE PHOTO DES GONADES DE POISSONS](FR_P.pdf){target="_blank"}
 
+\
+
+  Afin de compléter les fiches, voici la liste des photos en fonction des espèces, sexes et phases de maturité :
+  
+<center>
+[PDF](PhotoàPrendreAMM.pdf){target="_blank"}
+/
+[HTML](PhotoàPrendreAMM.html){target="_blank"}
+</center>
+
+
+
+\
+
+
+
+<center>
+
+
+</center>
+
+
+
 </center>
 
 \
