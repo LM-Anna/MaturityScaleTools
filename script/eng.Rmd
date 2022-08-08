@@ -179,6 +179,40 @@ plot(tbl_img)
 
 [FISH GONADS' PHOTOGRAPHY PROTOCOL](ENG_P.pdf){target="_blank"}
 
+\
+
+  In order to complete the tool, here is the list of photos to take by species, sex and maturity phases :
+  
+:::::::::::::: {.columns}
+::: {.column width="40%"}
+
+<center>
+North Atlantic / Channel Sea / North Sea
+
+[PDF](PhotototakeAMM.pdf){target="_blank"}
+/
+[HTML](PhotototakeAMM.html){target="_blank"}
+</center>
+
+:::
+::: {.column width="20%"}
+
+\
+
+:::
+::: {.column width="40%"}
+
+<center>
+Martinique / Guadeloupe
+
+[PDF](PhotototakeGM.pdf){target="_blank"}
+/
+[HTML](PhotototakeGM.HTML){target="_blank"}
+</center>
+
+:::
+::::::::::::::
+
 </center>
 
 \
