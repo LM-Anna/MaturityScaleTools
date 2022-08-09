@@ -64,7 +64,6 @@ knit: (function(inputFile, encoding) {
 <h4>*Last update : 09/08/2022*</h4>
 
 
-testetst
 
 </center>
 
