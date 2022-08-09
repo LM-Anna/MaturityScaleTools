@@ -1,6 +1,8 @@
 ---
 title: " "
 output: html_document
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
 
 
@@ -58,7 +60,7 @@ output: html_document
 
 <center>
 
-<h4>*Last update : 08/08/2022*</h4>
+<h4>*Last update : 09/08/2022*</h4>
 
 </center>
 

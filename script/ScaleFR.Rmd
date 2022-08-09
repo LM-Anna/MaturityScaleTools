@@ -12,6 +12,8 @@ params:
   sppeng : "Flat fish"
   sppfr : "Poissons plats"
   sex : "F"
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
 
 ```{r setup, include=FALSE}
@@ -351,4 +353,5 @@ plot(tbl_img1)
 **Références/Photos** :   
 CIEM (WKASMSF 2018 & WKMATCH 2012),   
 IFREMER 
+Quéro J-C. et Vayne J-J.2008. Les poissons de mer des pêches françaises : delachaux et niestlé, 304
 

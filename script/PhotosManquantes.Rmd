@@ -12,6 +12,8 @@ params:
   sppeng : "Flat fish"
   sppfr : "Bourse cabri"
   sex : "F"
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
 
 ```{r setup, include=FALSE}
