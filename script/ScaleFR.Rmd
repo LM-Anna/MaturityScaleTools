@@ -20,46 +20,38 @@ knit: (function(inputFile, encoding) {
 #knit option
 knitr::opts_chunk$set(echo = TRUE,fig.pos = 'h',dpi=32)
 #packages
-library(dplyr, warn.conflicts = FALSE)  # because tidyverse
-library(readxl, warn.conflicts = FALSE) # to read excel file
-library(knitr, warn.conflicts = FALSE)  # to elaborate html/pdf
-library(flextable)
+library(dplyr, warn.conflicts = FALSE)      # because tidyverse
+library(readxl, warn.conflicts = FALSE)     # to read excel file
+library(knitr, warn.conflicts = FALSE)      # to elaborate html/pdf
+library(flextable, warn.conflicts = FALSE)  # to elaborate figures/tables
+library(officer, warn.conflicts = FALSE)    # to customize tables
 library(magick, warn.conflicts = FALSE)
 library(tidyr)
 library(gridExtra)
-#library(pander, warn.conflicts = FALSE)
-#library(kableExtra, warn.conflicts = FALSE)
-#library(jpeg, warn.conflicts = FALSE)
-#library(png, warn.conflicts = FALSE)
-#library(imager, warn.conflicts = FALSE)
-#library(cowplot)
-#library(ggplot2)
-#a short function to get image ratio
+
+#creates a function to read image with their right dimensions
 fratimg<-function(pathimg){
 	imgdim<-image_info(image_read(pathimg))
 	imgratio<- imgdim$height/imgdim$width
 	return(imgratio)
 }
-
 ```
 
-
 ```{r localparam, include=FALSE}
-#local parameters
+##local parameters
 #define variables (spp)
-#onespp<-"Engraulis encrasicolus"
 spplat<-params$spplat
 sppfr<-params$sppfr
 sppeng<-params$sppeng
-sex<-params$sex #or "M"
+sex<-params$sex
+```
+
+```{r localpath, include=FALSE}
 #define local path
 path2localfile<-"../data/"
 #define image database path (aka the Photo_MATURITE directory)
-#here Laurent computer
 path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
-#example for Anna computer
-#path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
-#"/home/moi2/ifremer/data/Photo_MATURITE"
+
 #define path to NA photo
 imgNA<-paste0(path2localfile,'NA.jpg')
 #NA photo dim and ratio
@@ -79,25 +71,24 @@ if(sex=="M"){
 }
 #sex img ratio
 imgsexratio<- fratimg(imgsex)
-
 ```
 
-```{r testpara, echo=F, resultas='asis', warning=F, message=F,eval=T}
-
-library(officer)
-big_border = fp_border(color="#4775D1", width = 8)
-small_border = fp_border(color="gray", width = 1)
+```{r borderstyle, echo=F, resultas='asis', warning=F, message=F,eval=T}
+#to style table's borders
 border1 = fp_border(color="black", width = 2)
-
+border2 = fp_border(color="#4775D1", width = 8)
+border3 = fp_border(color="gray", width = 1)
 ```
-
 
 ```{r referencetable, include=FALSE}
 #load reference data
-Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=2)
-Datascale <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=1)
-Datataille <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=3)
+Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=2)#data frame with all gonads photos
+Datascale <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=1)#data frame with files simple commentaries
+Datataille <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=3)#data frame with first maturity size info
 #build link for maturity phase photo data using the imgpath
+```
+
+```{r hackNAinfo, include=FALSE}
 #hack to keep NA info
 l1<-sapply(strsplit(Dataphoto$Link,split="Photo_MATURITE\\\\"),"[[",1)
 l1NA<-which(grepl("NA.JPG",l1))
@@ -192,7 +183,7 @@ fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	  color(color="red",part="header")%>%
 	  bold(part="header")%>%
 	  border_remove()%>%
-	  hline_top(border = big_border, part = "header")%>%
+	  hline_top(border = border2, part = "header")%>%
 	  valign(j="Description",valign = "center", part="body")
 	return(tbl_img)
 }
@@ -272,7 +263,7 @@ fctphasetest<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	  color(color="red",part="header")%>%
 	  bold(part="header")%>%
 	  border_remove()%>%
-	  hline_top(border = big_border, part = "header")
+	  hline_top(border = border2, part = "header")
 
 	return(tbl_img)
 }
