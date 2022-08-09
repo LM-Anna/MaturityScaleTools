@@ -252,7 +252,7 @@ plot(TT2,dpi=32)
 
 
 
-```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=1.5,fig.width=7.5,out.width='400px', fig.align='center'}
+```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=1.5,fig.width=7.5,out.width='550px'}
 
 fctphasetest<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	  textASB<-Datascale %>% 
@@ -264,9 +264,9 @@ fctphasetest<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 		add_header_row(value=phase,colwidths=1)%>%
 	  padding(padding=35, part="body")%>%
 		set_table_properties(layout="autofit",width=1)%>%
-    fontsize(size = 25, part = "body")%>%
+    fontsize(size = 20, part = "body")%>%
 	  align(j = "Description", align = "center", part = "body")%>%
-    fontsize(size = 28, part = "header")%>%
+    fontsize(size = 22, part = "header")%>%
 	  color(color="red",part="header")%>%
 	  bold(part="header")%>%
 	  border_remove()%>%
@@ -280,7 +280,7 @@ plot(tbl_img)
 ```
 
 
-```{r phaseF, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px',fig.align='center'}
+```{r phaseF, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px'}
 tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="F - ANORMAL",sex,imgNA)
 plot(tbl_img)
 ```
@@ -318,7 +318,7 @@ plot(TT3)
 ```
 
 
-```{r test4 , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='550px',fig.align='center'}
+```{r test4 , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='550px'}
 
 TAILLE<-Datataille %>% filter(Species==spplat,Sexe==sex)
 TAILLE <- TAILLE %>%select(1,4)
