@@ -108,9 +108,7 @@ if(.Platform$OS.type=="unix"){
 
 
 ```{r allfish , echo=F, warning=F, message=F,fig.height=1.3,fig.width=8.4,out.width='560px'}
-
-#☺titre1 <- "MATURITÉ ÉCHELLE VISUELLE"
-
+##File's header
 mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / "),Fish=rep(imgspp,length(1)),Sex=rep(imgsex,length(1))) %>% 
   separate(`Espèce`, c("french_name", "latin_name"), sep = "\\ / ") %>% 
   mutate(latin_name = paste0(" / ", latin_name) )
@@ -132,8 +130,6 @@ TT2 <- flextable(mydata, col_keys = c("dummy","Fish","Sex")) %>%
   bg(i = 1, bg = "#4775D1", part = "header")
 
 plot(TT2,dpi=32)
-
-
 ```
 
 
@@ -343,6 +339,6 @@ plot(tbl_img1)
 
 **Références/Photos** :   
 CIEM (WKASMSF 2018 & WKMATCH 2012),   
-IFREMER 
+IFREMER,   
 Quéro J-C. et Vayne J-J.2008. Les poissons de mer des pêches françaises : delachaux et niestlé, 304
 

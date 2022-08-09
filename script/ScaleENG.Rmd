@@ -352,5 +352,5 @@ plot(tbl_img1)
 
 **References/Photos** :   
 ICES (WKASMSF 2018 & WKMATCH 2012),   
-IFREMER 
+IFREMER,   
 Quéro J-C. et Vayne J-J.2008. Les poissons de mer des pêches françaises : delachaux et niestlé, 304
