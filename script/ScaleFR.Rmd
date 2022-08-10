@@ -4,16 +4,14 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 params:
   spplat : "Flat fish sp."
   sppeng : "Flat fish"
   sppfr : "Poissons plats"
   sex : "F"
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
 
 ```{r setup, include=FALSE}
@@ -82,10 +80,10 @@ border3 = fp_border(color="gray", width = 1)
 
 ```{r referencetable, include=FALSE}
 #load reference data
+#build link for maturity phase photo data using the imgpath
 Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=2)#data frame with all gonads photos
 Datascale <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=1)#data frame with files simple commentaries
 Datataille <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=3)#data frame with first maturity size info
-#build link for maturity phase photo data using the imgpath
 ```
 
 ```{r hackNAinfo, include=FALSE}
@@ -107,7 +105,7 @@ if(.Platform$OS.type=="unix"){
 ```
 
 
-```{r allfish , echo=F, warning=F, message=F,fig.height=1.3,fig.width=8.4,out.width='560px'}
+```{r header1, echo=F, warning=F, message=F,fig.height=1.3,fig.width=8.4,out.width='560px'}
 ##File's header
 mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / "),Fish=rep(imgspp,length(1)),Sex=rep(imgsex,length(1))) %>% 
   separate(`Espèce`, c("french_name", "latin_name"), sep = "\\ / ") %>% 
@@ -132,17 +130,11 @@ TT2 <- flextable(mydata, col_keys = c("dummy","Fish","Sex")) %>%
 plot(TT2,dpi=32)
 ```
 
-
-```{r aphase, echo=F, resultas='asis', warning=F, message=F,eval=T, dpi=32}
-# Generic check for a phase
-#test flextable for maturity phase
-#phase<-"A - IMMATURE"
-#phase<-"B - DEVELOPING"
-#parameters: 
-#text maturity
-
+```{r function, echo=F, resultas='asis', warning=F, message=F,eval=T, dpi=32}
+##function to elaborate tables with gonad's photos depending on parameters
 fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
-	  textASB<-Datascale %>% 
+	#commentary maturity  
+  textASB<-Datascale %>% 
 		filter(Species==spplat,Phase==phase,Sexe==sex)%>%
 		pull(Text)
 	#picture maturity
@@ -183,9 +175,6 @@ fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	  valign(j="Description",valign = "center", part="body")
 	return(tbl_img)
 }
-
-#tbl_img<-fctphase(Datascale,Dataphoto,spplat,phase="B - DEVELOPING",sex,imgNA)
-#plot(tbl_img)
 ```
 
 ```{r phaseA, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px'}
@@ -210,39 +199,13 @@ plot(tbl_img)
 
 \newpage
 
-```{r allfish2 , echo=F, warning=F, message=F,fig.height=1.3,fig.width=8.4,out.width='560px'}
-
-#☺titre1 <- "MATURITÉ ÉCHELLE VISUELLE"
-
-mydata <- data.frame(Espèce =  paste(sppfr,spplat,sep=" / "),Fish=rep(imgspp,length(1)),Sex=rep(imgsex,length(1))) %>% 
-  separate(`Espèce`, c("french_name", "latin_name"), sep = "\\ / ") %>% 
-  mutate(latin_name = paste0(" / ", latin_name) )
-
-TT2 <- flextable(mydata, col_keys = c("dummy","Fish","Sex")) %>%
-  compose(j = "dummy", value =as_paragraph(french_name, as_i(latin_name)))%>%
-  colformat_image(j="Sex",width=0.7,height=0.7*imgsexratio)%>%
-  colformat_image(j="Fish",width=1.9,height=1.9*imgsppratio)%>%
-  set_header_labels(dummy="MATURITE ECHELLE VISUELLE",Sex="",Fish="")%>%
-	set_table_properties(layout="autofit",width=1)%>%
-  fontsize(size = 25, part = "body")%>%
-  fontsize(size = 15, part = "header")%>%
-	align( align = "left", part = "all")%>%
-	color(color="black",part="body")%>%
-	bold(part="all")%>%
-	valign(valign = "center", part="body")%>%
-  border_remove()%>%
-  bg(i = 1, bg = "#E6E6FF", part = "body")%>%
-  bg(i = 1, bg = "#4775D1", part = "header")
-
+```{r header2 , echo=F, warning=F, message=F,fig.height=1.3,fig.width=8.4,out.width='560px'}
+##File's header
 plot(TT2,dpi=32)
-
-
 ```
 
-
-
 ```{r phaseE, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=1.5,fig.width=7.5,out.width='550px'}
-
+#function to elaborate table for E phase
 fctphasetest<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	  textASB<-Datascale %>% 
 		filter(Species==spplat,Phase==phase,Sexe==sex)%>%
@@ -268,19 +231,15 @@ tbl_img<-fctphasetest(Datascale,Dataphoto,spplat,phase="E - OMISSION DE PONTE",s
 plot(tbl_img)
 ```
 
-
 ```{r phaseF, echo=F, resultas='asis', warning=F, message=F,eval=T,fig.height=2.2,fig.width=7.5,out.width='550px'}
 tbl_img<-fctphase1(Datascale,Dataphoto,spplat,phase="F - ANORMAL",sex,imgNA)
 plot(tbl_img)
 ```
 
-
-```{r testtable3 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='400px'}
-
+```{r blank1 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='400px'}
+#blank table to create a space between tables
 titre3 <- " "
-
 TITRE3<- data.frame(titre=titre3)
-
 TT3<-TITRE3%>%flextable()%>%
 		delete_part(part="header")%>%
 		set_table_properties(layout="autofit",width=1)%>%
@@ -293,22 +252,16 @@ TT3<-TITRE3%>%flextable()%>%
     bg(i = 1, bg = "white", part = "body")
 
 plot(TT3)
-
-
 ```
 
 ----
 
-```{r testtable7 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='200px'}
-
+```{r blank2 , echo=F, warning=F, message=F,fig.height=1,fig.width=8.5,out.width='200px'}
 plot(TT3)
-
-
 ```
 
-
-```{r test4 , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='550px'}
-
+```{r FirstSize , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='550px'}
+#to elaborate first size maturity table
 TAILLE<-Datataille %>% filter(Species==spplat,Sexe==sex)
 TAILLE <- TAILLE %>%select(1,4)
 TAILLE <- TAILLE %>% drop_na("Fishbase")
@@ -330,10 +283,7 @@ tbl_img1<-tbl_img%>%flextable()%>%
   set_header_labels(Species2="Photo",FMS="Taille de 1ère maturité",Sex="Sexe",Species="Espèces")
 
 plot(tbl_img1)
-
-
 ```
-
 
 \vspace*{\fill}
 
