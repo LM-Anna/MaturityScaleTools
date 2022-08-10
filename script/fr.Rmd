@@ -78,7 +78,7 @@ border1 = fp_border(color="black", width = 2)
 
 <center>
 
-<h4>*Dernière mise à jour : 09/08/2022*</h4>
+<h4>*Dernière mise à jour : 10/08/2022*</h4>
 
 </center>
 
@@ -182,7 +182,7 @@ plot(tbl_img)
 
 \
 
-  Afin de compléter les fiches, voici la liste des photos en fonction des espèces, sexes et phases de maturité :
+  Afin de compléter les fiches, voici la liste des photos à prendre en fonction des espèces, sexes et phases de maturité :
   
 :::::::::::::: {.columns}
 ::: {.column width="40%"}
