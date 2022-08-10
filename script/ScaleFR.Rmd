@@ -4,9 +4,9 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 params:
   spplat : "Flat fish sp."
   sppeng : "Flat fish"
@@ -51,7 +51,7 @@ path2localfile<-"../data/"
 path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
 
 #define path to NA photo
-imgNA<-paste0(path2localfile,'NA.jpg')
+imgNA<-paste0(path2localfile,'NA.png')
 #NA photo dim and ratio
 imgNAratio<- fratimg(imgNA)
 
@@ -89,14 +89,14 @@ Datataille <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=3)#data 
 ```{r hackNAinfo, include=FALSE}
 #hack to keep NA info
 l1<-sapply(strsplit(Dataphoto$Link,split="Photo_MATURITE\\\\"),"[[",1)
-l1NA<-which(grepl("NA.JPG",l1))
-l1noNA<-which(!grepl("NA.JPG",l1))
+l1NA<-which(grepl("NA.PNG",l1))
+l1noNA<-which(!grepl("NA.PNG",l1))
 l2<-sapply(strsplit(Dataphoto$Link[l1noNA],split="Photo_MATURITE"),"[[",2)
 if(.Platform$OS.type=="unix"){
 	#pipo<-paste0(path2imgdb, gsub("\\\\","/",l2[272]) )
 	#plot(image_read(l1[392]))
 	l1[l1noNA]<-paste0(path2imgdb, gsub("\\\\","/",l2) )
-	l1[l1NA]<-paste0(path2localfile,"NA.jpg")
+	l1[l1NA]<-paste0(path2localfile,"NA.PNG")
 	Dataphoto$Link<-l1
 }else{
 	#to be setup for other computers (Anna first)
