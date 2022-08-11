@@ -5,6 +5,14 @@ knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
 
+```{r , include=FALSE}
+#If new species were to be added, here is the template section that must be added to the script to have access to this new species identification guide in the GitHub pages (text to change will be surrounded by "!" ) : 
+
+#<h2>*!Scientific name!* / !Vernacular name!</h2>
+
+#![](../data/Photo_Guides/Image_Fish/!French vernacular name!.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_!Scientific name!_F.html){target="_blank"} / [Mâle](Echelle_!Scientific name!_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+```
+
 
 <html>
 <head>
