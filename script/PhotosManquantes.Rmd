@@ -73,7 +73,7 @@ test6<-Dataphoto
 test<- test6 %>% filter(Species=="Argyrosomus regius" | Species=="Chelidonichthys cuculus" | Species=="Clupea clupea" | Species=="Engraulis encrasicolus" | Species=="Dicentrarchus labrax" | Species=="Flat fish sp." | Species=="Gadidae sp." | Species=="Merluccius merluccius" | Species=="Mullus surmuletus" | Species=="Lophius sp." | Species=="Pagellus bogaraveo" | Species=="Sardina pilchardus" | Species=="Scomber scombrus" | Species=="Scophthalmus sp." | Species=="Solea solea" | Species=="Sprattus sprattus")
 colnames(test)[8]<-"ID"
 test <- test %>%select(1,5,6,7,8)
-test1<- test%>%filter(Guides=="oui" | ID =="E")
+test1<- test%>%filter(Guides=="yes" | ID =="E")
 colnames(test1)[5]<-"ID"
 test1<-test1%>%distinct(Species, Sex, ID, .keep_all=TRUE)
 test1<-test1%>%select(2,3,4,5)
@@ -233,7 +233,7 @@ test61<-Dataphoto
 test<- test61 %>% filter(Species=="Acanthostracion polygonius" | Species=="Acanthurus bahianus" | Species=="Aluterus scriptus" | Species=="Balistes vetula" | Species=="Calamus bajonado" | Species=="Cantherhines macrocerus" | Species=="Canthidermis sufflamen" | Species=="Caranx sp." | Species=="Epinephelinae sp." | Species=="Etelis oculatus" | Species=="Haemulon sp." | Species=="Lutjanus sp." | Species=="Mulloidichthys martinicus" | Species=="Ocyurus chrysurus" | Species=="Priacanthus arenatus" | Species=="Pseudupeneus maculatus" | Species=="Pterois volitans" | Species=="Sparisoma sp.")
 colnames(test)[8]<-"ID"
 test <- test %>%select(1,5,6,7,8)
-test1<- test%>%filter(Guides=="oui" | ID =="E")
+test1<- test%>%filter(Guides=="yes" | ID =="E")
 colnames(test1)[5]<-"ID"
 test1<-test1%>%distinct(Species, Sex, ID, .keep_all=TRUE)
 test1<-test1%>%select(2,3,4,5)

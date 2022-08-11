@@ -141,9 +141,9 @@ fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	#picture maturity
 	ASB<-Dataphoto %>% 
 		filter(Species==spplat,Sex==sex,Phase==phase)%>%
-		filter(Guides=='oui'| Guides=='na')
-	#if oui then keep only "oui" Fiches and remove NA
-	if(any(ASB$Guides%in%"oui")){
+		filter(Guides=='yes'| Guides=='na')
+	#if yes then keep only "yes" Fiches and remove NA
+	if(any(ASB$Guides%in%"yes")){
 		ASB<-ASB%>% filter(Guides!="na")
 	}
 	#links to the two pictures
