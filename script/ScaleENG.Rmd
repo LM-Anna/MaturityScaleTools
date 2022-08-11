@@ -136,11 +136,11 @@ plot(TT2,dpi=32)
 fctphase1<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	#commentary maturity   
   textASB<-Datascale %>% 
-		filter(Species==spplat,Phase==phase,Sexe==sex)%>%
+		filter(Species==spplat,Phase==phase,Sex==sex)%>%
 		pull(Text)
 	#picture maturity
 	ASB<-Dataphoto %>% 
-		filter(Species==spplat,Sexe==sex,Phase==phase)%>%
+		filter(Species==spplat,Sex==sex,Phase==phase)%>%
 		filter(Guides=='oui'| Guides=='na')
 	#if oui then keep only "oui" Fiches and remove NA
 	if(any(ASB$Guides%in%"oui")){
@@ -209,7 +209,7 @@ plot(TT2,dpi=32)
 #function to elaborate table for E phase
 fctphasetest<-function(Datascale,DataPhoto,spplat,phase,sex,imgNA){
 	  textASB<-Datascale %>% 
-		filter(Species==spplat,Phase==phase,Sexe==sex)%>%
+		filter(Species==spplat,Phase==phase,Sex==sex)%>%
 		pull(Text)
 	tbl_img<-data.frame(Description=textASB)
 	tbl_img<-tbl_img%>%flextable()%>%
@@ -263,11 +263,11 @@ plot(TT3)
 
 ```{r FirstSize , echo=F, warning=F, message=F,fig.height=2,fig.width=8.4,out.width='550px'}
 #to elaborate first size maturity table
-TAILLE<-Datataille %>% filter(Species==spplat,Sexe==sex)
+TAILLE<-Datataille %>% filter(Species==spplat,Sex==sex)
 TAILLE <- TAILLE %>%select(1,4)
-TAILLE <- TAILLE %>% drop_na("Fishbase")
+TAILLE <- TAILLE %>% drop_na("FSM")
 
-tbl_img<-data.frame(Species2=rep(imgspp,length(TAILLE$SubSpecies)),Sex=rep(imgsex,length(TAILLE$SubSpecies)),Species=TAILLE$SubSpecies,FMS=TAILLE$Fishbase)
+tbl_img<-data.frame(Species2=rep(imgspp,length(TAILLE$SubSpecies)),Sex=rep(imgsex,length(TAILLE$SubSpecies)),Species=TAILLE$SubSpecies,FMS=TAILLE$FSM)
 
 tbl_img1<-tbl_img%>%flextable()%>%
   merge_v(j=~Species2+Sex)%>%

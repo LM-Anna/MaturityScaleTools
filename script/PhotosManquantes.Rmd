@@ -75,16 +75,16 @@ colnames(test)[8]<-"ID"
 test <- test %>%select(1,5,6,7,8)
 test1<- test%>%filter(Guides=="oui" | ID =="E")
 colnames(test1)[5]<-"ID"
-test1<-test1%>%distinct(Species, Sexe, ID, .keep_all=TRUE)
+test1<-test1%>%distinct(Species, Sex, ID, .keep_all=TRUE)
 test1<-test1%>%select(2,3,4,5)
 
 
 TEST<-test%>%select(2,3,4,5)
 #return all rows that are not in commons between two tables
-test8<-anti_join(TEST, test1, by = c("ID","Sexe","Species"))
+test8<-anti_join(TEST, test1, by = c("ID","Sex","Species"))
 
 
-test9 <- pivot_wider(test8, names_from = Sexe, values_from = ID)
+test9 <- pivot_wider(test8, names_from = Sex, values_from = ID)
 
 test9$F<-as.character(test9$F)
 test9$M<-as.character(test9$M)
@@ -235,16 +235,16 @@ colnames(test)[8]<-"ID"
 test <- test %>%select(1,5,6,7,8)
 test1<- test%>%filter(Guides=="oui" | ID =="E")
 colnames(test1)[5]<-"ID"
-test1<-test1%>%distinct(Species, Sexe, ID, .keep_all=TRUE)
+test1<-test1%>%distinct(Species, Sex, ID, .keep_all=TRUE)
 test1<-test1%>%select(2,3,4,5)
 
 
 TEST<-test%>%select(2,3,4,5)
 #return all rows that are not in commons between two tables
-test8<-anti_join(TEST, test1, by = c("ID","Sexe","Species"))
+test8<-anti_join(TEST, test1, by = c("ID","Sex","Species"))
 
 
-test9 <- pivot_wider(test8, names_from = Sexe, values_from = ID)
+test9 <- pivot_wider(test8, names_from = Sex, values_from = ID)
 
 test9$F<-as.character(test9$F)
 test9$M<-as.character(test9$M)
