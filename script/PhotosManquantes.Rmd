@@ -27,14 +27,7 @@ library(flextable)
 library(magick, warn.conflicts = FALSE)
 library(tidyr)
 library(gridExtra)
-#library(pander, warn.conflicts = FALSE)
-#library(kableExtra, warn.conflicts = FALSE)
-#library(jpeg, warn.conflicts = FALSE)
-#library(png, warn.conflicts = FALSE)
-#library(imager, warn.conflicts = FALSE)
-#library(cowplot)
-#library(ggplot2)
-#a short function to get image ratio
+
 fratimg<-function(pathimg){
 	imgdim<-image_info(image_read(pathimg))
 	imgratio<- imgdim$height/imgdim$width
@@ -52,13 +45,14 @@ sppfr<-params$sppfr
 sppeng<-params$sppeng
 sex<-params$sex
 #define local path
-path2localfile<-"../data/"
+path2localfile<-"../data/Photo_Guides/"
+path2localfile2<-"../data/"
 #define image database path (aka the Photo_MATURITE directory)
 #here Laurent computer
 path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
 #define local images
 #spp
-imgspp<-paste0(path2localfile,"Image poisson/",sppfr,".png")
+imgspp<-paste0(path2localfile,"Image_Fish/",sppfr,".png")
 #spp img ratio
 imgsppratio<- fratimg(imgspp)
 
@@ -66,8 +60,8 @@ imgsppratio<- fratimg(imgspp)
 
 ```{r referencetable, include=FALSE}
 #load reference data
-Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=2)
-DataFR <- read_excel(paste0(path2localfile,"dataLOOP.xlsx"),sheet=1)
+Dataphoto <- read_excel(paste0(path2localfile2,"photo_guides.xlsx"),sheet=1)
+DataFR <- read_excel(paste0(path2localfile2,"dataLOOP.xlsx"),sheet=1)
 
 ```
 
@@ -116,7 +110,7 @@ test10<-merge(test9, sppfr, all=TRUE)
 test10<-test10%>%select(1,3,4,5,6)
 test10<-test10[,c(5,1,4,2,3)]
 
-imgspp<-paste0(path2localfile,"Image poisson/",test10$sppfr,".png")
+imgspp<-paste0(path2localfile,"Image_Fish/",test10$sppfr,".png")
 imgsppratio<- fratimg(imgspp)
 
 
@@ -276,7 +270,7 @@ test10<-merge(test9, sppfr, all=TRUE)
 test10<-test10%>%select(1,3,4,5,6)
 test10<-test10[,c(5,1,4,2,3)]
 
-imgspp<-paste0(path2localfile,"Image poisson/",test10$sppfr,".png")
+imgspp<-paste0(path2localfile,"Image_Fish/",test10$sppfr,".png")
 imgsppratio<- fratimg(imgspp)
 
 ```

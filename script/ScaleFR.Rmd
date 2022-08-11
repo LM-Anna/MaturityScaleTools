@@ -46,7 +46,8 @@ sex<-params$sex
 
 ```{r localpath, include=FALSE}
 #define local path
-path2localfile<-"../data/"
+path2localfile<-"../data/Photo_Guides/"
+path2localfile2<-"../data/"
 #define image database path (aka the Photo_MATURITE directory)
 path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
 
@@ -57,7 +58,7 @@ imgNAratio<- fratimg(imgNA)
 
 #define local images
 #spp
-imgspp<-paste0(path2localfile,"Image poisson/",sppfr,".png")
+imgspp<-paste0(path2localfile,"Image_Fish/",sppfr,".png")
 #spp img ratio
 imgsppratio<- fratimg(imgspp)
 #sex symbol
@@ -81,9 +82,9 @@ border3 = fp_border(color="gray", width = 1)
 ```{r referencetable, include=FALSE}
 #load reference data
 #build link for maturity phase photo data using the imgpath
-Dataphoto <- read_excel(paste0(path2localfile,"photo_mat.xlsx"),sheet=2)#data frame with all gonads photos
-Datascale <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=1)#data frame with files simple commentaries
-Datataille <- read_excel(paste0(path2localfile,"matu_scale.xlsx"),sheet=3)#data frame with first maturity size info
+Dataphoto <- read_excel(paste0(path2localfile2,"photo_guides.xlsx"),sheet=1)#data frame with all gonads photos
+Datascale <- read_excel(paste0(path2localfile2,"matu_scale.xlsx"),sheet=1)#data frame with files simple commentaries
+Datataille <- read_excel(paste0(path2localfile2,"FSM.xlsx"),sheet=1)#data frame with first maturity size info
 ```
 
 ```{r hackNAinfo, include=FALSE}
