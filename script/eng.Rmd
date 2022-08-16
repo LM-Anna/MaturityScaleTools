@@ -209,7 +209,7 @@ Martinique / Guadeloupe
 
 [PDF](PhotototakeGM.pdf){target="_blank"}
 /
-[HTML](PhotototakeGM.HTML){target="_blank"}
+[HTML](PhotototakeGM.html){target="_blank"}
 </center>
 
 :::

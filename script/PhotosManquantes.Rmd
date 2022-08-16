@@ -195,7 +195,7 @@ plot(TT3,dpi=32)
 
 ```
 
-```{r , echo=F, warning=F, message=F,fig.height=10,fig.width=6.8,out.width='475px',fig.align='center'}
+```{r , echo=F, warning=F, message=F,fig.height=10,fig.width=6.8,out.width='475px', fig.align='center'}
 
 library(officer)
 border1 = fp_border(color="black", width = 2)
@@ -275,7 +275,7 @@ imgsppratio<- fratimg(imgspp)
 
 ```
 
-```{r , echo=F, warning=F, message=F,fig.height=13.3,fig.width=6.8,out.width='500px',fig.align='center'}
+```{r , echo=F, warning=F, message=F,fig.height=13.3,fig.width=6.8,out.width='500px', fig.align='center'}
 
 library(officer)
 border1 = fp_border(color="black", width = 2)
