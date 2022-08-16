@@ -9,8 +9,6 @@ output:
   pdf_document: default
 params:
   sppfr: "Bar"
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
 
 ```{r setup, include=FALSE}
@@ -40,8 +38,6 @@ sppfr<-params$sppfr
 #define local path
 path2localfile<-"../data/Photo_Guides/"
 path2localfile2<-"../data/"
-#define image database path (aka the Photo_MATURITE directory)
-path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
 #define local images
 #spp
 imgspp<-paste0(path2localfile,"Image_Fish/",sppfr,".png")

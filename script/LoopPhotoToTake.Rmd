@@ -8,48 +8,42 @@ knit: (function(inputFile, encoding) {
 ---
 
 ```{r setup, include=FALSE}
+#knitr options
 knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-```{r para, warning=FALSE, echo=FALSE, message=FALSE, autodep=TRUE}
-
+#packages
 library(readxl)
 library(tidyverse)
 library(rmarkdown)
-library(staplr)  
-     
+library(staplr) 
 ```
 
-
-```{r}
-
+```{r loop}
+#read the ligns of Rmd files
 lines <- readLines("PhotosManquantes.Rmd")
-
+#knitr French / North Atlantic, Channel Sea and North sea
 writeLines(purrr::map_chr(1:177, ~ lines[.]), "test1s.Rmd")
 render("test1s.Rmd",output_file=paste0("PhotoàPrendreAMM", ".pdf"))
-  
+#knitr English / North Atlantic, Channel Sea and North sea
 writeLines(purrr::map_chr(c(1:123,178:232), ~ lines[.]), "test2s.Rmd")
 render("test2s.Rmd",output_file=paste0("PhotototakeAMM", ".pdf"))
-
+#knitr French / Guadeloupe and Martinique
 writeLines(purrr::map_chr(c(1:123,234:312), ~ lines[.]), "test3s.Rmd")
 render("test3s.Rmd",output_file=paste0("PhotoàPrendreGM", ".pdf"))
-
+#remove extra pages that appears
 remove_pages(
   rmpages=1,
   input_filepath = "PhotoàPrendreGM.pdf",
   output_filepath = "PhotoàPrendreGM.pdf",
 )
-
+#knitr English / Guadeloupe and Martinique
 writeLines(purrr::map_chr(c(1:123,234:280,314:344), ~ lines[.]), "test4s.Rmd")
 render("test4s.Rmd",output_file=paste0("PhotototakeGM", ".pdf"))
-
+#remove extra pages that appears
 remove_pages(
   rmpages=1,
   input_filepath = "PhotototakeGM.pdf",
   output_filepath = "PhotototakeGM.pdf",
 )
-
 ```
 
 
