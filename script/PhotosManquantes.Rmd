@@ -8,10 +8,7 @@ output:
   word_document: default
   pdf_document: default
 params:
-  spplat : "Cantherhines macrocerus"
-  sppeng : "Flat fish"
-  sppfr : "Bourse cabri"
-  sex : "F"
+  sppfr: "Bar"
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
@@ -35,15 +32,8 @@ fratimg<-function(pathimg){
 	imgratio<- imgdim$height/imgdim$width
 	return(imgratio)
 }
-```
-
-```{r localparam, include=FALSE}
-##local parameters
-#define variables (spp)
-spplat<-params$spplat
+#define variables
 sppfr<-params$sppfr
-sppeng<-params$sppeng
-sex<-params$sex
 ```
 
 ```{r localpath, include=FALSE}
@@ -81,31 +71,24 @@ test1<- test%>%filter(Guides=="yes" | ID =="E")
 colnames(test1)[5]<-"ID"
 test1<-test1%>%distinct(Species, Sex, ID, .keep_all=TRUE)
 test1<-test1%>%select(2,3,4,5)
-
 TEST<-test%>%select(2,3,4,5)
 #return all rows that are not in commons between two tables
 test8<-anti_join(TEST, test1, by = c("ID","Sex","Species"))
-
 test9 <- pivot_wider(test8, names_from = Sex, values_from = ID)
-
 test9$F<-as.character(test9$F)
 test9$M<-as.character(test9$M)
-
 test9$M<-gsub('c',"",as.character(test9$M))
 test9$M<-gsub('["]',"",as.character(test9$M))
 test9$M<-gsub('[(]',"",as.character(test9$M))
 test9$M<-gsub('[)]',"",as.character(test9$M))
-
 test9$F<-gsub('c',"",as.character(test9$F))
 test9$F<-gsub('["]',"",as.character(test9$F))
 test9$F<-gsub('[(]',"",as.character(test9$F))
 test9$F<-gsub('[)]',"",as.character(test9$F))
-
 sppfr<-DataFR
 sppfr<-sppfr%>%filter(spplat=="Argyrosomus regius" | spplat=="Chelidonichthys cuculus" | spplat=="Clupea clupea" | spplat=="Engraulis encrasicolus" | spplat=="Dicentrarchus labrax" | spplat=="Flat fish sp." | spplat=="Gadidae sp." | spplat=="Merluccius merluccius" | spplat=="Mullus surmuletus" | spplat=="Lophius sp." | spplat=="Pagellus bogaraveo" | spplat=="Sardina pilchardus" | spplat=="Scomber scombrus" | spplat=="Scophthalmus sp." | spplat=="Solea solea" | spplat=="Sprattus sprattus")
 sppfr<-sppfr%>%select(1,2,3)
 sppfr<-sppfr%>%distinct(spplat, sppeng, .keep_all=TRUE)
-
 test10<-merge(test9, sppfr, all=TRUE)
 test10<-test10%>%select(1,3,4,5,6)
 test10<-test10[,c(5,1,4,2,3)]
@@ -212,31 +195,24 @@ test1<- test%>%filter(Guides=="yes" | ID =="E")
 colnames(test1)[5]<-"ID"
 test1<-test1%>%distinct(Species, Sex, ID, .keep_all=TRUE)
 test1<-test1%>%select(2,3,4,5)
-
 TEST<-test%>%select(2,3,4,5)
 #return all rows that are not in commons between two tables
 test8<-anti_join(TEST, test1, by = c("ID","Sex","Species"))
-
 test9 <- pivot_wider(test8, names_from = Sex, values_from = ID)
-
 test9$F<-as.character(test9$F)
 test9$M<-as.character(test9$M)
-
 test9$M<-gsub('c',"",as.character(test9$M))
 test9$M<-gsub('["]',"",as.character(test9$M))
 test9$M<-gsub('[(]',"",as.character(test9$M))
 test9$M<-gsub('[)]',"",as.character(test9$M))
-
 test9$F<-gsub('c',"",as.character(test9$F))
 test9$F<-gsub('["]',"",as.character(test9$F))
 test9$F<-gsub('[(]',"",as.character(test9$F))
 test9$F<-gsub('[)]',"",as.character(test9$F))
-
 sppfr<-DataFR
 sppfr<-sppfr%>%filter(spplat=="Acanthostracion polygonius" | spplat=="Acanthurus bahianus" | spplat=="Aluterus scriptus" | spplat=="Balistes vetula" | spplat=="Calamus bajonado" | spplat=="Cantherhines macrocerus" | spplat=="Canthidermis sufflamen" | spplat=="Caranx sp." | spplat=="Epinephelinae sp." | spplat=="Etelis oculatus" | spplat=="Haemulon sp." | spplat=="Lutjanus sp." | spplat=="Mulloidichthys martinicus" | spplat=="Ocyurus chrysurus" | spplat=="Priacanthus arenatus" | spplat=="Pseudupeneus maculatus" | spplat=="Pterois volitans" | spplat=="Sparisoma sp.")
 sppfr<-sppfr%>%select(1,2,3)
 sppfr<-sppfr%>%distinct(spplat, sppeng, .keep_all=TRUE)
-
 test10<-merge(test9, sppfr, all=TRUE)
 test10<-test10%>%select(1,3,4,5,6)
 test10<-test10[,c(5,1,4,2,3)]
