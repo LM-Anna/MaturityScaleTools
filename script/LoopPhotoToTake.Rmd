@@ -6,6 +6,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+##DO NOT KNITR THIS FILE
 #knitr options
 knitr::opts_chunk$set(echo = TRUE)
 #packages
