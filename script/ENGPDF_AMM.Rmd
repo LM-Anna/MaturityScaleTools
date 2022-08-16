@@ -185,7 +185,7 @@ knit: (function(inputFile, encoding) {
 
 <h2>*Sprattus sprattus* / Sprat</h2>
 
-![](../data/Photo_Guides/Image_Fish/Sprat.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Sprattus sprattus_F.pdf{target="_blank"}) / [Male](Scale_Sprattus sprattus_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+![](../data/Photo_Guides/Image_Fish/Sprat.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Sprattus sprattus_F.pdf){target="_blank"} / [Male](Scale_Sprattus sprattus_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 
 </center>
