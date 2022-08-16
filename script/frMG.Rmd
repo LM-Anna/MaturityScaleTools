@@ -19,7 +19,6 @@ small_border = fp_border(color="gray", width = 1)
 border1 = fp_border(color="black", width = 2)
 ```
 
-
 <html>
 <head>
 <style media="all"> 
@@ -68,30 +67,17 @@ border1 = fp_border(color="black", width = 2)
     </style>
 
 <title>Page Title</title>
-
-
 </head>
-
 <body>
-
 <h1>FICHES MATURITÉ VISUELLE</h1>
-
 <center>
-
 <h4>*Dernière mise à jour : 16/08/2022*</h4>
-
 </center>
-
 \
-
 <center>
-
 **Choix du format de sortie des fiches : **
-
 </center>
-
 \
-
 
 :::::::::::::: {.columns}
 ::: {.column width="40%"}
@@ -116,10 +102,7 @@ border1 = fp_border(color="black", width = 2)
 ::::::::::::::
 
 \
-
 \
-
-
 <div style="text-align: justify"> 
   Cet outil est un **guide d'identification des phases de maturité des poissons d'intérêts commerciaux**. Il a été mis en place dans le cadre du projet d'harmonisation des méthodes de collecte de données de maturité.
 
@@ -129,24 +112,14 @@ border1 = fp_border(color="black", width = 2)
   
   Elle est divisée en 6 phases de maturité qui correspondent aux périodes spécifiques de développement des gonades au sein du cycle reproducteur : 
 </div>
-
-\
-
 <center>
-
 <h3>Echelle de maturité du CIEM « WKMATCH 2012 et 2018 »</h3>
-
 </center>
 
 ```{r, echo=F, warning=F, message=F,fig.height=2,fig.width=7,out.width='800px', fig.align='center'}
-
-
 statut<- c("Sexuellement immature","Sexuellement mature","Sexuellement mature","Sexuellement mature","Sexuellement mature","Sexuellement mature")
-
 Code<-c("A","B","C","D","E","F")
-
 phase<- c("IMMATURE","EN DÉVELOPPEMENT","EN PONTE","RÉGRESSION/RÉGÉNÉRATION","OMISSION DE PONTE","ANORMAL")
-
 
 	tbl_img<-data.frame(Statut=statut,
 			    Code=Code,
@@ -167,11 +140,9 @@ phase<- c("IMMATURE","EN DÉVELOPPEMENT","EN PONTE","RÉGRESSION/RÉGÉNÉRATION
     set_header_labels(Phase="Phase de maturité")
 	
 plot(tbl_img)
-
 ```
 
 \
-
 <div style="text-align: justify">
 
   Les photos présentes sur les fiches ont été prises à partir du protocole établi au cours du projet d'harmonisation des méthodes de collecte des données de maturité.
@@ -181,38 +152,20 @@ plot(tbl_img)
 [PROTOCOLE PRISE DE PHOTO DES GONADES DE POISSONS](FR_P.pdf){target="_blank"}
 
 \
-
   Afin de compléter les fiches, voici la liste des photos à prendre en fonction des espèces, sexes et phases de maturité :
   
-<center>
+
 [PDF](PhotoàPrendreGM.pdf){target="_blank"}
 /
 [HTML](PhotoàPrendreGM.html){target="_blank"}
-</center>
-
-
-
-</center>
 
 \
-
-
-<center>
 ![](../data/Photo_Guides/GoBack.png){height=26px width=20px} <a href="#" onclick="history.go(-1)" style="color:black;font-size:20px;">Retour</a>
 </center>
-
-
 \
-
 \
-
-
 Anna LE MELEDER  
 IFREMER / RBE-HMMN-LRHPB
-
-
 </div>
-
-
 </body>
 </html>

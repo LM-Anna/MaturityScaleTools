@@ -19,7 +19,6 @@ small_border = fp_border(color="gray", width = 1)
 border1 = fp_border(color="black", width = 2)
 ```
 
-
 <html>
 <head>
 <style media="all"> 
@@ -64,31 +63,17 @@ border1 = fp_border(color="black", width = 2)
     </style>
 
 <title>Page Title</title>
-
-
 </head>
-
 <body>
-
 <h1>MATURITY SCALE TOOLS</h1>
-
 <center>
-
 <h4>*Last update : 16/08/2022*</h4>
-
 </center>
-
-
 \
-
 <center>
-
 **Choice of the output format : **
-
 </center>
-
 \
-
 
 :::::::::::::: {.columns}
 ::: {.column width="40%"}
@@ -113,13 +98,8 @@ border1 = fp_border(color="black", width = 2)
 ::::::::::::::
 
 \
-
 \
-
 \
-
-
-
 <div style="text-align: justify"> 
   This tool is a **guide for identifying maturity phases of fish of commercial interest**. It was set up as part of the project to harmonize maturity data collection methods.
 
@@ -128,26 +108,15 @@ border1 = fp_border(color="black", width = 2)
   The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2012/2018 "WKMATCH" scale**. This scale was created in the ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
   
   This scale is divided into 6 maturity phases, corresponding to specific development periods of the gonads during the reproductive cycle : 
- 
 </div>
-
-\
-
 <center>
-
 <h3>ICES maturity scale « WKMATCH 2012 and 2018 »</h3>
-
 </center>
 
 ```{r, echo=F, warning=F, message=F,fig.height=2,fig.width=7,out.width='800px', fig.align='center'}
-
-
 statut<- c("Sexually immature","Sexually mature","Sexually mature","Sexually mature","Sexually mature","Sexually mature")
-
 Code<-c("A","B","C","D","E","F")
-
 phase<- c("IMMATURE","DEVELOPING","SPAWNING","REGRESSION/REGENERATION","OMITTED SPAWNING","ABNORMAL")
-
 
 	tbl_img<-data.frame(Status=statut,
 			    Code=Code,
@@ -168,53 +137,29 @@ phase<- c("IMMATURE","DEVELOPING","SPAWNING","REGRESSION/REGENERATION","OMITTED 
     set_header_labels(Phase="Maturity phases")
 	
 plot(tbl_img)
-
 ```
 
 \
-
 <div style="text-align: justify">
 
   All photos have been taken based on the "Gonads' photography protocol" established during the data collection process.
 
 <center>
-
 [FISH GONADS' PHOTOGRAPHY PROTOCOL](ENG_P.pdf){target="_blank"}
-
 \
+In order to complete the tool, here is the list of photos to take by species, sex and maturity phases :
 
-  In order to complete the tool, here is the list of photos to take by species, sex and maturity phases :
-  
-  <center>
 [PDF](PhotototakeAMM.pdf){target="_blank"}
 /
 [HTML](PhotototakeAMM.html){target="_blank"}
-</center>
-
-
-
-</center>
 
 \
-
-
-<center>
 ![](../data/Photo_Guides/GoBack.png){height=26px width=20px} <a href="#" onclick="history.go(-1)" style="color:black;font-size:20px;">Go back</a>
 </center>
-
-
 \
-
 \
-
-
 Anna LE MELEDER  
 IFREMER / RBE-HMMN-LRHPB
-
-
 </div>
-
-
-
 </body>
 </html>

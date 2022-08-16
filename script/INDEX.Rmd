@@ -5,8 +5,6 @@ knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs/") })
 ---
 
-
-
 <html>
 <head>
 <style media="all"> 
@@ -51,25 +49,13 @@ knit: (function(inputFile, encoding) {
     </style>
 
 <title>Page Title</title>
-
-
 </head>
-
 <body>
-
 <h1>MATURITY SCALE TOOLS</h1>
-
 <center>
-
 <h4>*Last update : 16/08/2022*</h4>
-
-
-
 </center>
-
-
 \
-
 
 :::::::::::::: {.columns}
 ::: {.column width="40%"}
@@ -94,34 +80,19 @@ knit: (function(inputFile, encoding) {
 ::::::::::::::
 
 \
-
 \
-
 \
-
-
 <center>
 ![](../data/Photo_Guides/Image.png){width=800px}
 </center>
-
 \
-
-
-
 \
-
 \
-
 \
-
 \
-
 \
-
 Anna LE MELEDER  
 IFREMER / RBE-HMMN-LRHPB
-
-
 
 </body>
 </html>
