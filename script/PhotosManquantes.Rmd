@@ -4,9 +4,9 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 params:
   sppfr: "Bar"
 ---
