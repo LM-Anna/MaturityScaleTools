@@ -17,10 +17,13 @@ library(tidyverse)
 library(rmarkdown)
 ```
 
-```{r para, warning=FALSE, echo=FALSE, message=FALSE, autodep=TRUE}
+```{r path}
 path2localfile<-"../data/"
-species = read_excel(paste0(path2localfile,"dataLOOP.xlsx"))
 pathoutput<-"../docs/"
+species = read_excel(paste0(path2localfile,"dataLOOP.xlsx"))
+```
+
+```{r read, warning=FALSE, echo=FALSE, message=FALSE, autodep=TRUE}
 #generate pdf files in French
      for (i in 1:nrow(species)) {
   render("ScaleFR.rmd", 
