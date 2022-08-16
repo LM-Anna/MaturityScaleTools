@@ -67,7 +67,7 @@ knit: (function(inputFile, encoding) {
 
 <center>
 
-<h4>*Dernière mise à jour : 11/08/2022*</h4>
+<h4>*Dernière mise à jour : 16/08/2022*</h4>
 
 </center>
 
