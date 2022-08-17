@@ -58,7 +58,7 @@ imgNAratio<- fratimg(imgNA)
 
 #define local images
 #spp
-imgspp<-paste0(path2localfile,"Image_Fish/",sppfr,".png")
+imgspp<-paste0(path2localfile,"Image_Fish/",sppeng,".png")
 #spp img ratio
 imgsppratio<- fratimg(imgspp)
 #sex symbol
