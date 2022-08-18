@@ -20,8 +20,11 @@ If new photos or new species were added, this all process would update the ident
 
 ---
 
-Espèce	
-Acanthostracion polygonius	Lutjanus apodus
+| Espèce |
+| ------ |
+| Acanthostracion polygonius | Lutjanus apodus |
+
+
 Acanthurus bahianus	Lutjanus buccanella
 Aluterus scriptus	Lutjanus vivanus
 Balistes vetula	Melanogrammus aegelfinus
