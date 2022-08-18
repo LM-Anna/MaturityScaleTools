@@ -19,3 +19,32 @@ If new photos or new species were added, this all process would update the ident
 
 
 ---
+
+Espèce	
+Acanthostracion polygonius	Lutjanus apodus
+Acanthurus bahianus	Lutjanus buccanella
+Aluterus scriptus	Lutjanus vivanus
+Balistes vetula	Melanogrammus aegelfinus
+Calamus bajonado	Merlangius merlangus
+Cantherhines macrocerus	Merluccius merluccius
+Canthidermis sufflamen	Micromesistius poutassou
+Caranx latus	Microstomus kitt
+Caranx ruber	Mulloidichthys martinicus
+Cephalopholis fulva	Mullus surmuletus
+Chelidonichthys cuculus	Ocyurus chrysurus
+Clupea clupea	Phycis blenoides
+Dicentrarchus labrax	Pleuronectes platessa
+Engraulis encrasicolus	Priacanthus arenatus
+Epinephelus guttatus	Pseudupeneus maculatus
+Epinephelus striatus	Pterois volitans
+Etelis oculatus	Sardina pilchardus
+Gadus morhua	Scomber scombrus
+Haemulon carbonarium	Scophthalmus rhombus
+Haemulon flavolineatum	Solea solea
+Haemulon parra	Sparisoma aurofrenatum
+Haemulon plumierii	Sparisoma chrysopterum
+Haemulon sciurus	Sparisoma rubripinne
+Lepidorhombus whiffiagonis	Sparisoma viride
+Lophius budegassa	Sprattus sprattus
+Lophius piscatorius	Trachurus trachurus
+Lutjanus analis	Zeus faber
