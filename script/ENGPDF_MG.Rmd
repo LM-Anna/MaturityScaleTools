@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>MATURITY SCALE INDEX</h1>
 <center>
-<h4>*Last update : 17/08/2022*</h4>
+<h4>*Last update : 09/09/2022*</h4>
 </center>
 
 :::::::::::::: {.columns}
@@ -73,12 +73,12 @@ knit: (function(inputFile, encoding) {
 ::: {.column width="80%"}
 
 <center>
-<h2>*Acanthostracion polygonius* / Honeycomb cowfish</h2>
-![](../data/Photo_Guides/Image_Fish/Honeycomb cowfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Acanthostracion polygonius_F.pdf){target="_blank"} / [Male](Scale_Acanthostracion polygonius_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+<h2>*Acanthostracion sp.* / Cowfish</h2>
+![](../data/Photo_Guides/Image_Fish/Cowfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Acanthostracion sp._F.pdf){target="_blank"} / [Male](Scale_Acanthostracion sp._M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
-<h2>*Acanthurus bahianus* / Barber surgeonfish</h2>
-![](../data/Photo_Guides/Image_Fish/Barber surgeonfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Acanthurus bahianus_F.pdf){target="_blank"} / [Male](Scale_Acanthurus bahianus_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+<h2>*Acanthurus sp.* / Surgeonfish</h2>
+![](../data/Photo_Guides/Image_Fish/Surgeonfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Acanthurus sp._F.pdf){target="_blank"} / [Male](Scale_Acanthurus sp._M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
 <h2>*Aluterus scriptus* / Scribbled leatherjacket filefish</h2>

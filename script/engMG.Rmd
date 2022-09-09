@@ -67,7 +67,7 @@ border1 = fp_border(color="black", width = 2)
 <body>
 <h1>MATURITY SCALE TOOLS</h1>
 <center>
-<h4>*Last update : 17/08/2022*</h4>
+<h4>*Last update : 09/09/2022*</h4>
 </center>
 \
 <center>
@@ -159,7 +159,8 @@ plot(tbl_img)
 \
 \
 Anna LE MELEDER  
-IFREMER / RBE-HMMN-LRHPB
+IFREMER / RBE-HMMN-LRHPB  
+ICES (WKASMSF 2018 & WKMATCH 2012)
 </div>
 </body>
 </html>

@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>INDEX ÉCHELLE DE MATURITÉ</h1>
 <center>
-<h4>*Dernière mise à jour : 17/08/2022*</h4>
+<h4>*Dernière mise à jour : 09/09/2022*</h4>
 </center>
 
 :::::::::::::: {.columns}
@@ -153,7 +153,8 @@ knit: (function(inputFile, encoding) {
 \
 \
 Anna LE MELEDER  
-IFREMER / RBE-HMMN-LRHPB
+IFREMER / RBE-HMMN-LRHPB  
+Quéro J-C. et Vayne J-J.2008. Les poissons de mer des pêches françaises : delachaux et niestlé, 304
 
 </body>
 </html>

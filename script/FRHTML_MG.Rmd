@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>INDEX ÉCHELLE DE MATURITÉ</h1>
 <center>
-<h4>*Dernière mise à jour : 17/08/2022*</h4>
+<h4>*Dernière mise à jour : 09/09/2022*</h4>
 </center>
 
 :::::::::::::: {.columns}
@@ -73,13 +73,13 @@ knit: (function(inputFile, encoding) {
 ::: {.column width="80%"}
 
 <center>
-<h2>*Acanthostracion polygonius* / Coffre nid d'abeille</h2>
-![](../data/Photo_Guides/Image_Fish/Honeycomb cowfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Acanthostracion polygonius_F.html){target="_blank"} / [Mâle](Echelle_Acanthostracion polygonius_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+<h2>*Acanthostracion sp.* / Coffre</h2>
+![](../data/Photo_Guides/Image_Fish/Cowfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Acanthostracion sp._F.html){target="_blank"} / [Mâle](Echelle_Acanthostracion sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
-<h2>*Acanthurus bahianus* / Chirurgien océanique</h2>
+<h2>*Acanthurus sp.* / Chirurgien</h2>
 
-![](../data/Photo_Guides/Image_Fish/Barber surgeonfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Acanthurus bahianus_F.html){target="_blank"} / [Mâle](Echelle_Acanthurus bahianus_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+![](../data/Photo_Guides/Image_Fish/Surgeonfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Acanthurus sp._F.html){target="_blank"} / [Mâle](Echelle_Acanthurus sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
 <h2>*Aluterus scriptus* / Bourse écriture</h2>
