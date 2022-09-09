@@ -23,7 +23,6 @@ pathoutput<-"../docs/"
 species = read_excel(paste0(path2localfile,"dataLOOP.xlsx"))
 ```
 
-
 ```{r read, warning=FALSE, echo=FALSE, message=FALSE, autodep=TRUE}
 #generate html files in French
      for (i in 1:nrow(species)) {
@@ -38,8 +37,4 @@ species = read_excel(paste0(path2localfile,"dataLOOP.xlsx"))
          output_file=paste0(pathoutput,"Scale_", species$spplat[i],"_", species$sex[i], ".html"))
 }
 ```
-
-
-
-
 
