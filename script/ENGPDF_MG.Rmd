@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>MATURITY SCALE INDEX</h1>
 <center>
-<h4>*Last update : 09/09/2022*</h4>
+<h4>*Last update : 12/09/2022*</h4>
 </center>
 
 :::::::::::::: {.columns}
@@ -141,6 +141,10 @@ knit: (function(inputFile, encoding) {
 ![](../data/Photo_Guides/Image_Fish/Red lionfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Pterois volitans_F.pdf){target="_blank"} / [Male](Scale_Pterois volitans_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
+<h2>*Seriola rivoliana* / Longfin yellowtail</h2>
+![](../data/Photo_Guides/Image_Fish/Longfin yellowtail.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Seriola rivoliana_F.pdf){target="_blank"} / [Male](Scale_Seriola rivoliana_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+
+\
 <h2>*Sparisoma sp.* / Parrotfish</h2>
 ![](../data/Photo_Guides/Image_Fish/Parrotfish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Sparisoma sp._F.pdf){target="_blank"} / [Male](Scale_Sparisoma sp._M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
@@ -161,7 +165,8 @@ knit: (function(inputFile, encoding) {
 \
 \
 Anna LE MELEDER  
-IFREMER / RBE-HMMN-LRHPB
+IFREMER / RBE-HMMN-LRHPB  
+© J. Baudrier - Ifremer Martinique
 
 </body>
 </html>

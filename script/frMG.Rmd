@@ -71,7 +71,7 @@ border1 = fp_border(color="black", width = 2)
 <body>
 <h1>FICHES MATURITÉ VISUELLE</h1>
 <center>
-<h4>*Dernière mise à jour : 09/09/2022*</h4>
+<h4>*Dernière mise à jour : 12/09/2022*</h4>
 </center>
 \
 <center>
