@@ -8,7 +8,7 @@ It also gathers scripts to generate the sheets with the missing fishes :
 - **PhotoManquantes.Rmd**  
 - **LoopPhotoToTake.Rmd**  
 
-Finally, it gathers the scripts to generate the 15 html pages for the GitHub page :  
+Finally, it gathers the scripts to generate the 15 html pages of the GitHub page :  
 - **index.Rmd**  
 - **fr.Rmd**  
 - **frAMM.Rmd**  
