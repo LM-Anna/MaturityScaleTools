@@ -7,7 +7,7 @@
   Its creation falls within the harmonisation of maturity data acqusition methods for bony fish of commercial interest project carried out by **IFREMER SIH (Système d'Information Halieutique)**.
 This project aims to harmonise and standardise the maturity staging process during scientific surveys, using the ICES maturity scale (2018) and Brown-Peterson et al. (2011) terminologies.
 
-  The maturity identification guide is composed of identification forms for males and females of each species of fish and provides simple comments and photos to ease the identification of maturity phases. Photos used to elaborate identification forms come from the dataset **"A gonad photographs dataset for fish of commercial interest from the European and Caribbean coastal waters"**.
+  The maturity identification guide is composed of identification forms for males and females of each species of fish and provides simple comments and photos to ease the identification of maturity phases. Photos used to elaborate identification forms come from the dataset **"A gonad photographs dataset for fish of commercial interest from the European and Caribbean coastal waters"** available on ZENODO.
 
   The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2018 "WKASMSF" scale**. This scale was created in the ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
   This scale is divided into **6 maturity phases**, corresponding to specific development periods of the gonads during the reproductive cycle. 
