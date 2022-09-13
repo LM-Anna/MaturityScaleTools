@@ -44,7 +44,7 @@ The "data" file gathers 40 pictures/logos used to embellish the identification f
 
 
 **matu_scale.xlsx** : data table (.xlsx) with two spreadsheets that also have the same data but one is in French (SCALE_FR) and the other one in English (SCALE_ENG). They both list all the commentaries found in the in the identification guide, for each species, each sex and each maturity phase. One row corresponds to a single information. For each row, the associated columns are as followed :  
-Name : Vernacular name of the species or species group established for the identification guide;  
+- Name : Vernacular name of the species or species group established for the identification guide;  
 - Phase : maturity phase A, B, C, D, E or F (ICES, 2018);   
 - Sex : Sex (F for female, M for male);  
 - Text : Comment established for the species/sex/maturity phase;  
