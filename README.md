@@ -5,9 +5,9 @@
   This GitHub repository hosts all tools to automatically generate **guide for identifying maturity phases of fish of commercial interest** (https://lm-anna.github.io/MaturityScaleTools/). 
   
   Its creation falls within the harmonisation of maturity data acqusition methods for bony fish of commercial interest project carried out by **IFREMER SIH (Système d'Information Halieutique)**.
-This project aims to harmonise and standardise the maturity staging process during scientific surveys, using the ICES maturity scale (2018) and Brown-Peterson et al. (2011) terminologies.
+This project aims to harmonise and standardise the maturity staging process during scientific surveys, using the ICES maturity scale (ICES, 2018) and Brown-Peterson et al. (2011) terminologies.
 
-  The maturity identification guide is composed of identification forms for males and females of each species of fish and provides simple comments and photos to ease the identification of maturity phases. Photos used to elaborate identification forms come from the dataset **"A gonad photographs dataset for fish of commercial interest from the European and Caribbean coastal waters"** available on ZENODO.
+  The maturity identification guide is composed of identification forms for males and females of each species of fish and provides simple comments and photos to ease the identification of maturity phases. Photos used to elaborate identification forms come from the dataset **"A gonad photographs dataset for fish of commercial interest from the European and Caribbean coastal waters"** available on ZENODO and were took using the "Fish' gonads photography protocol” from Le Meleder et al. (2022).
 
   The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2018 "WKASMSF" scale**. This scale was created in the ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
   This scale is divided into **6 maturity phases**, corresponding to specific development periods of the gonads during the reproductive cycle. 
@@ -140,5 +140,16 @@ First of all, before launching the scripts, the *photo_guides.xlsx* data frame m
 The scripts to generate the identification guide are the *“LoopPDF.Rmd”* and *“LoopHTML.Rmd”* scripts. They automatically generate identification guides by using loops, depending on the sets of parameters in the *“dataLOOP.xlsx”* data frame. The output files are set up to automatically generate in the **“docs”** GitHub’s file so they would automatically be added to the GitHub pages. Likewise, the *“LoopPhotoToTake.Rmd”* script will automatically generate on the GitHub pages sheet that indicates missing photos on the identification forms.  It is important to note that those scripts (*“LoopHTML.Rmd”, “LoopPDF.Rmd”, “LoopPhotoToTake.Rmd”*) must not be knitr, only the chunks content must be launched, as noted within the scripts. Moreover, before reading the loops, if it is a loop that generates .pdf format files, the attached .Rmd file (*ScaleFR.Rmd, ScaleENG.Rmd, PhotosManquantes.Rmd*) must be have the pdf format first in the **“YALM”** section (further described in the scripts).  
 
 Finally, in order to access the newly updated identification guide, a new link must be added to the scripts that produce the GitHub pages : *ENGHTML_AMM.Rmd, ENGHTML_MG.Rmd, ENGPDF_AMM.Rmd, ENGPDF_MG.Rmd, FRHTML_AMM.Rmd, FRHTML_MG.Rmd, FRPDF_AMM.Rmd, FRPDF_MG.Rmd.* Further information can be found  at the beginning of the previously stated script. Then, those scripts must be **“knitr”** to produce html pages directly into the GitHub pages directory.
+
+---
+
+### Bibliography
+
+Brown-Peterson, N. J., Wyanski, D. M., Saborido-Rey, F., Macewicz, B. J., & Lowerre-Barbieri, S. K. (2011). A Standardized Terminology for Describing Reproductive Development in Fishes. Marine and Coastal Fisheries, 3(1), 52‑70. https://doi.org/10.1080/19425120.2011.555724
+
+LE MELEDER, A., SAUGER, C., DUBROCA, L. (2022). Protocole de photographie des gonades de poisson / Fish gonads' photography protocol. RBE-HMMN-LRHPB. https://doi.org/10.13155/89703
+
+ICES. (2018). Report of the Workshop for Advancing Sexual Maturity Staging in Fish (WKASMSF). ICES CM/EOSG: 38. 75 pp., 79.
+
 
 </div>
