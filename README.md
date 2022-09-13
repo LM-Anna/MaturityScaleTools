@@ -12,8 +12,8 @@ This project aims to harmonise and standardise the maturity staging process duri
   The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2018 "WKASMSF" scale**. This scale was created in the ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
   This scale is divided into **6 maturity phases**, corresponding to specific development periods of the gonads during the reproductive cycle. 
   
-  To have more details about the creation of these identification forms, please contact Anna Le Meleder (annalemeleder@orange.fr).
-
+  To have more details about the creation of these identification forms, please contact Anna Le Meleder (annalemeleder@orange.fr).  
+  
 ---
 
 ### Data Records
@@ -62,7 +62,7 @@ Species : Scientific name of the species or species group established for the id
 - sppfr : French vernacular name for the species or species group established for the identification guide;  
 - sex : (F for female, M for male).
 
-\
+
 
 #### *"docs"*
 
@@ -95,7 +95,7 @@ It also gathers in pdf format the "Fish's gonads photography protocol" in both E
 
 Finally, it gathers the **280 identification forms**, so be it 70 identification forms in both html and in pdf format and in both English and French.  
 
-\
+
 
 #### *"script"*  
 
@@ -127,4 +127,15 @@ Finally, it gathers the scripts to generate the 15 html pages for the GitHub pag
 - **ENGPDF_MG.Rmd**  
 
 ---
+
+### Usage Notes
+
+To update or generate new identification forms, all files and scripts needed are available in this GitHub repository “MaturityScaleTools”. When downloaded and used, directories must remain in the same order to operate properly.  
+
+First of all, before launching the scripts, the *photo_guides.xlsx* data frame must be completed. Note that for each new species, 12 NA rows must be created with the link to the NA photo (a row for each maturity stage of each sex). It is also important for those rows to put the information “na” in the “Guides” column. Also, this new species picture should be added to the *“Image_Fish”* file. The *“dataLOOPS.xlsx”* must also have 2 new rows added per species, to account for both sexes (M & F). Then, all photo repository links should be adapted depending on the location of the gonads’ photograph database and the GitHub repository.  
+
+The scripts to generate the identification guide are the *“LoopPDF.Rmd”* and *“LoopHTML.Rmd”* scripts. They automatically generate identification guides by using loops, depending on the sets of parameters in the *“dataLOOP.xlsx”* data frame. The output files are set up to automatically generate in the **“docs”** GitHub’s file so they would automatically be added to the GitHub pages. Likewise, the *“LoopPhotoToTake.Rmd”* script will automatically generate on the GitHub pages sheet that indicates missing photos on the identification forms.  It is important to note that those scripts (*“LoopHTML.Rmd”, “LoopPDF.Rmd”, “LoopPhotoToTake.Rmd”*) must not be knitr, only the chunks content must be launched, as noted within the scripts. Moreover, before reading the loops, if it is a loop that generates .pdf format files, the attached .Rmd file (*ScaleFR.Rmd, ScaleENG.Rmd, PhotosManquantes.Rmd*) must be have the pdf format first in the **“YALM”** section (further described in the scripts).  
+
+Finally, in order to access the newly updated identification guide, a new link must be added to the scripts that produce the GitHub pages : *ENGHTML_AMM.Rmd, ENGHTML_MG.Rmd, ENGPDF_AMM.Rmd, ENGPDF_MG.Rmd, FRHTML_AMM.Rmd, FRHTML_MG.Rmd, FRPDF_AMM.Rmd, FRPDF_MG.Rmd.* Further information can be found  at the beginning of the previously stated script. Finally, those scripts must be **“knitr”** to produce html pages directly into the GitHub pages directory.
+
 </div>
