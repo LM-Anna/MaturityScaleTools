@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>MATURITY SCALE INDEX</h1>
 <center>
-<h4>*Last update : 12/09/2022*</h4>
+<h4>*Last update : 13/09/2022*</h4>
 </center>
 
 :::::::::::::: {.columns}
