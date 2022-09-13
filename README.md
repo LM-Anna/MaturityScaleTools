@@ -147,7 +147,7 @@ Finally, in order to access the newly updated identification guide, a new link m
 
 Brown-Peterson, N. J., Wyanski, D. M., Saborido-Rey, F., Macewicz, B. J., & Lowerre-Barbieri, S. K. (2011). A Standardized Terminology for Describing Reproductive Development in Fishes. Marine and Coastal Fisheries, 3(1), 52‑70. https://doi.org/10.1080/19425120.2011.555724
 
-LE MELEDER, A., SAUGER, C., DUBROCA, L. (2022). Protocole de photographie des gonades de poisson / Fish gonads' photography protocol. RBE-HMMN-LRHPB. https://doi.org/10.13155/89703
+Le Meleder, A., Sauger, C., Dubroca, L. (2022). Protocole de photographie des gonades de poisson / Fish gonads' photography protocol. RBE-HMMN-LRHPB. https://doi.org/10.13155/89703
 
 ICES. (2018). Report of the Workshop for Advancing Sexual Maturity Staging in Fish (WKASMSF). ICES CM/EOSG: 38. 75 pp., 79.
 
