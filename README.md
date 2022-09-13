@@ -151,5 +151,6 @@ LE MELEDER, A., SAUGER, C., DUBROCA, L. (2022). Protocole de photographie des go
 
 ICES. (2018). Report of the Workshop for Advancing Sexual Maturity Staging in Fish (WKASMSF). ICES CM/EOSG: 38. 75 pp., 79.
 
+---
 
 </div>
