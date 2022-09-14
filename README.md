@@ -61,11 +61,13 @@ Species : Scientific name of the species or species group established for the id
 - Sex : Sex (F for female, M for male);  
 - FSM : Size range at first maturity
 
-**dataLOOP.xlsx** (4 columns/71 rows) : data table (Excel format) listing all the parameters to generate in the identification guide. For each row, the associated columns are as  followed :   
+**dataLOOP.xlsx** (4 columns/71 rows) : data table (Excel format) listing the parameters to generate the identification forms. This data table can be modified and not repertoriate all the parameters of the guide. To have the complete list of the guide, check the dataLOOP.md file. For each row, the associated columns are as  followed :   
 - spplat : Scientific name of the species or species group established for the identification guide;  
 - sppeng :  English vernacular name for the species or species group established for the identification guide;  
 - sppfr : French vernacular name for the species or species group established for the identification guide;  
 - sex : (F for female, M for male).
+
+**dataLOOP.md** : ReadMe file listing all the parameters to generate the identification forms.
 
 
 
