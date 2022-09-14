@@ -49,7 +49,7 @@ sex<-params$sex
 path2localfile<-"../data/Photo_Guides/"
 path2localfile2<-"../data/"
 #define image database path (aka the Photo_MATURITE directory)
-path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITE\\"
+path2imgdb<-"C:\\Users\\alemeled\\Desktop\\RStudio Maturite\\data\\Photo_MATURITY\\"
 
 #define path to NA photo
 imgNA<-paste0(path2localfile,'NA.png')
@@ -90,10 +90,10 @@ Datataille <- read_excel(paste0(path2localfile2,"FSM.xlsx"),sheet=1)#data frame 
 
 ```{r hackNAinfo, include=FALSE}
 #hack to keep NA info
-l1<-sapply(strsplit(Dataphoto$Link,split="Photo_MATURITE\\\\"),"[[",1)
+l1<-sapply(strsplit(Dataphoto$Link,split="Photo_MATURITY\\\\"),"[[",1)
 l1NA<-which(grepl("NAEng.PNG",l1))
 l1noNA<-which(!grepl("NAEng.PNG",l1))
-l2<-sapply(strsplit(Dataphoto$Link[l1noNA],split="Photo_MATURITE"),"[[",2)
+l2<-sapply(strsplit(Dataphoto$Link[l1noNA],split="Photo_MATURITY"),"[[",2)
 if(.Platform$OS.type=="unix"){
 	#pipo<-paste0(path2imgdb, gsub("\\\\","/",l2[272]) )
 	#plot(image_read(l1[392]))
