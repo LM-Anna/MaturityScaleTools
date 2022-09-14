@@ -26,15 +26,21 @@ species = read_excel(paste0(path2localfile,"dataLOOP.xlsx"))
 ```{r read, warning=FALSE, echo=FALSE, message=FALSE, autodep=TRUE}
 #generate html files in French
      for (i in 1:nrow(species)) {
-  render("ScaleFR.rmd", 
+      fichname<-paste0("Echelle_", species$spplat[i],"_", species$sex[i], ".html")
+       render("ScaleFR.rmd", 
          params=list(spplat=species$spplat[i], sppeng=species$sppeng[i], sex=species$sex[i], sppfr=species$sppfr[i]),
-         output_file=paste0(pathoutput,"Echelle_", species$spplat[i],"_", species$sex[i], ".html"))
+         output_file=fichname)
+       file.copy(fichname,to=paste0(pathoutput,fichname),overwrite=T)
+      file.remove(fichname)
 }
 #generate html files in English
      for (i in 1:nrow(species)) {
-  render("ScaleENG.rmd", 
+      fichname<-paste0("Scale_", species$spplat[i],"_", species$sex[i], ".html")
+       render("ScaleENG.rmd", 
          params=list(spplat=species$spplat[i], sppeng=species$sppeng[i], sex=species$sex[i], sppfr=species$sppfr[i]),
-         output_file=paste0(pathoutput,"Scale_", species$spplat[i],"_", species$sex[i], ".html"))
+         output_file=fichname)
+       file.copy(fichname,to=paste0(pathoutput,fichname),overwrite=T)
+      file.remove(fichname)
 }
 ```
 
