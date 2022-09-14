@@ -14,6 +14,8 @@ This project aims to harmonise and standardise the maturity staging process duri
   
   To have more details about the creation of these identification forms, please contact Anna Le Meleder (annalemeleder@orange.fr).  
   
+  All codes used for the automated generation of the identification guide were set up using RStudio (R-4.1.2).
+  
 ---
 
 ### Data Records
