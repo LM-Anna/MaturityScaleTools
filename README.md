@@ -16,6 +16,8 @@ This project aims to harmonise and standardise the maturity staging process duri
   
   All codes used for the automated generation of the identification guide were set up using RStudio (R-4.1.2).
   
+
+  
 ---
 
 ### Data Records
@@ -72,6 +74,8 @@ Species : Scientific name of the species or species group established for the id
 
 
 #### *"docs"*
+
+  ! In this project, "AMM" stand for species from the North Atlantic, Channel sea and North area, and "MG" for species from Martinique and Guadeloupe geographic area. !
 
 The "docs" file gathers all the 15 html. pages that leads to all the different identification forms and sort them into the format (pdf or html) and language (English or French) :  
 - **index.html**  
