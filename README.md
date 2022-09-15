@@ -78,21 +78,21 @@ Species : Scientific name of the species or species group established for the id
   ! In this project, "AMM" stand for species from the North Atlantic, Channel sea and North area, and "MG" for species from Martinique and Guadeloupe geographic area. !
 
 The "docs" file gathers all the 15 html. pages that leads to all the different identification forms and sort them into the format (pdf or html) and language (English or French) :  
-- **index.html**  
-- **fr.html**  
-- **frAMM.html**  
-- **frMG.html**  
-- **FRHTML_AMM.html**    
-- **FRHTML_MG.html**  
-- **FRPDF_AMM.html**  
-- **FRPDF_MG.html**  
-- **eng.html**  
-- **engAMM.html**  
-- **engMG.html**  
-- **ENGHTML_AMM.html**    
-- **ENGHTML_MG.html**  
-- **ENGPDF_AMM.html**  
-- **ENGPDF_MG.html**  
+- **index.html** (cover page)   
+- **fr.html** (front page French version)  
+- **frAMM.html**  (front page for species from North Atlantic, Channel sea and North sea French version)
+- **frMG.html** (front page for species from Martinique and Guadeloupe French version)  
+- **FRHTML_AMM.html** (page listing forms for species from North Atlantic, Channel sea and North sea French and html version)    
+- **FRHTML_MG.html** (page listing forms for species from Martinique and Guadeloupe French and html version)  
+- **FRPDF_AMM.html** (page listing forms for species from North Atlantic, Chanel sea and North sea French and pdf version)  
+- **FRPDF_MG.html** (page listing forms for species from Martinique and Guadeloupe French and pdf version)  
+- **eng.html** (front page English version)  
+- **engAMM.html** (front page for species from North Atlantic, Channel sea and North sea English version)  
+- **engMG.html** (front page for species from Martinique and Guadeloupe English version)  
+- **ENGHTML_AMM.html** (page listing forms for species from North Atlantic, Channel sea and North sea English and html version)    
+- **ENGHTML_MG.html** (page listing forms for species from Martinique and Guadeloupe English and html version)  
+- **ENGPDF_AMM.html** (page listing forms for species from North Atlantic, Channel sea and North sea English and pdf version)  
+- **ENGPDF_MG.html** (page listing forms for species from Martinique and Guadeloupe English and pdf version)  
 
 It also gathers in pdf format the "Fish's gonads photography protocol" in both English and French version **(ENG_P.pdf & FR_P.pdf)**, as well as 8 sheets (pdf and html) with the remaining maturity phases to take in photo in order to complete identification forms :  
 - **PhotototakeAMM.html**  
