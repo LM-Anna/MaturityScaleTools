@@ -21,11 +21,14 @@ knitr::opts_chunk$set(echo = TRUE,fig.pos = 'h',dpi=32)
 library(dplyr, warn.conflicts = FALSE)      # because tidyverse
 library(readxl, warn.conflicts = FALSE)     # to read excel file
 library(knitr, warn.conflicts = FALSE)      # to elaborate html/pdf
+#remotes::install_version("flextable", "0.7.0")
 library(flextable, warn.conflicts = FALSE)  # to elaborate figures/tables
 library(officer, warn.conflicts = FALSE)    # to customize tables
 library(magick, warn.conflicts = FALSE)
 library(tidyr)
 library(gridExtra)
+library(showtext)
+library(webshot)
 
 #creates a function to read image with their right dimensions
 fratimg<-function(pathimg){
