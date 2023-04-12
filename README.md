@@ -14,7 +14,7 @@ This project aims to harmonise and standardise the maturity staging process duri
   
   To have more details about the creation of these identification forms, please contact Anna Le Meleder (annalemeleder@orange.fr).  
   
-  All codes used for the automated generation of the identification guide were set up using RStudio (R-4.1.2).
+  All codes used for the automated generation of the identification guide were set up using RStudio (R-4.1.3).
   
 
   
@@ -29,7 +29,7 @@ The "data" file gathers 40 pictures/logos used to embellish the identification f
 - 6 pictures (.PNG; 1-187 Ko) that are : the NA and NAEng picture when not photo is available for a maturity phase, the female logo, the male logo, the “go back” logo and the GitHub’s main page picture   
 - A directory (Image_Fish) containing 35 fish pictures (.PNG; 44-883 Ko) to illustrate  the species/groups of species of the corresponding identification form  
 
-**photo_guides.xlsx** (13 columns/1387 rows) : data table (Excel format) with two spreadsheets that have the same data but one is in French (FINAL_FR) and the other one in English (FINAL_ENG). Both of these sheets list the same data : photos that may potentially be used in the identification guide and their associated data. This table has the same 13 columns as photo_mat.xlsx, plus two more columns :   
+**photo_guides.xlsx** (13 columns/1441 rows) : data table (Excel format) with two spreadsheets that have the same data but one is in French (FINAL_FR) and the other one in English (FINAL_ENG). Both of these sheets list the same data : photos that may potentially be used in the identification guide and their associated data. This table has the same 13 columns as photo_mat.xlsx, plus two more columns :   
 - Guides : code id “yes”, “no” or “na”, with “yes if the picture appears in the identification forms (maximum 2 photos should be selected for a single maturity stage for each species), all other choices should be classified under “no”, and “na” is used for the default NA picture;  
 - Phase : maturity phase name on forms  
 - Name : Name of the photo;  
