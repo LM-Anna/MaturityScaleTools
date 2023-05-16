@@ -4,9 +4,9 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 params:
   spplat : "Flat fish sp."
   sppeng : "Flat fish"
@@ -22,6 +22,7 @@ library(dplyr, warn.conflicts = FALSE)      # because tidyverse
 library(readxl, warn.conflicts = FALSE)     # to read excel file
 library(knitr, warn.conflicts = FALSE)      # to elaborate html/pdf
 #remotes::install_version("flextable", "0.7.0")
+#remotes::install_version("rmarkdown", "2.20")
 library(flextable, warn.conflicts = FALSE)  # to elaborate figures/tables
 library(officer, warn.conflicts = FALSE)    # to customize tables
 library(magick, warn.conflicts = FALSE)
