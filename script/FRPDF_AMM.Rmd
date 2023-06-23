@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>INDEX ÉCHELLE DE MATURITÉ</h1>
 <center>
-<h4>*Dernière mise à jour : 16/05/2023*</h4>
+<h4>*Dernière mise à jour : 23/06/2023*</h4>
 </center>
 
 :::::::::::::: {.columns}
