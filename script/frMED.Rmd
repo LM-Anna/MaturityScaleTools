@@ -75,39 +75,27 @@ border1 = fp_border(color="black", width = 2)
 </center>
 \
 <center>
-**Zone géographique : **
+**Choix du format de sortie des fiches : **
 </center>
 \
 
 :::::::::::::: {.columns}
-::: {.column width="25%"}
+::: {.column width="40%"}
 
 <center>
-[Méditerranée](frMED.html)
+[PDF](FRPDF_MED.html)
 </center>
 
 :::
-::: {.column width="12.5%"}
+::: {.column width="20%"}
 
 \
 
 :::
-::: {.column width="25%"}
+::: {.column width="40%"}
 
 <center>
-[Atlantique Nord / Manche / Mer du Nord](frAMM.html)
-</center>
-
-:::
-::: {.column width="12.5%"}
-
-\
-
-:::
-::: {.column width="25%"}
-
-<center>
-[Martinique / Guadeloupe](frMG.html)
+[HTML](FRHTML_MED.html)
 </center>
 
 :::
@@ -158,62 +146,20 @@ plot(tbl_img)
 <div style="text-align: justify">
 
   Les photos présentes sur les fiches ont été prises à partir du protocole établi au cours du projet d'harmonisation des méthodes de collecte des données de maturité.
-  
+
 <center>
+
 [PROTOCOLE PRISE DE PHOTO DES GONADES DE POISSONS](FR_P.pdf){target="_blank"}
 
 \
-Afin de compléter les fiches, voici la liste des photos à prendre en fonction des espèces, sexes et phases de maturité :
+  Afin de compléter les fiches, voici la liste des photos à prendre en fonction des espèces, sexes et phases de maturité :
   
-:::::::::::::: {.columns}
-::: {.column width="25%"}
-
-
-Méditerranée
-
 [PDF](PhotoàPrendreMED.pdf){target="_blank"}
 /
 [HTML](PhotoàPrendreMED.html){target="_blank"}
 
-
-:::
-::: {.column width="12.5%"}
-
 \
-
-:::
-::: {.column width="25%"}
-
-
-Atlantique Nord / Manche / Mer du Nord
-
-[PDF](PhotoàPrendreAMM.pdf){target="_blank"}
-/
-[HTML](PhotoàPrendreAMM.html){target="_blank"}
-
-
-:::
-::: {.column width="12.5%"}
-
 \
-
-:::
-::: {.column width="25%"}
-
-
-Martinique / Guadeloupe
-
-[PDF](PhotoàPrendreGM.pdf){target="_blank"}
-/
-[HTML](PhotoàPrendreGM.HTML){target="_blank"}
-
-
-:::
-::::::::::::::
-
-</center>
-\
-<center>
 ![](../data/Photo_Guides/GoBack.png){height=26px width=20px} <a href="#" onclick="history.go(-1)" style="color:black;font-size:20px;">Retour</a>
 </center>
 \
@@ -221,28 +167,7 @@ Martinique / Guadeloupe
 Anna LE MELEDER  
 IFREMER / RBE-HMMN-LRHPB  
 CIEM (WKASMSF 2018 & WKMATCH 2012)
-
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

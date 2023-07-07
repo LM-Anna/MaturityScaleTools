@@ -42,8 +42,8 @@ Merluccius merluccius	Hake	Merlu	F
 Merluccius merluccius	Hake	Merlu	M
 Mulloidichthys martinicus	Yellow goatfish	Barbarin blanc	F
 Mulloidichthys martinicus	Yellow goatfish	Barbarin blanc	M
-Mullus surmuletus	Red mullet	Rouget barbet de roche	F
-Mullus surmuletus	Red mullet	Rouget barbet de roche	M
+Mullus sp.	Red mullet	Rouget barbet	F
+Mullus sp.	Red mullet	Rouget barbet	M
 Ocyurus chrysurus	Yellowtail snapper	Sarde queue jaune	F
 Ocyurus chrysurus	Yellowtail snapper	Sarde queue jaune	M
 Pagellus bogaraveo	Sea bream	Dorade rose	F
@@ -68,6 +68,17 @@ Sprattus sprattus	Sprat	Sprat 	F
 Sprattus sprattus	Sprat	Sprat 	M
 Seriola rivoliana	Longfin yellowtail	Sériole limon	F
 Seriola rivoliana	Longfin yellowtail	Sériole limon	M
+Trisopterus minutus	Poor-cod	Capelan	F
+Trisopterus minutus	Poor-cod	Capelan	M
+Trachurus sp.	Horse mackerel	Chinchard	F
+Trachurus sp.	Horse mackerel	Chinchard	M
+Boops boops	Bogue	Bogue	F
+Boops boops	Bogue	Bogue	M
+Sparus aurata	Gilt-head bream	Dorade royale	F
+Sparus aurata	Gilt-head bream	Dorade royale	M
+Eutrigla gurnardus	Grey gurnard	Grondin gris	F
+Eutrigla gurnardus	Grey gurnard	Grondin gris	M
+
 
 ---
 

@@ -71,39 +71,27 @@ border1 = fp_border(color="black", width = 2)
 </center>
 \
 <center>
-**Geographic area : **
+**Choice of the output format : **
 </center>
 \
 
 :::::::::::::: {.columns}
-::: {.column width="25%"}
+::: {.column width="40%"}
 
 <center>
-[Mediterranean](engMED.html)
+[PDF](ENGPDF_MED.html)
 </center>
 
 :::
-::: {.column width="12.5%"}
+::: {.column width="20%"}
 
 \
 
 :::
-::: {.column width="25%"}
+::: {.column width="40%"}
 
 <center>
-[North Atlantic / Channel Sea / North Sea](engAMM.html)
-</center>
-
-:::
-::: {.column width="12.5%"}
-
-\
-
-:::
-::: {.column width="25%"}
-
-<center>
-[Martinique / Guadeloupe](engMG.html)
+[HTML](ENGHTML_MED.html)
 </center>
 
 :::
@@ -150,6 +138,7 @@ phase<- c("IMMATURE","DEVELOPING","SPAWNING","REGRESSION/REGENERATION","OMITTED 
 	
 plot(tbl_img)
 ```
+
 \
 <div style="text-align: justify">
 
@@ -157,49 +146,12 @@ plot(tbl_img)
 
 <center>
 [FISH GONADS' PHOTOGRAPHY PROTOCOL](ENG_P.pdf){target="_blank"}
-
 \
-  In order to complete the tool, here is the list of photos to take by species, sex and maturity phases :
-  
-:::::::::::::: {.columns}
-::: {.column width="25%"}
-
-Mediterranean
+In order to complete the tool, here is the list of photos to take by species, sex and maturity phases :
 
 [PDF](PhotototakeMED.pdf){target="_blank"}
 /
 [HTML](PhotototakeMED.html){target="_blank"}
-
-:::
-::: {.column width="12.5%"}
-
-\
-
-:::
-::: {.column width="25%"}
-
-North Atlantic / Channel Sea / North Sea
-
-[PDF](PhotototakeAMM.pdf){target="_blank"}
-/
-[HTML](PhotototakeAMM.html){target="_blank"}
-
-:::
-::: {.column width="12.5%"}
-
-\
-
-:::
-::: {.column width="25%"}
-
-Martinique / Guadeloupe
-
-[PDF](PhotototakeGM.pdf){target="_blank"}
-/
-[HTML](PhotototakeGM.html){target="_blank"}
-
-:::
-::::::::::::::
 
 \
 ![](../data/Photo_Guides/GoBack.png){height=26px width=20px} <a href="#" onclick="history.go(-1)" style="color:black;font-size:20px;">Go back</a>
