@@ -117,7 +117,7 @@ knit: (function(inputFile, encoding) {
 ![](../data/Photo_Guides/Image_Fish/Horse mackerel.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Trachurus sp._F.html){target="_blank"} / [Male](Scale_Trachurus sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
-<h2>*Trisoptersu minutus* / Poor-cod</h2>
+<h2>*Trisopterus minutus* / Poor-cod</h2>
 ![](../data/Photo_Guides/Image_Fish/Poor-cod.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Trisopterus minutus_F.html){target="_blank"} / [Male](Scale_Trisopterus minutus_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 </center>
