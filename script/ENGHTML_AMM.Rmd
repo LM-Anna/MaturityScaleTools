@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>MATURITY SCALE INDEX</h1>
 <center>
-<h4>*Last update : 23/06/2023*</h4>
+<h4>*Last update : 10/07/2023*</h4>
 </center>
 
 :::::::::::::: {.columns}
@@ -105,8 +105,8 @@ knit: (function(inputFile, encoding) {
 ![](../data/Photo_Guides/Image_Fish/Hake.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Merluccius merluccius_F.html){target="_blank"} / [Male](Scale_Merluccius merluccius_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
-<h2>*Mullus surmuletus* / Red mullet</h2>
-![](../data/Photo_Guides/Image_Fish/Red mullet.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Mullus surmuletus_F.html){target="_blank"} / [Male](Scale_Mullus surmuletus_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+<h2>*Mullus sp.* / Red mullet</h2>
+![](../data/Photo_Guides/Image_Fish/Red mullet.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Mullus sp._F.html){target="_blank"} / [Male](Scale_Mullus sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
 <h2>*Lophius sp.* / Anglefish</h2>
