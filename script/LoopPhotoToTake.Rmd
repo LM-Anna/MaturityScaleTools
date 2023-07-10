@@ -33,10 +33,15 @@ render("test2s.Rmd",output_file=paste0(localpath,"PhotototakeAMM", ".pdf"))
 #knitr French / Guadeloupe and Martinique
 writeLines(purrr::map_chr(c(1:61,186:244), ~ lines[.]), "test3s.Rmd")
 render("test3s.Rmd",output_file=paste0(localpath,"PhotoàPrendreGM", ".pdf"))
-
 #knitr English / Guadeloupe and Martinique
 writeLines(purrr::map_chr(c(1:61,186:220,245:268), ~ lines[.]), "test4s.Rmd")
 render("test4s.Rmd",output_file=paste0(localpath,"PhotototakeGM", ".pdf"))
+#knitr French / Mediterranean
+writeLines(purrr::map_chr(c(1:61,98:116,270:328), ~ lines[.]), "test5s.Rmd")
+render("test5s.Rmd",output_file=paste0(localpath,"PhotoàPrendreMED", ".pdf"))
+#knitr English / Mediterranean
+writeLines(purrr::map_chr(c(1:61,143:161,270:303,330:352), ~ lines[.]), "test6s.Rmd")
+render("test6s.Rmd",output_file=paste0(localpath,"PhotototakeMED", ".pdf"))
 #remove extra pages that appears
 remove_pages(
   rmpages=1,
@@ -68,4 +73,10 @@ render("test3s.Rmd",output_file=paste0(localpath,"PhotoàPrendreGM", ".html"))
 #knitr English / Guadeloupe and Martinique
 writeLines(purrr::map_chr(c(1:61,186:220,245:268), ~ lines[.]), "test4s.Rmd")
 render("test4s.Rmd",output_file=paste0(localpath,"PhotototakeGM", ".html"))
+#knitr French / Mediterranean
+writeLines(purrr::map_chr(c(1:61,98:116,270:328), ~ lines[.]), "test5s.Rmd")
+render("test5s.Rmd",output_file=paste0(localpath,"PhotoàPrendreMED", ".html"))
+#knitr English / Mediterranean
+writeLines(purrr::map_chr(c(1:61,143:161,270:303,330:352), ~ lines[.]), "test6s.Rmd")
+render("test6s.Rmd",output_file=paste0(localpath,"PhotototakeMED", ".html"))
 ```
