@@ -7,7 +7,7 @@
   Its creation falls within the harmonisation of maturity data acqusition methods for bony fish of commercial interest project carried out by **IFREMER SIH (Système d'Information Halieutique)**.
 This project aims to harmonise and standardise the maturity staging process during scientific surveys, using the ICES maturity scale (ICES, 2018) and Brown-Peterson et al. (2011) terminologies.
 
-  The maturity identification guide is composed of identification forms for males and females of each species of fish and provides simple comments and photos to ease the identification of maturity phases. Photos used to elaborate identification forms come from the dataset **"A gonad photographs dataset for fish of commercial interest from the European and Caribbean coastal waters"** available on ZENODO and were took using the "Fish' gonads photography protocol” from Le Meleder et al. (2022).
+  The maturity identification guide is composed of identification forms for males and females of each species of fish and provides simple comments and photos to ease the identification of maturity phases. Photos used to elaborate identification forms come from the dataset **"A gonad photographs dataset for fish of commercial interest from the European (Channel Sea, North Sea, Atlantic and Mediterranean) and Caribbean coastal waters"** available on ZENODO and were took using the "Fish' gonads photography protocol” from Le Meleder et al. (2022).
 
   The maturity phases identification presented in this tools is exclusively based on visual criteria described by the **ICES 2018 "WKASMSF" scale**. This scale was created in the ideal of a universal scale, regardless of the species or the sex of the individual. It also falls within the respect of the species biology.
   This scale is divided into **6 maturity phases**, corresponding to specific development periods of the gonads during the reproductive cycle. 
@@ -23,11 +23,11 @@ This project aims to harmonise and standardise the maturity staging process duri
 ### Data Records
 #### *"data"*
 
-The "data" file gathers 40 pictures/logos used to embellish the identification forms and 4 data frames :
+The "data" file gathers 46 pictures/logos used to embellish the identification forms and 4 data frames :
 
 **Photo_Guides** : archives in zip format of:  
 - 6 pictures (.PNG; 1-187 Ko) that are : the NA and NAEng picture when not photo is available for a maturity phase, the female logo, the male logo, the “go back” logo and the GitHub’s main page picture   
-- A directory (Image_Fish) containing 35 fish pictures (.PNG; 44-883 Ko) to illustrate  the species/groups of species of the corresponding identification form  
+- A directory (Image_Fish) containing 40 fish pictures (.PNG; 44-883 Ko) to illustrate  the species/groups of species of the corresponding identification form  
 
 **photo_guides.xlsx** (13 columns/1441 rows) : data table (Excel format) with two spreadsheets that have the same data but one is in French (FINAL_FR) and the other one in English (FINAL_ENG). Both of these sheets list the same data : photos that may potentially be used in the identification guide and their associated data. This table has the same 13 columns as photo_mat.xlsx, plus two more columns :   
 - Guides : code id “yes”, “no” or “na”, with “yes if the picture appears in the identification forms (maximum 2 photos should be selected for a single maturity stage for each species), all other choices should be classified under “no”, and “na” is used for the default NA picture;  
@@ -63,7 +63,7 @@ Species : Scientific name of the species or species group established for the id
 - Sex : Sex (F for female, M for male);  
 - FSM : Size range at first maturity
 
-**dataLOOP.xlsx** (4 columns/71 rows) : data table (Excel format) listing the parameters to generate the identification forms. This data table can be modified and not repertoriate all the parameters of the guide. To have the complete list of the guide, check the dataLOOP.md file. For each row, the associated columns are as  followed :   
+**dataLOOP.xlsx** (4 columns/81 rows) : data table (Excel format) listing the parameters to generate the identification forms. This data table can be modified and not repertoriate all the parameters of the guide. To have the complete list of the guide, check the dataLOOP.md file. For each row, the associated columns are as  followed :   
 - spplat : Scientific name of the species or species group established for the identification guide;  
 - sppeng :  English vernacular name for the species or species group established for the identification guide;  
 - sppfr : French vernacular name for the species or species group established for the identification guide;  
@@ -75,36 +75,46 @@ Species : Scientific name of the species or species group established for the id
 
 #### *"docs"*
 
-  ! In this project, "AMM" stand for species from the North Atlantic, Channel sea and North area, and "MG" for species from Martinique and Guadeloupe geographic area. !
+  ! In this project, **"AMM"** stand for species from the North Atlantic, Channel sea and North area, **"MED"** for species from the Mediterranean Sea, and **"MG"** for species from Martinique and Guadeloupe geographic area. !
 
-The "docs" file gathers all the 15 html. pages that leads to all the different identification forms and sort them into the format (pdf or html) and language (English or French) :  
+The "docs" file gathers all the 21 html. pages that leads to all the different identification forms and sort them into the format (pdf or html) and language (English or French) :  
 - **index.html** (cover page)   
 - **fr.html** (front page French version)  
 - **frAMM.html**  (front page for species from North Atlantic, Channel sea and North sea French version)
 - **frMG.html** (front page for species from Martinique and Guadeloupe French version)  
+- **frMED.html** (front page for species from Mediterranean Sea French version)  
 - **FRHTML_AMM.html** (page listing forms for species from North Atlantic, Channel sea and North sea French and html version)    
 - **FRHTML_MG.html** (page listing forms for species from Martinique and Guadeloupe French and html version)  
+- **FRHTML_MED.html** (page listing forms for species from Mediterranean Sea French and html version)  
 - **FRPDF_AMM.html** (page listing forms for species from North Atlantic, Chanel sea and North sea French and pdf version)  
 - **FRPDF_MG.html** (page listing forms for species from Martinique and Guadeloupe French and pdf version)  
+- **FRPDF_MED.html** (page listing forms for species from Mediterranean Sea French and pdf version)  
 - **eng.html** (front page English version)  
 - **engAMM.html** (front page for species from North Atlantic, Channel sea and North sea English version)  
 - **engMG.html** (front page for species from Martinique and Guadeloupe English version)  
+- **engMED.html** (front page for species from Mediterranean Sea English version)  
 - **ENGHTML_AMM.html** (page listing forms for species from North Atlantic, Channel sea and North sea English and html version)    
 - **ENGHTML_MG.html** (page listing forms for species from Martinique and Guadeloupe English and html version)  
+- **ENGHTML_MED.html** (page listing forms for species from Mediterranean Sea English and html version)  
 - **ENGPDF_AMM.html** (page listing forms for species from North Atlantic, Channel sea and North sea English and pdf version)  
 - **ENGPDF_MG.html** (page listing forms for species from Martinique and Guadeloupe English and pdf version)  
+- **ENGPDF_MED.html** (page listing forms for species from Mediterranean Sea English and pdf version)  
 
 It also gathers in pdf format the "Fish's gonads photography protocol" in both English and French version **(ENG_P.pdf & FR_P.pdf)**, as well as 8 sheets (pdf and html) with the remaining maturity phases to take in photo in order to complete identification forms :  
 - **PhotototakeAMM.html**  
 - **PhotototakeAMM.pdf**  
 - **PhotototakeGM.html**  
-- **PhototakeGM.pdf**  
+- **PhotototakeGM.pdf**  
+- **PhotototakeMED.html**  
+- **PhotototakeMED.pdf**  
 - **PhotoàPrendreAMM.html**  
 - **PhotoàPrendreAMM.pdf**  
 - **PhotoàPrendreGM.html**  
-- **PhotoàPrnedreGM.pdf**  
+- **PhotoàPrendreGM.pdf**  
+- **PhotoàPrendreMED.html**  
+- **PhotoàPrendreMED.pdf**  
 
-Finally, it gathers the **280 identification forms**, so be it 70 identification forms in both html and in pdf format and in both English and French.  
+Finally, it gathers the **328 identification forms**, so be it 82 identification forms in both html and in pdf format and in both English and French.  
 
 
 
@@ -120,22 +130,28 @@ It also gathers scripts to generate the sheets with the missing fishes :
 - **PhotoManquantes.Rmd**  
 - **LoopPhotoToTake.Rmd**  
 
-Finally, it gathers the scripts to generate the 15 html pages for the GitHub page :  
+Finally, it gathers the scripts to generate the 21 html pages for the GitHub page :  
 - **index.Rmd**  
 - **fr.Rmd**  
 - **frAMM.Rmd**  
 - **frMG.Rmd**  
+- **frMED.Rmd**  
 - **FRHTML_AMM.Rmd**    
 - **FRHTML_MG.Rmd**  
+- **FRHTML_MED.Rmd**  
 - **FRPDF_AMM.Rmd**  
 - **FRPDF_MG.Rmd**  
+- **FRPDF_MED.Rmd**  
 - **eng.Rmd**  
 - **engAMM.Rmd**  
 - **engMG.Rmd**  
+- **engMED.Rmd**  
 - **ENGHTML_AMM.Rmd**    
-- **ENGHTML_MG.Rmd**  
+- **ENGHTML_MG.Rmd**   
+- **ENGHTML_MED.Rmd**  
 - **ENGPDF_AMM.Rmd**  
 - **ENGPDF_MG.Rmd**  
+- **ENGPDF_MED.Rmd**  
 
 ---
 
@@ -147,7 +163,7 @@ First of all, before launching the scripts, the *photo_guides.xlsx* data frame m
 
 The scripts to generate the identification guide are the *“LoopPDF.Rmd”* and *“LoopHTML.Rmd”* scripts. They automatically generate identification guides by using loops, depending on the sets of parameters in the *“dataLOOP.xlsx”* data frame. The output files are set up to automatically generate in the **“docs”** GitHub’s file so they would automatically be added to the GitHub pages. Likewise, the *“LoopPhotoToTake.Rmd”* script will automatically generate on the GitHub pages sheet that indicates missing photos on the identification forms.  It is important to note that those scripts (*“LoopHTML.Rmd”, “LoopPDF.Rmd”, “LoopPhotoToTake.Rmd”*) must not be knitr, only the chunks content must be launched, as noted within the scripts. Moreover, before reading the loops, if it is a loop that generates .pdf format files, the attached .Rmd file (*ScaleFR.Rmd, ScaleENG.Rmd, PhotosManquantes.Rmd*) must be have the pdf format first in the **“YALM”** section (further described in the scripts).  
 
-Finally, in order to access the newly updated identification guide, a new link must be added to the scripts that produce the GitHub pages : *ENGHTML_AMM.Rmd, ENGHTML_MG.Rmd, ENGPDF_AMM.Rmd, ENGPDF_MG.Rmd, FRHTML_AMM.Rmd, FRHTML_MG.Rmd, FRPDF_AMM.Rmd, FRPDF_MG.Rmd.* Further information can be found  at the beginning of the previously stated script. Then, those scripts must be **“knitr”** to produce html pages directly into the GitHub pages directory.
+Finally, in order to access the newly updated identification guide, a new link must be added to the scripts that produce the GitHub pages : *ENGHTML_AMM.Rmd, ENGHTML_MG.Rmd, ENGHTML_MED.Rmd, ENGPDF_AMM.Rmd, ENGPDF_MG.Rmd, ENGPDF_MED.Rmd, FRHTML_AMM.Rmd, FRHTML_MG.Rmd, FRHTML_MED.Rmd, FRPDF_AMM.Rmd, FRPDF_MG.Rmd, FRPDF_MED.Rmd.* Further information can be found  at the beginning of the previously stated script. Then, those scripts must be **“knitr”** to produce html pages directly into the GitHub pages directory.
 
 ---
 
