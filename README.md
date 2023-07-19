@@ -100,7 +100,7 @@ The "docs" file gathers all the 21 html. pages that leads to all the different i
 - **ENGPDF_MG.html** (page listing forms for species from Martinique and Guadeloupe English and pdf version)  
 - **ENGPDF_MED.html** (page listing forms for species from Mediterranean Sea English and pdf version)  
 
-It also gathers in pdf format the "Fish's gonads photography protocol" in both English and French version **(ENG_P.pdf & FR_P.pdf)**, as well as 8 sheets (pdf and html) with the remaining maturity phases to take in photo in order to complete identification forms :  
+It also gathers in pdf format the "Fish's gonads photography protocol" in both English and French version **(ENG_P.pdf & FR_P.pdf)**, as well as 12 sheets (pdf and html) with the remaining maturity phases to take in photo in order to complete identification forms :  
 - **PhotototakeAMM.html**  
 - **PhotototakeAMM.pdf**  
 - **PhotototakeGM.html**  
@@ -114,7 +114,7 @@ It also gathers in pdf format the "Fish's gonads photography protocol" in both E
 - **PhotoàPrendreMED.html**  
 - **PhotoàPrendreMED.pdf**  
 
-Finally, it gathers the **328 identification forms**, so be it 82 identification forms in both html and in pdf format and in both English and French.  
+Finally, it gathers the **332 identification forms**, so be it 83 identification forms in both html and in pdf format and in both English and French.  
 
 
 
