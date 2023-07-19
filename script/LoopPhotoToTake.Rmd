@@ -25,22 +25,22 @@ localpath<-"../docs/"
 #read the ligns of Rmd files
 lines <- readLines("PhotosManquantes.Rmd")
 #knitr French / North Atlantic, Channel Sea and North sea
-writeLines(purrr::map_chr(1:141, ~ lines[.]), "test1s.Rmd")
+writeLines(purrr::map_chr(1:142, ~ lines[.]), "test1s.Rmd")
 render("test1s.Rmd",output_file=paste0(localpath, "PhotoàPrendreAMM", ".pdf"))
 #knitr English / North Atlantic, Channel Sea and North sea
-writeLines(purrr::map_chr(c(1:96,142:185), ~ lines[.]), "test2s.Rmd")
+writeLines(purrr::map_chr(c(1:97,144:186), ~ lines[.]), "test2s.Rmd")
 render("test2s.Rmd",output_file=paste0(localpath,"PhotototakeAMM", ".pdf"))
 #knitr French / Guadeloupe and Martinique
-writeLines(purrr::map_chr(c(1:61,186:244), ~ lines[.]), "test3s.Rmd")
+writeLines(purrr::map_chr(c(1:61,188:246), ~ lines[.]), "test3s.Rmd")
 render("test3s.Rmd",output_file=paste0(localpath,"PhotoàPrendreGM", ".pdf"))
 #knitr English / Guadeloupe and Martinique
-writeLines(purrr::map_chr(c(1:61,186:220,245:268), ~ lines[.]), "test4s.Rmd")
+writeLines(purrr::map_chr(c(1:61,188:224,248:270), ~ lines[.]), "test4s.Rmd")
 render("test4s.Rmd",output_file=paste0(localpath,"PhotototakeGM", ".pdf"))
 #knitr French / Mediterranean
-writeLines(purrr::map_chr(c(1:61,98:116,270:328), ~ lines[.]), "test5s.Rmd")
+writeLines(purrr::map_chr(c(1:61,99:117,272:331), ~ lines[.]), "test5s.Rmd")
 render("test5s.Rmd",output_file=paste0(localpath,"PhotoàPrendreMED", ".pdf"))
 #knitr English / Mediterranean
-writeLines(purrr::map_chr(c(1:61,143:161,270:303,330:352), ~ lines[.]), "test6s.Rmd")
+writeLines(purrr::map_chr(c(1:61,144:162,272:306,333:355), ~ lines[.]), "test6s.Rmd")
 render("test6s.Rmd",output_file=paste0(localpath,"PhotototakeMED", ".pdf"))
 #remove extra pages that appears
 remove_pages(
@@ -62,21 +62,21 @@ remove_pages(
 #read the ligns of Rmd files
 lines <- readLines("PhotosManquantes.Rmd")
 #knitr French / North Atlantic, Channel Sea and North sea
-writeLines(purrr::map_chr(1:141, ~ lines[.]), "test1s.Rmd")
+writeLines(purrr::map_chr(1:142, ~ lines[.]), "test1s.Rmd")
 render("test1s.Rmd",output_file=paste0(localpath, "PhotoàPrendreAMM", ".html"))
 #knitr English / North Atlantic, Channel Sea and North sea
-writeLines(purrr::map_chr(c(1:96,142:185), ~ lines[.]), "test2s.Rmd")
+writeLines(purrr::map_chr(c(1:97,144:186), ~ lines[.]), "test2s.Rmd")
 render("test2s.Rmd",output_file=paste0(localpath,"PhotototakeAMM", ".html"))
 #knitr French / Guadeloupe and Martinique
-writeLines(purrr::map_chr(c(1:61,186:244), ~ lines[.]), "test3s.Rmd")
+writeLines(purrr::map_chr(c(1:61,188:246), ~ lines[.]), "test3s.Rmd")
 render("test3s.Rmd",output_file=paste0(localpath,"PhotoàPrendreGM", ".html"))
 #knitr English / Guadeloupe and Martinique
-writeLines(purrr::map_chr(c(1:61,186:220,245:268), ~ lines[.]), "test4s.Rmd")
+writeLines(purrr::map_chr(c(1:61,188:224,248:270), ~ lines[.]), "test4s.Rmd")
 render("test4s.Rmd",output_file=paste0(localpath,"PhotototakeGM", ".html"))
 #knitr French / Mediterranean
-writeLines(purrr::map_chr(c(1:61,98:116,270:328), ~ lines[.]), "test5s.Rmd")
+writeLines(purrr::map_chr(c(1:61,99:117,272:331), ~ lines[.]), "test5s.Rmd")
 render("test5s.Rmd",output_file=paste0(localpath,"PhotoàPrendreMED", ".html"))
 #knitr English / Mediterranean
-writeLines(purrr::map_chr(c(1:61,143:161,270:303,330:352), ~ lines[.]), "test6s.Rmd")
+writeLines(purrr::map_chr(c(1:61,144:162,272:306,333:355), ~ lines[.]), "test6s.Rmd")
 render("test6s.Rmd",output_file=paste0(localpath,"PhotototakeMED", ".html"))
 ```

@@ -4,9 +4,9 @@ geometry: "left=1cm,right=1cm,top=0.5cm,bottom=0.5cm"
 number_sections : no
 pagestyle: "empty"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 params:
   sppeng: "Sea bass"
   sppfr: "Bar"
@@ -62,7 +62,7 @@ border2 = fp_border(color="black", width = 1)
 
 ```{r AMM, include=FALSE, fig.align='center'}
 test6<-Dataphoto
-test<- test6 %>% filter(Species=="Argyrosomus regius" | Species=="Chelidonichthys cuculus" | Species=="Clupea clupea" | Species=="Engraulis encrasicolus" | Species=="Dicentrarchus labrax" | Species=="Flat fish sp." | Species=="Gadidae sp." | Species=="Merluccius merluccius" | Species=="Mullus sp." | Species=="Lophius sp." | Species=="Pagellus bogaraveo" | Species=="Sardina pilchardus" | Species=="Scomber scombrus" | Species=="Scophthalmus sp." | Species=="Solea solea" | Species=="Sprattus sprattus")
+test<- test6 %>% filter(Species=="Argyrosomus regius" | Species=="Chelidonichthys cuculus" | Species=="Clupea clupea" | Species=="Engraulis encrasicolus" | Species=="Dicentrarchus labrax" | Species=="Flat fish sp." | Species=="Gadidae sp." | Species=="Merluccius merluccius" | Species=="Mullus sp." | Species=="Lophius sp." | Species=="Osmerus eperlanus" | Species=="Pagellus bogaraveo" | Species=="Sardina pilchardus" | Species=="Scomber scombrus" | Species=="Scophthalmus sp." | Species=="Solea solea" | Species=="Sprattus sprattus")
 colnames(test)[8]<-"ID"
 test <- test %>%select(1,5,6,7,8)
 test1<- test%>%filter(Guides=="yes" | ID =="E")
@@ -85,7 +85,7 @@ test9$F<-gsub('["]',"",as.character(test9$F))
 test9$F<-gsub('[(]',"",as.character(test9$F))
 test9$F<-gsub('[)]',"",as.character(test9$F))
 sppfr<-DataFR
-sppfr<-sppfr%>%filter(spplat=="Argyrosomus regius" | spplat=="Chelidonichthys cuculus" | spplat=="Clupea clupea" | spplat=="Engraulis encrasicolus" | spplat=="Dicentrarchus labrax" | spplat=="Flat fish sp." | spplat=="Gadidae sp." | spplat=="Merluccius merluccius" | spplat=="Mullus sp." | spplat=="Lophius sp." | spplat=="Pagellus bogaraveo" | spplat=="Sardina pilchardus" | spplat=="Scomber scombrus" | spplat=="Scophthalmus sp." | spplat=="Solea solea" | spplat=="Sprattus sprattus")
+sppfr<-sppfr%>%filter(spplat=="Argyrosomus regius" | spplat=="Chelidonichthys cuculus" | spplat=="Clupea clupea" | spplat=="Engraulis encrasicolus" | spplat=="Dicentrarchus labrax" | spplat=="Flat fish sp." | spplat=="Gadidae sp." | spplat=="Merluccius merluccius" | spplat=="Mullus sp." | spplat=="Lophius sp." | spplat=="Osmerus eperlanus" | spplat=="Pagellus bogaraveo" | spplat=="Sardina pilchardus" | spplat=="Scomber scombrus" | spplat=="Scophthalmus sp." | spplat=="Solea solea" | spplat=="Sprattus sprattus")
 sppfr<-sppfr%>%select(1,2,3)
 sppfr<-sppfr%>%distinct(spplat, sppeng, .keep_all=TRUE)
 test10<-merge(test9, sppfr, all=TRUE)
