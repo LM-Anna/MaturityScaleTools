@@ -23,13 +23,13 @@ This project aims to harmonise and standardise the maturity staging process duri
 ### Data Records
 #### *"data"*
 
-The "data" file gathers 46 pictures/logos used to embellish the identification forms and 4 data frames :
+The "data" file gathers 47 pictures/logos used to embellish the identification forms and 4 data frames :
 
 **Photo_Guides** : archives in zip format of:  
 - 6 pictures (.PNG; 1-187 Ko) that are : the NA and NAEng picture when not photo is available for a maturity phase, the female logo, the male logo, the “go back” logo and the GitHub’s main page picture   
-- A directory (Image_Fish) containing 40 fish pictures (.PNG; 44-883 Ko) to illustrate  the species/groups of species of the corresponding identification form  
+- A directory (Image_Fish) containing 41 fish pictures (.PNG; 44-883 Ko) to illustrate  the species/groups of species of the corresponding identification form  
 
-**photo_guides.xlsx** (13 columns/1536 rows) : data table (Excel format) with two spreadsheets that have the same data but one is in French (FINAL_FR) and the other one in English (FINAL_ENG). Both of these sheets list the same data : photos that may potentially be used in the identification guide and their associated data. This table has the same 13 columns as photo_mat.xlsx, plus two more columns :   
+**photo_guides.xlsx** (13 columns/1548 rows) : data table (Excel format) with two spreadsheets that have the same data but one is in French (FINAL_FR) and the other one in English (FINAL_ENG). Both of these sheets list the same data : photos that may potentially be used in the identification guide and their associated data. This table has the same 13 columns as photo_mat.xlsx, plus two more columns :   
 - Guides : code id “yes”, “no” or “na”, with “yes if the picture appears in the identification forms (maximum 2 photos should be selected for a single maturity stage for each species), all other choices should be classified under “no”, and “na” is used for the default NA picture;  
 - Phase : maturity phase name on forms  
 - Name : Name of the photo;  
@@ -50,20 +50,20 @@ The "data" file gathers 46 pictures/logos used to embellish the identification f
 
 *n = row number
 
-**matu_scale.xlsx** (5 columns/841 rows) : data table (Excel format) with two spreadsheets that also have the same data but one is in French (SCALE_FR) and the other one in English (SCALE_ENG). They both list all the commentaries found in the in the identification guide, for each species, each sex and each maturity phase. One row corresponds to a single information. For each row, the associated columns are as followed :  
+**matu_scale.xlsx** (5 columns/861 rows) : data table (Excel format) with two spreadsheets that also have the same data but one is in French (SCALE_FR) and the other one in English (SCALE_ENG). They both list all the commentaries found in the in the identification guide, for each species, each sex and each maturity phase. One row corresponds to a single information. For each row, the associated columns are as followed :  
 - Name : Vernacular name of the species or species group established for the identification guide;  
 - Phase : maturity phase A, B, C, D, E or F (ICES, 2018);   
 - Sex : Sex (F for female, M for male);  
 - Text : Comment established for the species/sex/maturity phase;  
 - Species : Scientific name of the species or species group established for the identification guide.
 
-**FSM.xlsx** (4 columns/131 rows) : data table (Excel format) that lists all of the size range at first maturity for each species and each sex. For each row, the associated columns are as followed :  
+**FSM.xlsx** (4 columns/133 rows) : data table (Excel format) that lists all of the size range at first maturity for each species and each sex. For each row, the associated columns are as followed :  
 - SubSpecies : Scientific name of the species without taking the species groups into account;  
 Species : Scientific name of the species or species group established for the identification guide;  
 - Sex : Sex (F for female, M for male);  
 - FSM : Size range at first maturity
 
-**dataLOOP.xlsx** (4 columns/81 rows) : data table (Excel format) listing the parameters to generate the identification forms. This data table can be modified and not repertoriate all the parameters of the guide. To have the complete list of the guide, check the dataLOOP.md file. For each row, the associated columns are as  followed :   
+**dataLOOP.xlsx** (4 columns/83 rows) : data table (Excel format) listing the parameters to generate the identification forms. This data table can be modified and not repertoriate all the parameters of the guide. To have the complete list of the guide, check the dataLOOP.md file. For each row, the associated columns are as  followed :   
 - spplat : Scientific name of the species or species group established for the identification guide;  
 - sppeng :  English vernacular name for the species or species group established for the identification guide;  
 - sppfr : French vernacular name for the species or species group established for the identification guide;  
