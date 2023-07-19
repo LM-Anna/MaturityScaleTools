@@ -78,7 +78,8 @@ Sparus aurata	Gilt-head bream	Dorade royale	F
 Sparus aurata	Gilt-head bream	Dorade royale	M
 Eutrigla gurnardus	Grey gurnard	Grondin gris	F
 Eutrigla gurnardus	Grey gurnard	Grondin gris	M
-
+Osmerus eperlanus	European smelt	Eperlan d'Europe	F
+Osmerus eperlanus	European smelt	Eperlan d'Europe	M
 
 ---
 
