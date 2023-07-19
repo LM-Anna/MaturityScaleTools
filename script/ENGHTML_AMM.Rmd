@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>MATURITY SCALE INDEX</h1>
 <center>
-<h4>*Last update : 10/07/2023*</h4>
+<h4>*Last update : 19/07/2023*</h4>
 </center>
 
 :::::::::::::: {.columns}
@@ -101,6 +101,10 @@ knit: (function(inputFile, encoding) {
 ![](../data/Photo_Guides/Image_Fish/Gadidae.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Gadidae sp._F.html){target="_blank"} / [Male](Scale_Gadidae sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
+<h2>*Lophius sp.* / Anglefish</h2>
+![](../data/Photo_Guides/Image_Fish/Anglefish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Lophius sp._F.html){target="_blank"} / [Male](Scale_Lophius sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+
+\
 <h2>*Merluccius merluccius* / Hake</h2>
 ![](../data/Photo_Guides/Image_Fish/Hake.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Merluccius merluccius_F.html){target="_blank"} / [Male](Scale_Merluccius merluccius_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
@@ -109,8 +113,8 @@ knit: (function(inputFile, encoding) {
 ![](../data/Photo_Guides/Image_Fish/Red mullet.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Mullus sp._F.html){target="_blank"} / [Male](Scale_Mullus sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
-<h2>*Lophius sp.* / Anglefish</h2>
-![](../data/Photo_Guides/Image_Fish/Anglefish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Lophius sp._F.html){target="_blank"} / [Male](Scale_Lophius sp._M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+<h2>*Osmerus eperlanus* / European smelt</h2>
+![](../data/Photo_Guides/Image_Fish/European smelt.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Female](Scale_Osmerus eperlanus_F.html){target="_blank"} / [Male](Scale_Osmerus eperlanus_M.html){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
 <h2>*Pagellus bogaraveo* / Sea bream</h2>

@@ -61,7 +61,7 @@ knit: (function(inputFile, encoding) {
 <body>
 <h1>INDEX ÉCHELLE DE MATURITÉ</h1>
 <center>
-<h4>*Dernière mise à jour : 10/07/2023*</h4>
+<h4>*Dernière mise à jour : 19/07/2023*</h4>
 </center>
 
 :::::::::::::: {.columns}
@@ -101,6 +101,10 @@ knit: (function(inputFile, encoding) {
 ![](../data/Photo_Guides/Image_Fish/Gadidae.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Gadidae sp._F.pdf){target="_blank"} / [Mâle](Echelle_Gadidae sp._M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
+<h2>*Lophius sp.* / Baudroies</h2>
+![](../data/Photo_Guides/Image_Fish/Anglefish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Lophius sp._F.pdf){target="_blank"} / [Mâle](Echelle_Lophius sp._M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+
+\
 <h2>*Merluccius merluccius* / Merlu</h2>
 ![](../data/Photo_Guides/Image_Fish/Hake.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Merluccius merluccius_F.pdf){target="_blank"} / [Mâle](Echelle_Merluccius merluccius_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
@@ -109,8 +113,8 @@ knit: (function(inputFile, encoding) {
 ![](../data/Photo_Guides/Image_Fish/Red mullet.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Mullus sp._F.pdf){target="_blank"} / [Mâle](Echelle_Mullus sp._M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
-<h2>*Lophius sp.* / Baudroies</h2>
-![](../data/Photo_Guides/Image_Fish/Anglefish.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Lophius sp._F.pdf){target="_blank"} / [Mâle](Echelle_Lophius sp._M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
+<h2>*Osmerus eperlanus* / Eperlan d'Europe</h2>
+![](../data/Photo_Guides/Image_Fish/European smelt.png){width=250px} ![](../data/Photo_Guides/Female sign.png){height=26px width=20px} [Femelle](Echelle_Osmerus eperlanus_F.pdf){target="_blank"} / [Mâle](Echelle_Osmerus eperlanus_M.pdf){target="_blank"} ![](../data/Photo_Guides/Male sign.png){height=26px width=20px}
 
 \
 <h2>*Pagellus bogaraveo* / Dorade rose</h2>
